@@ -7,13 +7,20 @@ An alternative to Telegram Login Widget is [Login URL button,](../messages/butto
 
 ## User steps
 
+From the user perspective, the steps are the following:
+
 1. The user clicks "Log in with Telegram" and enters their phone number.
 2. Telegram app asks to confirm.
 3. The user chooses "Accept" and logs in.
 
 ![Screenshot](https://core.telegram.org/file/811140314/17c1/xf4ULBL5tmE.58438/07ff5b2958ed0e7e36)
 
-## Example code to verify the token
+## Handling authorization
+
+When the user logs in, the widget redirects to the authorization URL, passing the user’s ID, name, and other data as GET parameters (or, alternatively, calls a JavaScript function).
+
+To make sure that the parameters came from Telegram, you should check the hash parameter. The encryption logic is described in the Telegram docs, but here is a Python example:
+
 ```python
 from dataclasses import dataclass
 
