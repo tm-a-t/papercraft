@@ -61,7 +61,7 @@ export default defineConfig({
             message: 'Art Ivanov'
         },
         editLink: {
-            pattern: 'https://github.com/tm-a-t/papercraft/edit/main/:path',
+            pattern: 'https://github.com/tm-a-t/papercraft/edit/main/pages/:path',
             text: 'Edit this page on GitHub',
         },
         lastUpdated: {
