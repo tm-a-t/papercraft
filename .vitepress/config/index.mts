@@ -85,9 +85,9 @@ export default defineConfig({
         search: {
             provider: 'algolia',
             options: {
-                appId: 'XWCAXSO1PW',
-                apiKey: 'baac738133a1f9099fb1aa9fce51603b',
-                indexName: 'handbook-tmat',
+                appId: '6PO2OC0W1X',
+                apiKey: 'ff73f6ce0f89bcef29d1d41e9dc2143e',
+                indexName: 'papercraft',
             }
         },
         sidebar: sidebar,

@@ -13,11 +13,6 @@ if (env.NODE_ENV === 'production') {
     head.push(
         ['script', {defer: 'true', src: 'https://zond.vanutp.dev/script.js', 'data-website-id': 'b055fd15-b1a0-4d26-a389-01026049323a'}],
     )
-
-    // Verify Algolia
-    head.push(
-        ['meta', {name: 'algolia-site-verification', content: '9A40FCF70DC0EBC0'}],
-    )
 }
 
 export default head
