@@ -10,7 +10,7 @@
 
 # Papercraft
 
-_ex. Telegram Bot Handbook_
+_formerly Telegram Bot Handbook_
 <br>Tools and resources for Telegram devs.
 
 **https://papercraft.tmat.me/**

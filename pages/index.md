@@ -11,7 +11,7 @@ hero:
 features:
   - icon: 📘
     title: Papercraft Book
-    details: Learn to develop user-friendly, featureful, and stable bots.
+    details: Learn to develop user-friendly, feature-rich, and stable bots.
     link: /book/
     linkText: Read
   - icon: 🎨
@@ -25,4 +25,6 @@ features:
     link: /tgpy/
     linkText: Explore
 
+title: Papercraft
+titleTemplate: false
 ---
