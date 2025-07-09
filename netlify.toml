@@ -17,6 +17,12 @@ force = true
 status = 301
 
 [[redirects]]
+from = "/ru"
+to = "/"
+force = true
+status = 301
+
+[[redirects]]
 from = "/book/*"
 to = "/ru/book/:splat"
 force = true
