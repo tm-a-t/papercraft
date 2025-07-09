@@ -87,7 +87,7 @@ export default defineConfig({
             options: {
                 appId: '6PO2OC0W1X',
                 apiKey: 'ff73f6ce0f89bcef29d1d41e9dc2143e',
-                indexName: 'papercraft_tmat_me_6po2oc0w1x_pages',
+                indexName: 'Vitepress Attempt',
             }
         },
         sidebar: sidebar,
