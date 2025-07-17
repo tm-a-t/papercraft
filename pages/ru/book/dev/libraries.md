@@ -19,7 +19,8 @@
 Поскольку Telethon не фокусируется на разработке ботов,
 я создал на его основе фреймворк [Folds,](/folds/) который позволяет писать простой и масштабируемый код для ботов.
 
-Возможные альтернативы — это [Pyrogram](https://github.com/pyrogram/pyrogram) для Питона и [GramJS](https://github.com/gram-js/gramjs) для Джаваскрипта.
+Возможные альтернативы: [Pyrogram](https://github.com/pyrogram/pyrogram) для Питона, 
+[mtcute](https://github.com/mtcute/mtcute) и [GramJS](https://github.com/gram-js/gramjs) для Джаваскрипта.
 
 [//]: # (todo other langs?)
 

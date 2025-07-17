@@ -20,7 +20,7 @@ const members = [
     name: 'Ivan Filipenkov',
     title: 'Expert',
     links: [
-      { icon: 'github', link: 'https://github.com/tm-a-t' },
+      { icon: 'github', link: 'https://github.com/vanutp' },
     ]
   },
 ]

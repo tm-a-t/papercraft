@@ -21,7 +21,8 @@ Since Telethon is not primarily focused on developing bots,
 I started the [Folds](/folds/) framework, which is built on top of Telethon
 and is designed to create simple and scalable bot programs.
 
-As of alternatives, there are [Pyrogram](https://github.com/pyrogram/pyrogram) for Python and [GramJS](https://github.com/gram-js/gramjs) for JavaScript.
+As of alternatives, there are [Pyrogram](https://github.com/pyrogram/pyrogram) for Python and 
+[mtcute](https://github.com/mtcute/mtcute) or [GramJS](https://github.com/gram-js/gramjs) for JavaScript.
 
 [//]: # (todo other langs?)
 
