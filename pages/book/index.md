@@ -27,7 +27,16 @@ const members = [
 </script>
 
 
-# Papercraft Book <Badge type="info" text="formerly Telegram Bot Handbook"/>
+# Papercraft Book
+
+<p style="display: flex; align-items: start;">
+    <a href="https://github.com/tm-a-t/papercraft" target="_blank">
+        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/tm-a-t/papercraft?style=flat-square&logo=github" style="border-radius: 10px">
+    </a>
+    <Badge type="info" text="formerly Telegram Bot Handbook"/>
+</p>
+
+---
 
 Welcome to the Papercraft Book!
 This is your guide to developing user-friendly, feature-rich, and stable bots for Telegram messenger.

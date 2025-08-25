@@ -2,11 +2,22 @@
 
 # TGPy
 
+<p style="display: flex; align-items: start; column-gap: 2px">
+    <a href="https://github.com/tm-a-t/tgpy" target="_blank">
+        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/tm-a-t/tgpy?style=flat-square&logo=github" style="border-radius: 10px">
+    </a>
+    <a href="https://pypi.org/project/tgpy" target="_blank">
+        <img alt="GitHub Repo stars" src="https://img.shields.io/pypi/v/tgpy?style=flat-square" style="border-radius: 10px">
+    </a>
+</p>
+
+---
+
 TGPy is a Pythonic swiss knife for Telegram. 
 It runs Python code in your messages and integrates with your Telegram workspace. 
 See the video:
 
-<video controls loop muted src="https://user-images.githubusercontent.com/38432588/181266550-c4640ff1-71f2-4868-ab83-6ea3690c01b6.mp4"></video>
+<video controls loop muted src="https://user-images.githubusercontent.com/38432588/181266550-c4640ff1-71f2-4868-ab83-6ea3690c01b6.mp4" style="border: solid var(--vp-c-text-3) 1px"></video>
 
 ## Quick Start
 

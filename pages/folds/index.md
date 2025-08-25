@@ -1,5 +1,16 @@
 # Folds
 
+<p style="display: flex; align-items: start; column-gap: 2px">
+    <a href="https://github.com/tm-a-t/folds" target="_blank">
+        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/tm-a-t/folds?style=flat-square&logo=github" style="border-radius: 10px">
+    </a>
+    <a href="https://pypi.org/project/folds" target="_blank">
+        <img alt="GitHub Repo stars" src="https://img.shields.io/pypi/v/folds?style=flat-square" style="border-radius: 10px">
+    </a>
+</p>
+
+---
+
 Folds is an elegant and scalable framework for bots, wrapping Telethon library.
 
 - Minimalistic when you need simple features, powerful when you need complex ones.

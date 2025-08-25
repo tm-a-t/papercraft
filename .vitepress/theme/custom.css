@@ -3,7 +3,7 @@
     color: var(--vp-c-neutral-inverse);
 }
 
-.vp-doc img {
+.vp-doc img, .vp-doc video {
     border-radius: 8px;
 }
 
