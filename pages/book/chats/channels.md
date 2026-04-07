@@ -1,22 +1,19 @@
-# How Telegram Bots Can Be Useful in Channels
+# Developing Telegram Bots for Channels
 
 Bots can participate in channels only as admins.
-Admin rights allow bots to send and edit posts, rename channels, and perform other administrative actions.
-
-This makes bots particularly helpful for channel authors.
+Admin rights allow bots to send and edit posts, rename channels, and perform other administrative actions — making them particularly helpful for channel authors.
 
 ## Admin rights
 
-Just like in groups, channel admins may select bot admin rights where the default options can be configured in BotFather. 
+Just like in groups, channel admins can select specific admin rights for bots. The default options can be configured [in BotFather](../dev/botfather). 
 
 ## Adding buttons to posts
 
-One common use case for bots in channels is adding buttons: likes, links, and other interactive elements.
-This was especially popular before message reactions were introduced in Telegram.
+One common use case is adding buttons to channel posts: likes, links, and other interactive elements.
+This was especially popular before message reactions were introduced.
 
-These features work by utilizing the "Edit messages of others" admin right, 
-which allows a bot to add buttons when editing messages. 
-Here is an example:
+This works by using the "Edit messages of others" admin right, which allows bots to add buttons when editing messages.
+Here's an example:
 
 ![Post with buttons](/pictures/ru/channel-buttons.png)
 
@@ -36,8 +33,8 @@ async def on_new_message(message: Message):
             message_id=message.message_id,
             reply_markup=reply_markup
         )
-    except Exception as e:
-        # Bot is not an admin, or the message is uneditable (for example, a sticker)
+    except Exception:
+        # Bot is not an admin, or the message can't be edited (e.g., a sticker)
         pass
 ```
 == Folds
@@ -51,7 +48,7 @@ async def on_new_message(message: Message):
             ]
         )
     except (ChatAdminRequiredError, MessageIdInvalidError, InlineBotRequiredError):
-        # Bot is not an admin, or the message is uneditable (for example, a sticker)
+        # Bot is not an admin, or the message can't be edited (e.g., a sticker)
         pass
 ```
 == Telethon
@@ -65,7 +62,7 @@ async def on_new_message(message: Message):
             ]    
         )
     except (ChatAdminRequiredError, MessageIdInvalidError, InlineBotRequiredError):
-        # Bot is not an admin, or the message is uneditable (for example, a sticker)
+        # Bot is not an admin, or the message can't be edited (e.g., a sticker)
         pass
 ```
 == Other libraries

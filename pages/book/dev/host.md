@@ -2,28 +2,27 @@
 
 ## Hosting
 
-You will likely need a server to run your bot with a stable power and internet connection.
+Your bot needs a server with stable power and internet connection. Bot programs are lightweight — a basic hosting plan will work just fine.
 
-For this purpose, you'll need to purchase hosting services. Bot programs typically require minimal resources, so 
-a basic plan from most hosting providers should be sufficient.
+[//]: # (todo: tips on using Docker, systemd?)
 
 ## Free hosting
 
-If you are unable to pay for hosting, you can try these free alternatives:
-- [PythonAnywhere](https://www.pythonanywhere.com/) (note that it may work unstably)
-- [Yandex Cloud Functions](https://cloud.yandex.ru/docs/functions/tutorials/telegram-bot-serverless) (for serverless functions)
+If you can't pay for hosting yet, try these free options:
+- [PythonAnywhere](https://www.pythonanywhere.com/) (may be unstable)
+- [Yandex Cloud Functions](https://cloud.yandex.ru/docs/functions/tutorials/telegram-bot-serverless) (serverless)
 
 ## Long-polling vs webhooks
 
-If you are using Bot API, you may choose to use webhooks instead of long-polling updates.
-This choice will affect how you configure your server.
+When using Bot API, you can choose between long-polling and webhooks.
 
-The default option is long-polling, where your program regularly sends requests to Telegram servers to check for new updates. 
-With webhooks, Telegram servers will send HTTP requests to your program whenever there are updates available.
+With long-polling (the default), your program regularly asks Telegram servers for new updates. With webhooks, Telegram sends HTTP requests to your program when updates arrive.
 
-To set up a webhook, you'll need a web application capable of receiving HTTP requests. 
-For the aiogram library, there are [built-in features](https://docs.aiogram.dev/en/latest/dispatcher/webhook.html) 
-that integrate with aiohttp or other asynchronous web frameworks.
+Webhooks are faster and use fewer resources — your bot responds instantly instead of waiting for the next polling cycle. They're the better choice for production bots, especially if you handle high message volumes or need quick response times.
+
+To set up webhooks, you need a web application that can receive HTTP requests.
+For aiogram, there are [built-in features](https://docs.aiogram.dev/en/latest/dispatcher/webhook.html) that work with aiohttp and other async frameworks.
+Your webhook server also needs an HTTPS/SSL certificate.
 
 ::: tabs key:libraries
 == aiogram

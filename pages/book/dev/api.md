@@ -28,9 +28,9 @@ Some libraries are built on top of Bot API and some libraries are built on top o
 
 On the one hand, you can find many more libraries for Bot API.
 
-On the other hand, Bot API is a bit more limited. 
-By default, it forbids uploading large files or fetching old messages from chat history 
-(you can check out [the comparison table.)](../appendix/api-comparison)
+On the other hand, Bot API is a bit more limited.
+By default, it forbids uploading large files or fetching old messages from chat history
+(you can check out [the comparison table](../appendix/api-comparison)).
 I prefer always using Telegram API, but honestly there is little difference.
 
 You can read more about choosing the right library on the next page!

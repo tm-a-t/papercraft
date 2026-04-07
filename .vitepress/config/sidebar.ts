@@ -6,8 +6,8 @@ const sidebar: DefaultTheme.Sidebar = {
         {
             text: 'Development',
             items: [
-                {text: 'Bots?', link: '/book/dev/basics'},
-                {text: 'Telegram API', link: '/book/dev/api'},
+                {text: 'Bots 101', link: '/book/dev/basics'},
+                {text: 'APIs', link: '/book/dev/api'},
                 {text: 'Libraries', link: '/book/dev/libraries'},
                 {text: 'Bot Usernames', link: '/book/dev/usernames'},
                 {text: 'BotFather', link: '/book/dev/botfather'},
@@ -18,7 +18,7 @@ const sidebar: DefaultTheme.Sidebar = {
         {
             text: 'Messages',
             items: [
-                {text: 'Sending', link: '/book/messages/sending'},
+                {text: 'Messages FAQ', link: '/book/messages/sending'},
                 {text: 'Markup', link: '/book/messages/markup'},
                 {text: 'Commands', link: '/book/messages/commands'},
                 {text: 'Buttons', link: '/book/messages/buttons'},

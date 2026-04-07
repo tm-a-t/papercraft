@@ -1,7 +1,7 @@
 # How IDs of Users and Chats Work
 
 Each user, bot, group, or channel has an invariable ID. 
-You can now enable showing chat IDs in Telegram macOS settings or Telegram Desktop experimental settings.
+You can enable showing chat IDs in Telegram macOS settings or Telegram Desktop experimental settings.
 
 ::: warning
 Don't store user and chat IDs in 32-bit integers: they may be too large. 

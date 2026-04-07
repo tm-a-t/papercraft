@@ -1,12 +1,10 @@
-# Telegram Bots: The Very Basics
+# Telegram Bots 101
 
-As you know, a Telegram bot is a special user account controlled by a server program.
-Bots can have dialogs with users, send messages, reply to commands,
-send pictures, participate in groups and channels, and so on.
+A Telegram bot is a special user account controlled by your server program.
+Bots can chat with users, respond to commands, send media, and participate in groups and channels.
 
-However, bots have some limitations compared to real users. 
-Most of these limitations are to protect users' privacy:
-for instance, bots can't join groups on their own and must be added by users.
+Bots have some limitations compared to real users—mostly for privacy protection.
+For instance, bots can't join groups on their own and must be invited by users.
 
 <!--
 ::: info
@@ -20,7 +18,7 @@ Although technically bots are a kind of user account, in this book, I use the te
 Here is a short answer:
 
 1. Register a bot.
-2. Choose a library for your favorite programming language.
+2. Pick a library for your favorite programming language.
 3. Use the library docs and this book to write the code.
 
 While you can run the bot program on your computer during development, 

@@ -3,24 +3,22 @@
 When you register a bot, you should choose its username carefully:
 it will be difficult to change afterwards.
 
-As I usually try many different usernames to find the shortest and prettiest one available,
-I've come up with a hack to check many variants quickly.
-Before registering the bot, I open my own account settings and type the username I want to try — but don't save the changes. 
-If the username is taken, a red message will appear. 
-This is how I check many usernames but not create a bot until I made my choice.
+I usually try many usernames to find the shortest and prettiest one available.
+Here's a hack to check variants quickly: open your account settings and type the username you want to try—but don't save the changes.
+If the username is taken, a red message will appear.
+This way you can check many usernames without creating a bot until you've made your choice.
 
 ## Username form
 
-Bot usernames are no different from usernames of users, groups and channels.
-The only constraint is that normally a username of a bot must end with "bot".
-A username can look like this: `@ExampleBot`
+Bot usernames follow the same rules as usernames for users, groups and channels.
+The only constraint is that a bot username must end with "bot", like `@ExampleBot`.
 
-You can buy short usernames for bots that don't follow this constraint on [Fragment.](https://fragment.com/)
+You can buy short usernames that don't follow this constraint on [Fragment.](https://fragment.com/)
 
-::: info
+::: info NOTE
 A free username must contain at least 5 characters including "bot".
-However, you can't claim such a short username: all usernames of 5 (and maybe 6) characters are taken.
-Unfortunately, most of these registered bots are inactive, as developers rarely maintain bots for a long time.
+However, all 5-character usernames (and possibly 6-character ones) are already taken.
+Most of these registered bots are inactive—developers rarely maintain bots for a long time.
 :::
 
 ## Claiming a username through support

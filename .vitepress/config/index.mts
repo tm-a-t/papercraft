@@ -18,11 +18,11 @@ export default defineConfig({
     locales: {
         root: {
             label: 'English',
-            lang: 'en',
+            lang: 'en-US',
         },
         ru: {
             label: 'Русский',
-            lang: 'ru',
+            lang: 'ru-RU',
             ...ruConfig,
         },
     },

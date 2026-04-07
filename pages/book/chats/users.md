@@ -2,31 +2,30 @@
 
 Bots may work in PM, in groups, and in channels — depending on their purpose.
 These kinds of chats work by different rules,
-so we will consider them all in the "Chats" chapter.
+so we'll consider them all in the "Chats" chapter.
 
 However, your bot will always interact with users in one way or another. 
 On this page, we’ll discuss some general advice about managing users.
 
 ## User profile
 
-Users may have no username or no last name — you should keep this in mind while storing their profile info. 
+Users may have no username or no last name — keep this in mind while storing their profile info. 
 In groups, this means the bot can't always mention a user by username 
 (see [mentions by ID](../messages/markup#mention)).
 
 In addition, first name, username, and other profile data except for user ID can change over time,
 so ID is probably the only reliable way to identify a user.
-User IDs will be explained in more detail [later in the book](../chats/id).
+User IDs will be explained in more detail [later in the book.](../chats/id)
 
 ::: tabs key:libraries
 == aiogram
-A last name isn't always set, so `user.full_name` is a shortcut for a single string with the first name 
-and the last name when it exists.
+A last name isn't always set, so `user.full_name` is a shortcut that combines the first name and last name (when it exists) into a single string.
 
 ```python
 user.full_name
 ```
 == Telethon & Folds
-For example, a correct way to get a user's display name would be:
+A correct way to get a user's display name would be:
 ```python
 if user.last_name is None:
     full_name = user.first_name
@@ -67,5 +66,5 @@ The bot _sees_ a user when, for example, it receives a message from the user or 
 
 "Seeing" users is not an official term, but rather a conceptual explanation of how Telegram's API works.
 In technical terms, API requests must include not only the [user ID](./id) but also a corresponding
-access hash. The API provides these access hashes along with other user information in updates. Both Bot API
-and well-designed Telegram API libraries handle access hash caching automatically, so you typically don't need to manage them directly.
+access hash. The API provides these access hashes along with other user information in updates. 
+Both Bot API and well-designed Telegram API libraries handle access hash caching automatically, so you typically don't need to manage them directly.

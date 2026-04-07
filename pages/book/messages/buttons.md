@@ -1,7 +1,7 @@
 # Buttons in Telegram Bots 
 
-There are two types of buttons that bots can show when sending messages: 
-_inline buttons_ appear below the sent message and _keyboard buttons_ are suggestions that users see 
+There are two types of buttons that bots can show when sending messages:
+_inline buttons_ appear below the sent message, and _keyboard buttons_ are suggestions that users see
 near the message input.
 
 Both kinds of buttons may be shown in multiple rows of multiple buttons. 
@@ -17,10 +17,10 @@ A callback button is simply a button that sends [an update](../dev/updates) to t
 The bot can handle it in any way.
 
 When a user clicks a callback button, the bot can show a notification or an alert (see the video below).
-To provide visual feedback to the user, the bot should typically edit the message or react in some other visible way.
+To provide visual feedback, the bot should typically edit the message or react in some other visible way.
 Until the bot reacts, the button will display a "loading" animation.
 
-When receiving updates, the program can identify which button was pressed using a special parameter that is specified 
+When receiving updates, your program can identify which button was pressed using a special parameter that you specify
 when creating the button.
 
 <video controls loop muted preload="auto">
@@ -31,7 +31,7 @@ when creating the button.
 
 A URL button acts like a link.
 
-In Bot API, a URL button can be converted to a [user mention](./markup#mention) button by specifying `tg://user?ID=123456789` 
+In Bot API, a URL button can be converted to a [user mention](./markup#mention) button by specifying `tg://user?ID=123456789`
 as the URL. In Telegram API, user mention buttons are implemented differently.
 
 ![Link below the message](/pictures/ru/url-button.png)
@@ -51,7 +51,7 @@ You can also pre-fill a text query that will appear next to the bot's username (
 A request peer button allows the user to share information about one of their chats. 
 When clicked, it displays a chat selection dialog.
 
-You can configure this button flexibly: for example, the chat selection may include only channels with usernames or groups 
+You can configure this button flexibly: for example, the chat selection may include only channels with usernames or groups
 where the user is an admin.
 
 ### Other inline buttons
@@ -63,8 +63,8 @@ There are more, rather uncommon, buttons:
 - Web view button. Opens [bot web interface](../interaction/mini-apps).
 - Login URL button. Used for authorization on sites;
   for example, official [@discussbot](https://t.me/discussbot) utilized it before Telegram introduced native comments.
-  The button works similarly to [Telegram Login Widget](../interaction/login-widget) but doesn't require to enter 
-  the phone number and confirm the authorization.
+  The button works similarly to [Telegram Login Widget](../interaction/login-widget) but doesn't require entering
+  the phone number and confirming the authorization.
 
 ## Keyboard buttons
 
@@ -86,16 +86,16 @@ Apart from sending the text, a keyboard button may do one of the following:
 
 Of course, these actions require confirmation from the user.
 
-There is a "resize keyboard" option which determines whether the button keyboard should have flexible height.
-For some reason it is off by default, so the buttons look stretched:
+There's a "resize keyboard" option which determines whether the button keyboard should have flexible height.
+For some reason it's off by default, so the buttons look stretched:
 
 ![](/pictures/ru/wide-buttons.png)
 
 Keyboard buttons can be shown only with sending a message. 
 A bot can send keyboard buttons that will hide (but not disappear) after use.
 
-In groups, keyboard buttons are visible to all members by default. Alternatively, a bot can show 
-buttons only to mentioned users, that are:
+In groups, keyboard buttons are visible to all members by default. Alternatively, a bot can show
+buttons only to mentioned users, which are:
 
 - Users whose usernames are included in the message text
 - The sender of the message to which the bot is replying

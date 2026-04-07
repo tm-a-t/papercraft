@@ -1,13 +1,13 @@
 # Developing Telegram Bots for Groups
 
-Group bots are powerful. 
+Group bots are powerful.
 They provide features in groups — the space where people talk to each other.
-There are a lot of details to consider though.
+There are a lot of details to consider, though.
 
 ## Joining groups
 
-Users can add bots to groups, but bots cannot join groups on their own. 
-The bot's developer can forbid adding to groups [using BotFather settings.](../dev/botfather)
+Users can add bots to groups, but bots cannot join groups on their own.
+The bot's developer can forbid adding to groups [using BotFather settings](../dev/botfather).
 
 In public groups (those with usernames), bots can only be added by administrators. 
 Group admins can grant the bot permissions for deleting group members or performing other administrative actions.
@@ -79,7 +79,7 @@ async def handle_join(event: ChatMemberUpdated):
 ```python
 @bot.on(events.ChatAction(func=event.group and event.user_added and not event.user.is_self))
 async def greet(event: events.ChatAction.Event):
-    answer = await message.respond(f'Welcome to the group, {event.user.first_name}')
+    answer = await event.respond(f'Welcome to the group, {event.user.first_name}')
     await asyncio.sleep(30)
     await answer.delete()
 ```
@@ -92,20 +92,20 @@ Note that if your bot needs to personally contact new group users, join requests
 
 ## Privacy mode and visible messages { #privacy }
 
-Many bots are designed to react only [to commands.](../messages/commands.md)
-For this reason, Telegram by default protects group privacy and doesn't notify bots about non-command messages.
+Many bots are designed to react only [to commands](../messages/commands.md).
+For this reason, Telegram protects group privacy by default and doesn't notify bots about non-command messages.
 
 If you want your bot to see all chat messages, you need to disable the privacy mode.
 
-Privacy mode is a BotFather setting and it is activated by default. 
-In this mode, the bot only gets updates about commands and other group messages that may address the bot. 
+Privacy mode is a BotFather setting that's activated by default.
+In this mode, the bot only gets updates about commands and other group messages that may address the bot.
 This includes:
 - Commands
 - Replies on bot messages, replies to replies and so on
 - Messages [mentioning](../messages/markup#mention) the bot
 - System messages
 
-When the privacy mode is off, the bot can see all messages in groups except for ones from other bots.
+When privacy mode is off, the bot can see all messages in groups except ones from other bots.
 
 Also, if a bot is a group admin, it sees all messages regardless of the privacy mode setting.
 
@@ -150,7 +150,7 @@ Your program should correctly handle messages sent by other entities:
 
 ### Examples
 
-Determining chat type (e.g. for storing in a database:)
+Determining chat type (e.g., for storing in a database):
 
 ::: tabs key:libraries
 == aiogram

@@ -1,6 +1,7 @@
 ---
 title: Papercraft Book
 titleTemplate: false
+description: An online book on developing Telegram bots. Focuses on building user-friendly, feature-rich, and stable bots.
 ---
 
 <script setup>
@@ -9,7 +10,7 @@ import { VPTeamMembers } from 'vitepress/theme'
 const members = [
   {
     avatar: 'https://www.github.com/tm-a-t.png',
-    name: 'Artyom Ivanov',
+    name: 'Art Ivanov',
     title: 'Author',
     links: [
       { icon: 'github', link: 'https://github.com/tm-a-t' },
@@ -39,21 +40,21 @@ const members = [
 ---
 
 Welcome to the Papercraft Book!
-This is your guide to developing user-friendly, feature-rich, and stable bots for Telegram messenger.
+This is your guide to developing user-friendly, feature-rich, and stable bots for Telegram.
 The book is independent of any specific programming language or library —
-I will gladly accept contributions from readers who add examples for different libraries.
+contributions with examples for different libraries are welcome.
 
-We will cover all major features of the Telegram bot platform,
-starting from common features like `/commands` and progressing to more specialized ones,
-such as managing join requests and subtopics in groups.
-Additionally, we will explore corner cases and development tips.
+We cover all major features of the Telegram bot platform,
+starting from common features like `/commands` and progressing to specialized ones,
+such as managing join requests and forum topics.
+You'll also find corner cases and development tips throughout.
 
-Another focus of this book is user experience.
-The book describes how to make bots easy to use and which Telegram features are more suitable in different cases.
+Another focus is user experience.
+You'll learn how to make bots easy to use and which Telegram features work best in different scenarios.
 
-I believe the Papercraft Book to be the most comprehensive and practical guide on developing bots for Telegram.
+This aims to be the most comprehensive and practical guide on developing bots for Telegram.
 
-## Table of contents
+## What’s inside?
 
 The book has four chapters, each divided into multiple pages:
 
@@ -69,14 +70,7 @@ The book has four chapters, each divided into multiple pages:
 
 Feel free to use navigation on the left or just hit the "Next page" button below.
 
-## Book updated
-
-This site was previously called Telegram Bot Handbook and was more like a reference of Telegram features.
-Now, I've rewritten it so it became — well, a book.
-
-The new platform is called Papercraft and also contains the docs for TGPy userbot and my new Folds framework.
-
-## About
+## Who made this?
 
 <VPTeamMembers size="small" :members="members" />
 

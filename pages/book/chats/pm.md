@@ -2,7 +2,7 @@
 
 You want your bot to answer users in personal dialogs.
 
-Even if your bot is designed to work in groups or channels, it is a good idea to implement a greeting message in PM.
+Even if your bot is designed to work in groups or channels, it's a good idea to implement a greeting message in PM.
 This way, people who get interested in the bot and open its profile will receive a response rather than encountering no interaction.
 You can include an "Add to your group" link using [deep links for groups.](../interaction/links#deep-links-for-groups)
 
@@ -55,9 +55,9 @@ Deep links are explained [in the "Interaction" chapter.](../interaction/links)
 Just like any other chat, the dialog with the bot appears in the user's recent chat list.
 
 ::: warning
-The `/start` command does not necessarily mean this is the user's first interaction with the bot. 
-It's important to ensure your bot handles situations where a user sends `/start` 
-after they have already initiated a dialog previously.
+The `/start` command doesn't necessarily mean this is the user's first interaction with the bot.
+Make sure your bot handles situations where a user sends `/start`
+after they've already initiated a dialog previously.
 :::
 
 ::: tip Extra input
@@ -76,16 +76,16 @@ When this occurs, the Telegram app shows the user an explanation of why the bot 
 
 ## Stopping the dialog { #block }
 
-A user can stop the dialog by blocking the bot. The bot will not be able to send personal messages to the user
+A user can stop the dialog by blocking the bot. The bot won't be able to send personal messages to the user
 until they unblock it.
 
-## How to check if the bot may text to a user
+## How to check if the bot may text a user
 
 If you need to determine whether a user has blocked your bot, you can use the following method.
 
-Attempt to show a "Bot is typing..." status in the dialog. 
-If Telegram servers return an error, it means the bot cannot
-send messages to the user — so either the user has blocked the bot or the dialog has never started.
+Attempt to show a "Bot is typing..." status in the dialog.
+If Telegram servers return an error, it means the bot can't
+send messages to the user—so either the user has blocked the bot or the dialog has never started.
 
 This action has minimal rate limiting, so you can do it frequently.
 
