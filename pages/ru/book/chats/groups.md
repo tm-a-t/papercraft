@@ -7,7 +7,7 @@
 ## Вступление в группы
 
 Пользователи могут добавлять ботов в группы, но боты не могут вступать в группы самостоятельно.
-Разработчик бота может запретить добавление в группы [в настройках BotFather.](../dev/botfather)
+Разработчик бота может запретить добавление в группы [через настройки BotFather](../dev/botfather).
 
 В публичных группах — группах с юзернеймами — ботов могут добавлять только администраторы.
 Администраторы могут предоставить боту права на удаление участников 
@@ -79,7 +79,7 @@ async def handle_join(event: ChatMemberUpdated):
 ```python
 @bot.on(events.ChatAction(func=event.group and event.user_added and not event.user.is_self))
 async def greet(event: events.ChatAction.Event):
-    answer = await message.respond(f'Добро пожаловать в группу, {event.user.first_name}')
+    answer = await event.respond(f'Добро пожаловать в группу, {event.user.first_name}')
     await asyncio.sleep(30)
     await answer.delete()
 ```
@@ -92,12 +92,12 @@ async def greet(event: events.ChatAction.Event):
 
 ## Privacy mode и видимые сообщения { #privacy }
 
-Многие боты разработаны так, чтобы реагировать только [на команды.](../messages/commands.md)
-По этой причине Telegram по умолчанию защищает приватность группы и не уведомляет ботов о сообщениях, не являющихся командами.
+Многие боты созданы для того, чтобы реагировать только [на команды](../messages/commands.md).
+По этой причине Telegram по умолчанию защищает приватность групп и не уведомляет ботов о сообщениях, которые не являются командами.
 
 Если вы хотите, чтобы ваш бот видел все сообщения в чате, вам нужно отключить режим приватности.
 
-Privacy mode — это настройка в BotFather, которая активирована по умолчанию.
+Privacy mode — это настройка BotFather, включённая по умолчанию.
 В этом режиме бот получает обновления только о командах и других сообщениях группы, которые могут быть адресованы боту.
 Это включает:
 - Команды
@@ -105,7 +105,7 @@ Privacy mode — это настройка в BotFather, которая акти
 - Сообщения с [упоминанием](../messages/markup#mention) бота
 - Системные сообщения
 
-Когда режим приватности отключен, бот может видеть все сообщения в группах, кроме сообщений от других ботов.
+Когда privacy mode выключен, бот видит все сообщения в группах, кроме сообщений от других ботов.
 
 Также, если бот является администратором группы, он видит все сообщения независимо от настройки режима приватности.
 
@@ -213,7 +213,7 @@ name = message.from_user.first_name if message.from_user else message.sender_cha
 ```
 == Folds & Telethon
 ```python
-name = sender.first_name or sender.title  # один из них не None
+name = sender.first_name or sender.title  # одно из этих полей не None
 ```
 == Other libraries
 <HelpNeeded/>

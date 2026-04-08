@@ -7,8 +7,8 @@ const sidebar: DefaultTheme.Sidebar = {
             text: 'Разработка',
             items:
                 [
-                    {text: 'Введение', link: '/ru/book/dev/basics'},
-                    {text: 'Telegram API', link: '/ru/book/dev/api'},
+                    {text: 'О ботах', link: '/ru/book/dev/basics'},
+                    {text: 'API', link: '/ru/book/dev/api'},
                     {text: 'Библиотеки', link: '/ru/book/dev/libraries'},
                     {text: 'Юзернеймы', link: '/ru/book/dev/usernames'},
                     {text: 'BotFather', link: '/ru/book/dev/botfather'},
@@ -19,7 +19,7 @@ const sidebar: DefaultTheme.Sidebar = {
         {
             text: 'Сообщения', items:
                 [
-                    {text: 'Отправка', link: '/ru/book/messages/sending'},
+                    {text: 'FAQ по сообщениям', link: '/ru/book/messages/sending'},
                     {text: 'Разметка', link: '/ru/book/messages/markup'},
                     {text: 'Команды', link: '/ru/book/messages/commands'},
                     {text: 'Кнопки', link: '/ru/book/messages/buttons'},
@@ -29,7 +29,8 @@ const sidebar: DefaultTheme.Sidebar = {
         {
             text: 'Чаты', items:
                 [
-                    {text: 'Пользователи', link: '/ru/book/chats/pm'},
+                    {text: 'Пользователи', link: '/ru/book/chats/users'},
+                    {text: 'Личные сообщения', link: '/ru/book/chats/pm'},
                     {text: 'Группы', link: '/ru/book/chats/groups'},
                     {text: 'Каналы', link: '/ru/book/chats/channels'},
                     {text: 'Форумы', link: '/ru/book/chats/forums'},

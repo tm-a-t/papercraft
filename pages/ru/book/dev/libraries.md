@@ -1,7 +1,7 @@
 # Как выбрать правильную библиотеку для Телеграм-бота
 
 Ваш выбор будет зависеть от того, решите ли вы использовать Bot API или Telegram API.
-Я рассмотрел различия [на предыдущей странице;](./api) обязательно прочитайте её сначала.
+Я разобрал различия [на предыдущей странице,](./api) так что обязательно прочитайте её сначала.
 
 ## Библиотеки для Bot API
 
@@ -10,23 +10,22 @@
 Для Джаваскрипта часто используют [Telegraf](https://github.com/telegraf/telegraf)
 или [GrammY](https://github.com/grammyjs/grammY).
 
-Для многих других языков тоже есть библиотеки. На официальном сайте есть
-[списочек](https://core.telegram.org/bots/samples), который даже вроде поддерживается в актуальном состоянии.
+Библиотеки под Bot API есть и для многих других языков.
+На официальном сайте есть [список](https://core.telegram.org/bots/samples), который, похоже, поддерживается в актуальном состоянии.
 
 ## Библиотеки для Telegram API
 
-Самая популярная библиотека для Питона, построенная на Telegram API, — это [Telethon.](https://github.com/LonamiWebs/Telethon)
-Поскольку Telethon не фокусируется на разработке ботов,
-я создал на его основе фреймворк [Folds,](/folds/) который позволяет писать простой и масштабируемый код для ботов.
+Самая популярная библиотека для Питона, построенная на Telegram API, — это
+[Telethon.](https://github.com/LonamiWebs/Telethon) _Поскольку Telethon не сосредоточен именно на разработке ботов,
+я создал на его основе фреймворк [Folds](/folds/), который помогает писать простой и масштабируемый код для ботов._
 
-Возможные альтернативы: [Pyrogram](https://github.com/pyrogram/pyrogram) для Питона, 
-[mtcute](https://github.com/mtcute/mtcute) и [GramJS](https://github.com/gram-js/gramjs) для Джаваскрипта.
+Для Джаваскрипта можно посмотреть на [mtcute](https://github.com/mtcute/mtcute) и [GramJS.](https://github.com/gram-js/gramjs)
 
 [//]: # (todo other langs?)
 
 ## Начало работы
 
-Вот простой пример бота, который повторяет за пользователем в личных сообщениях:
+Вот простой пример бота, который повторяет сообщения пользователя в личке:
 
 ::::: tabs key:libraries
 == aiogram
@@ -38,9 +37,11 @@ from aiogram.types import Message
 bot = Bot(token='YOUR_BOT_TOKEN_HERE')
 dp = Dispatcher()
 
+
 @dp.message(F.chat.type == ChatType.PRIVATE)
 async def echo(message: Message):
     await message.answer(message.text)
+
 
 if __name__ == '__main__':
     asyncio.run(dp.start_polling(bot))
@@ -51,9 +52,11 @@ from folds import Bot, Message
 
 bot = Bot(bot_token='YOUR_BOT_TOKEN_HERE', api_id=123456, api_hash='YOUR_API_HASH')
 
+
 @bot.private_message()
 async def echo(text: str):
     return text
+
 
 if __name__ == '__main__':
     bot.run()
@@ -66,9 +69,11 @@ from telethon.tl.custom import Message
 client = TelegramClient('mybot', api_id=123456, api_hash='YOUR_API_HASH')
 client.start(bot_token='YOUR_BOT_TOKEN_HERE')
 
+
 @client.on(events.NewMessage(func=lambda e: e.is_private, incoming=True))
 async def echo(event: Message):
     await event.respond(event.raw_text)
+
 
 if __name__ == '__main__':
     client.run_until_disconnected()

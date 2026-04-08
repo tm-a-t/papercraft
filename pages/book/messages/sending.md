@@ -141,7 +141,8 @@ Unlike users' edited messages, when a bot edits a message, the message does not 
 While editing a message, you can edit its media as well as the text.
 A picture, video, or file can be replaced with another picture, video, or file (music counts as files too.)
 
-Good news: you can now add a media document to a text message that was originally sent without media.
+You can add a media document to a text message that was originally sent without media (but only one, so no albums). 
+You cannot remove media from a message though.
 
 ## 3. Forwarding messages
 
