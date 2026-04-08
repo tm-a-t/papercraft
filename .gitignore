@@ -6,3 +6,7 @@ node_modules/
 .vitepress/cache/
 .vitepress/dist/
 *.mts.timestamp-*
+
+# Generated from upstream docs at build time
+pages/tgpy/
+pages/public/assets/tgpy/

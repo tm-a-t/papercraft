@@ -1,8 +1,23 @@
+import {existsSync} from 'node:fs'
+import {dirname, resolve} from 'node:path'
+import {fileURLToPath} from 'node:url'
 import {defineConfig} from 'vitepress'
 import head from './head'
 import ruConfig from './ru'
 import sidebar from './sidebar'
 import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
+
+const configDir = dirname(fileURLToPath(import.meta.url))
+const hasTgpyDocs = existsSync(resolve(configDir, '../../pages/tgpy/index.md'))
+const nav = [
+    {text: 'Book', link: '/book/', activeMatch: '/book/'},
+    {text: 'Folds', link: '/folds/', activeMatch: '/folds/'},
+    ...(hasTgpyDocs ? [{
+        text: 'TGPy',
+        link: '/tgpy/',
+        activeMatch: '/tgpy/',
+    }] : []),
+]
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,6 +26,7 @@ export default defineConfig({
 
     appearance: 'dark',
     cleanUrls: true,
+    ignoreDeadLinks: hasTgpyDocs ? [] : [/^\/tgpy(?:\/.*)?$/],
     description: 'Tools and resources for Telegram developers. Learn to develop user-friendly, featureful, and stable Telegram bots.',
 
     head: head,
@@ -71,16 +87,7 @@ export default defineConfig({
                 forceLocale: true,
             },
         },
-        nav: [
-            {text: 'Book', link: '/book/', activeMatch: '/book/'},
-            {text: 'Folds', link: '/folds/', activeMatch: '/folds/'},
-            {
-                text: 'TGPy',
-                link: '/tgpy/',
-                activeMatch: '/tgpy/',
-            },
-            // {text: 'Share', link: 'https://t.me/share?url=papercraft.tmat.me/'},
-        ],
+        nav: nav,
         outline: 'deep',
         search: {
             provider: 'algolia',
