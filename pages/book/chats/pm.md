@@ -4,7 +4,7 @@ You want your bot to answer users in personal dialogs.
 
 Even if your bot is designed to work in groups or channels, it's a good idea to implement a greeting message in PM.
 This way, people who get interested in the bot and open its profile will receive a response rather than encountering no interaction.
-You can include an "Add to your group" link using [deep links for groups.](../interaction/links#deep-links-for-groups)
+You can include an “Add to your group” link using [deep links for groups.](../interaction/links#deep-links-for-groups)
 
 
 ## Starting a personal dialog
@@ -18,7 +18,7 @@ Note that bots cannot send messages to other bots.
 Here is how a personal dialog usually starts:
 
 A user opens the bot with a link or by searching in the app. 
-They then see [the intro text](../dev/botfather#customization) and the "Start" button.
+They then see [the intro text](../dev/botfather#customization) and the “Start” button.
 
 When the user clicks the button, the `/start` command is sent,
 which signals that the private chat has begun.
@@ -45,7 +45,7 @@ async def handle_start(event: Message):
 ```
 
 The regexp in this example accepts `/start` with some text after it in case a deep link is used.
-Deep links are explained [in the "Interaction" chapter.](../interaction/links)
+Deep links are explained [in the “Interaction” chapter.](../interaction/links)
 == Other libraries
 <HelpNeeded/>
 :::
@@ -83,7 +83,7 @@ until they unblock it.
 
 If you need to determine whether a user has blocked your bot, you can use the following method.
 
-Attempt to show a "Bot is typing..." status in the dialog.
+Attempt to show a “Bot is typing...” status in the dialog.
 If Telegram servers return an error, it means the bot can't
 send messages to the user—so either the user has blocked the bot or the dialog has never started.
 

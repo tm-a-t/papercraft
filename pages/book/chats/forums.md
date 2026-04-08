@@ -18,7 +18,7 @@ A forum is a group with a special UI.
 You can even open a forum in regular chat view using the forum menu in official apps.
 
 How topics work technically:
-- When a topic is created, a system message "Topic created" appears
+- When a topic is created, a system message “Topic created” appears
 - All replies to this message fall into the topic
 - The topic ID equals the system message ID
 - The General topic is where all other messages go, and its ID equals 1

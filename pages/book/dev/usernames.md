@@ -10,13 +10,13 @@ This way you can check many usernames without creating a bot until you've made y
 
 ## Username form
 
-Bot usernames follow the same rules as usernames for users, groups and channels.
-The only constraint is that a bot username must end with "bot", like `@ExampleBot`.
+Bot usernames follow the same rules as usernames for users, groups, and channels.
+The only constraint is that a bot username must end with “bot”, like `@ExampleBot`.
 
 You can buy short usernames that don't follow this constraint on [Fragment.](https://fragment.com/)
 
 ::: info NOTE
-A free username must contain at least 5 characters including "bot".
+A free username must contain at least 5 characters including “bot”.
 However, all 5-character usernames (and possibly 6-character ones) are already taken.
 Most of these registered bots are inactive—developers rarely maintain bots for a long time.
 :::

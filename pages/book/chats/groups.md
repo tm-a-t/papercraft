@@ -1,7 +1,7 @@
 # Developing Telegram Bots for Groups
 
 Group bots are powerful.
-They provide features in groups — the space where people talk to each other.
+They provide features in groups—the space where people talk to each other.
 There are a lot of details to consider, though.
 
 ## Joining groups
@@ -87,8 +87,7 @@ async def greet(event: events.ChatAction.Event):
 <HelpNeeded/>
 :::
 
-Note that if your bot needs to personally contact new group users, join requests may be useful to get PM permission
-— we will explore [join requests](../interaction/join-requests) later in the book.
+Note that if your bot needs to personally contact new group users, join requests may be useful to get PM permission—we will explore [join requests](../interaction/join-requests) later in the book.
 
 ## Privacy mode and visible messages { #privacy }
 
@@ -124,7 +123,7 @@ Mobile and desktop Telegram apps indicate whether the privacy mode is on in grou
 If a bot with privacy mode enabled asks a question in a group, the user's response must be a reply 
 for the bot to see it.
 
-To make replying easier, a bot can send a "force reply" message which automatically initiates 
+To make replying easier, a bot can send a “force reply” message which automatically initiates 
 the reply interface for the user.
 
 However, I don't recommend using force reply. In my opinion, automatic replies only confuse users.

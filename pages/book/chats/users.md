@@ -1,15 +1,15 @@
 # How Your Telegram Bot Should Manage User Info
 
-Bots may work in PM, in groups, and in channels — depending on their purpose.
+Bots may work in PM, in groups, and in channels—depending on their purpose.
 These kinds of chats work by different rules,
-so we'll consider them all in the "Chats" chapter.
+so we'll consider them all in the “Chats” chapter.
 
 However, your bot will always interact with users in one way or another. 
 On this page, we’ll discuss some general advice about managing users.
 
 ## User profile
 
-Users may have no username or no last name — keep this in mind while storing their profile info. 
+Users may have no username or no last name—keep this in mind while storing their profile info. 
 In groups, this means the bot can't always mention a user by username 
 (see [mentions by ID](../messages/markup#mention)).
 
@@ -64,7 +64,7 @@ user.lang_code  # Sometimes is None
 A bot must have _seen_ a user to perform actions related to them (such as mentioning them). 
 The bot _sees_ a user when, for example, it receives a message from the user or retrieves their information by username.
 
-"Seeing" users is not an official term, but rather a conceptual explanation of how Telegram's API works.
+“Seeing” users is not an official term, but rather a conceptual explanation of how Telegram's API works.
 In technical terms, API requests must include not only the [user ID](./id) but also a corresponding
 access hash. The API provides these access hashes along with other user information in updates. 
 Both Bot API and well-designed Telegram API libraries handle access hash caching automatically, so you typically don't need to manage them directly.

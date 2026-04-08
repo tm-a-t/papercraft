@@ -9,7 +9,7 @@ A long time ago, Telegram developers introduced two types of groups: regular one
 Supergroups had public links, larger limit for the number of members, and other features designed for big communities.
 
 Apparently, this was later considered rather confusing. Telegram app interface no longer mentions 
-"supergroups" and all groups look the same there, although on the technical level two types remain distinct.
+“supergroups” and all groups look the same there, although on the technical level two types remain distinct.
 In fact, most of the groups you participate in are probably supergroups.
 
 The main trait of supergroups is that API considers them a special case of channels.
@@ -53,7 +53,7 @@ if message.is_private:
 <HelpNeeded/>
 :::
 
-I use the term "groups" both for regular groups and supergroups in this book. 
+I use the term “groups” both for regular groups and supergroups in this book. 
 For more info about group bots, see [the page about groups.](../chats/groups)
 
 

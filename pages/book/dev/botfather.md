@@ -1,6 +1,6 @@
 # How to Set Up a Telegram Bot with BotFather
 
-You register and configure bots via [@BotFather](https://t.me/BotFather) — which itself is an official Telegram bot.
+You register and configure bots via [@BotFather](https://t.me/BotFather)—which itself is an official Telegram bot.
 
 ## Registration
 
@@ -15,15 +15,15 @@ The token is your key to control the bot.
 ## Settings
 
 In BotFather, it's easy to edit bot settings using the `/mybots` command.
-This is how you customize the bot profile and configure special features — like
+This is how you customize the bot profile and configure special features—like
 forbidding being added to groups.
 
 You may register up to 20 bots.
 
 ## Customization { #customization }
 
-You can open your bot's profile and click "edit" to change its avatar, name, intro, and "about" text.
-This feature is relatively new — previously, BotFather commands were the only way to change a bot's profile settings.
+You can open your bot's profile and click “edit” to change its avatar, name, intro, and “about” text.
+This feature is relatively new—previously, BotFather commands were the only way to change a bot's profile settings.
 
 Intro (aka description) is the text users see before they start a dialog with the bot.
 It can contain a picture or even a GIF.
@@ -31,7 +31,7 @@ It can contain a picture or even a GIF.
 ::: tip UX TIP
 Spend some time filling out the bot profile: it will be helpful and convenient for users.
 Add a profile picture to make the bot more distinguishable in the chat list. 
-It may be a good idea to include your contacts in "About".
+It may be a good idea to include your contacts in “About”.
 :::
 
 ::: info

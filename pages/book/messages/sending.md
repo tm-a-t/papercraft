@@ -134,7 +134,7 @@ await my_message.edit('Loaded!')
 <HelpNeeded/>
 :::
 
-Unlike users' edited messages, when a bot edits a message, the message does not get the "Edited" label.
+Unlike users' edited messages, when a bot edits a message, the message does not get the “Edited” label.
 
 ### How to edit media? { #edit-media }
 
@@ -171,11 +171,11 @@ await client.send_message(chat_id, message)
 
 ### What's up with forwarding music?
 
-When a user or a bot forwards a music file, it doesn't receive the "Forwarded" label. Strange Telegram rules ¯\_(ツ)_/¯
+When a user or a bot forwards a music file, it doesn't receive the “Forwarded” label. Strange Telegram rules ¯\_(ツ)_/¯
 
 ### Why can’t I forward a message?
 
-It is not allowed to forward messages from groups and channels with the "protected content" setting turned on.
+It is not allowed to forward messages from groups and channels with the “protected content” setting turned on.
 
 ## 4. Interacting with messages
 

@@ -1,7 +1,7 @@
 # Telegram API VS Bot API. What Is the Difference?
 
 Developing a bot means creating a program that connects to Telegram servers, receives information (such as
-incoming messages) and sends instructions (like "reply to that message").
+incoming messages) and sends instructions (like “reply to that message”).
 Let's dive into how it works.
 
 **MTProto API** (also known as **Telegram API**) is the API through which your mobile or desktop Telegram app connects

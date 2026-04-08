@@ -1,7 +1,7 @@
 # Developing Telegram Bots for Channels
 
 Bots can participate in channels only as admins.
-Admin rights allow bots to send and edit posts, rename channels, and perform other administrative actions — making them particularly helpful for channel authors.
+Admin rights allow bots to send and edit posts, rename channels, and perform other administrative actions—making them particularly helpful for channel authors.
 
 ## Admin rights
 
@@ -12,7 +12,7 @@ Just like in groups, channel admins can select specific admin rights for bots. T
 One common use case is adding buttons to channel posts: likes, links, and other interactive elements.
 This was especially popular before message reactions were introduced.
 
-This works by using the "Edit messages of others" admin right, which allows bots to add buttons when editing messages.
+This works by using the “Edit messages of others” admin right, which allows bots to add buttons when editing messages.
 Here's an example:
 
 ![Post with buttons](/pictures/ru/channel-buttons.png)

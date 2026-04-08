@@ -13,7 +13,7 @@ your bot may use different providers depending on users.
 You can try the payment interface in [the Demo Store channel](https://t.me/TestStore).
 
 A bot can send invoice messages to any chats, even from [inline-mode](../interaction/inline). 
-The first [button](../messages/buttons#inline) under the message must be a "Buy" button.
+The first [button](../messages/buttons#inline) under the message must be a “Buy” button.
 
 ## Related links
 

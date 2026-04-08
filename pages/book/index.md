@@ -41,7 +41,7 @@ const members = [
 
 Welcome to the Papercraft Book!
 This is your guide to developing user-friendly, feature-rich, and stable bots for Telegram.
-The book is independent of any specific programming language or library —
+The book is independent of any specific programming language or library—
 contributions with examples for different libraries are welcome.
 
 We cover all major features of the Telegram bot platform,
@@ -68,7 +68,7 @@ The book has four chapters, each divided into multiple pages:
 4. [**Interaction.**](interaction/join-requests) 
    Non-dialog Telegram features: join requests, deep links, payments, mini apps, etc.
 
-Feel free to use navigation on the left or just hit the "Next page" button below.
+Feel free to use navigation on the left or just hit the “Next page” button below.
 
 ## Who made this?
 
@@ -76,4 +76,4 @@ Feel free to use navigation on the left or just hit the "Next page" button below
 
 Some pictures and videos are taken from the Telegram site. Most screenshots are made in Telegram web apps.
 
-The sources are open on GitHub — corrections and improvements are welcome!
+The sources are open on GitHub—corrections and improvements are welcome!

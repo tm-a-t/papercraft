@@ -18,7 +18,7 @@ The bot can handle it in any way.
 
 When a user clicks a callback button, the bot can show a notification or an alert (see the video below).
 To provide visual feedback, the bot should typically edit the message or react in some other visible way.
-Until the bot reacts, the button will display a "loading" animation.
+Until the bot reacts, the button will display a “loading” animation.
 
 When receiving updates, your program can identify which button was pressed using a special parameter that you specify
 when creating the button.
@@ -86,7 +86,7 @@ Apart from sending the text, a keyboard button may do one of the following:
 
 Of course, these actions require confirmation from the user.
 
-There's a "resize keyboard" option which determines whether the button keyboard should have flexible height.
+There's a “resize keyboard” option which determines whether the button keyboard should have flexible height.
 For some reason it's off by default, so the buttons look stretched:
 
 ![](/pictures/ru/wide-buttons.png)

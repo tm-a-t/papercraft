@@ -10,7 +10,7 @@ the link `t.me/examplebot` opens the bot with the username `@examplebot`.
 
 ## Deep links
 
-Deep links can start a personal dialog with the bot with some initial data —
+Deep links can start a personal dialog with the bot with some initial data—
 for example, for a referral program it can be an ID of the user who shared the link.
 They have the following form: `t.me/examplebot?start=YOUR_TEXT`
 
@@ -36,7 +36,7 @@ link = f'https://t.me/{self_user.username}?start=from_ad'
 <HelpNeeded/>
 :::
 
-Once a user visits a deep link, they see a dialog with the bot and the "Start" button 
+Once a user visits a deep link, they see a dialog with the bot and the “Start” button 
 (even if they have already [started the dialog).](../chats/pm) 
 The button sends `/start YOUR_TEXT`.
 The user, however, sees only `/start`, like if starting the bot regularly.

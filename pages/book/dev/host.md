@@ -2,7 +2,7 @@
 
 ## Hosting
 
-Your bot needs a server with stable power and internet connection. Bot programs are lightweight — a basic hosting plan will work just fine.
+Your bot needs a server with stable power and internet connection. Bot programs are lightweight—a basic hosting plan will work just fine.
 
 [//]: # (todo: tips on using Docker, systemd?)
 
@@ -18,7 +18,7 @@ When using Bot API, you can choose between long-polling and webhooks.
 
 With long-polling (the default), your program regularly asks Telegram servers for new updates. With webhooks, Telegram sends HTTP requests to your program when updates arrive.
 
-Webhooks are faster and use fewer resources — your bot responds instantly instead of waiting for the next polling cycle. They're the better choice for production bots, especially if you handle high message volumes or need quick response times.
+Webhooks are faster and use fewer resources—your bot responds instantly instead of waiting for the next polling cycle. They're the better choice for production bots, especially if you handle high message volumes or need quick response times.
 
 To set up webhooks, you need a web application that can receive HTTP requests.
 For aiogram, there are [built-in features](https://docs.aiogram.dev/en/latest/dispatcher/webhook.html) that work with aiohttp and other async frameworks.

@@ -28,9 +28,9 @@ Through BotFather, you can define a list of commands with short descriptions. Wh
 
 ![An example of autocomplete with commands from multiple bots](/pictures/book/commands-autocomplete.png)
 
-Users also see a "menu" button in chats with your bot—it opens the same autocomplete menu.
+Users also see a “menu” button in chats with your bot—it opens the same autocomplete menu.
 
-Special commands get special treatment: `/help` adds a "Help with bot" button to your bot's profile, `/settings` creates a "Settings" button, and `/privacy` adds a "Privacy policy" button.
+Special commands get special treatment: `/help` adds a “Help with bot” button to your bot's profile, `/settings` creates a “Settings” button, and `/privacy` adds a “Privacy policy” button.
 
 You can also set command lists through the API instead of BotFather. This lets you:
 - Show different menus for different users or groups

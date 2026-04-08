@@ -24,7 +24,7 @@ Here is a short answer:
 While you can run the bot program on your computer during development, 
 you'll want to deploy it to a hosting service when the code is ready for production.
 
-All these steps are covered in detail further in the "Development" chapter.
+All these steps are covered in detail further in the “Development” chapter.
 
 ## Related links
 
