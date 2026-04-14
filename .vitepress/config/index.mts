@@ -7,16 +7,10 @@ import ruConfig from './ru'
 import sidebar from './sidebar'
 import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
 
-const configDir = dirname(fileURLToPath(import.meta.url))
-const hasTgpyDocs = existsSync(resolve(configDir, '../../pages/tgpy/index.md'))
 const nav = [
     {text: 'Book', link: '/book/', activeMatch: '/book/'},
     {text: 'Folds', link: '/folds/', activeMatch: '/folds/'},
-    ...(hasTgpyDocs ? [{
-        text: 'TGPy',
-        link: '/tgpy/',
-        activeMatch: '/tgpy/',
-    }] : []),
+    {text: 'TGPy', link: '/tgpy/', activeMatch: '/tgpy/'},
 ]
 
 // https://vitepress.dev/reference/site-config
@@ -26,7 +20,6 @@ export default defineConfig({
 
     appearance: 'dark',
     cleanUrls: true,
-    ignoreDeadLinks: hasTgpyDocs ? [] : [/^\/tgpy(?:\/.*)?$/],
     description: 'Tools and resources for Telegram developers. Learn to develop user-friendly, featureful, and stable Telegram bots.',
 
     head: head,

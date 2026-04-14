@@ -10,3 +10,4 @@ node_modules/
 # Generated from upstream docs at build time
 pages/tgpy/
 pages/public/assets/tgpy/
+pages/folds/

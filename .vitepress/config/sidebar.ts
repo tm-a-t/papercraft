@@ -1,12 +1,15 @@
 import {DefaultTheme} from 'vitepress'
 
-let tgpySidebar: DefaultTheme.SidebarItem[] = []
-
-try {
-    tgpySidebar = (await import('../../pages/tgpy/.site/sidebar')).default
-} catch (error) {
-    if (!(error instanceof Error) || !error.message.includes('Cannot find module')) {
-        throw error
+async function importSidebar(resolve: () => Promise<{
+    readonly default: DefaultTheme.SidebarItem[]
+}>): Promise<DefaultTheme.SidebarItem[]> {
+    try {
+        return (await resolve()).default
+    } catch (error) {
+        if (!(error instanceof Error) || !error.message.includes('Cannot find module')) {
+            throw error
+        }
+        return []
     }
 }
 
@@ -70,34 +73,9 @@ const sidebar: DefaultTheme.Sidebar = {
         },
     ],
 
-    '/folds/': [
-        {text: 'Overview', link: '/folds/'},
-        {
-            text: 'Tutorial',
-            items: [
-                {text: 'Quick Start', link: '/folds/tutorial/quick-start'},
-                {text: 'Simple Rules', link: '/folds/tutorial/rules'},
-                {text: 'Rule Kinds', link: '/folds/tutorial/rule-kinds'},
-                {text: 'Arguments', link: '/folds/tutorial/arguments'},
-                {text: 'Multiple Files', link: '/folds/tutorial/multiple-files'},
-            ]
-        },
-        {
-            text: 'Advanced Features',
-            items: [
-                {text: 'Admin Rules', link: '/folds/advanced/admin'},
-                {text: 'Multiple Bots', link: '/folds/advanced/multiple-bots'},
-            ],
-        },
-        {
-            text: 'Learn',
-            items: [
-                {text: 'Examples', link: '/folds/examples'},
-            ],
-        },
-    ],
+    '/folds/': await importSidebar(() => import('../../pages/folds/.site/sidebar')),
 
-    '/tgpy/': tgpySidebar,
+    '/tgpy/': await importSidebar(() => import('../../pages/tgpy/.site/sidebar')),
 }
 
 
