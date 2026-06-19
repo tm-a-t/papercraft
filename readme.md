@@ -36,6 +36,14 @@ This repo is for the Papercraft website. See also:
 - [Folds](https://github.com/tm-a-t/folds)
 - [TGPy](https://github.com/tm-a-t/tgpy)
 
+## Licensing
+
+This repository uses split licensing:
+
+- The Papercraft website code and other repo-owned source files are licensed under the [MIT License](LICENSE).
+- The authored Papercraft Book text in [`pages/book`](pages/book) and [`pages/ru/book`](pages/ru/book) is licensed under [CC BY-NC 4.0](LICENSE.book.md).
+- Third-party or separately licensed assets and synced content, including files under [`pages/public`](pages/public), [`pages/folds`](pages/folds), and [`pages/tgpy`](pages/tgpy), are not relicensed by these files unless noted otherwise.
+
 ## Edit the site
 
 Feel free to PR!
@@ -55,6 +63,5 @@ Then run:
 ```shell
 yarn dev
 ```
-
 
 
