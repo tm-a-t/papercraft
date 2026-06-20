@@ -7,7 +7,7 @@ They are useful for moderation, support, games, alerts, and shared workflows.
 There are also a lot of details to consider:
 privacy mode, admin rights, public messages, and messages sent on behalf of groups or channels.
 
-## Joining groups
+## Add the bot intentionally
 
 Users can add bots to groups, but bots cannot join groups on their own.
 The bot's developer can forbid adding to groups [using BotFather settings](../dev/botfather).
@@ -45,7 +45,7 @@ async def handle_join(event):
 <HelpNeeded/>
 :::
 
-## Sending messages to group members
+## Keep group messages public and clean
 
 <!-- TODO
 
@@ -96,7 +96,7 @@ async def greet(event: events.ChatAction.Event):
 
 Note that if your bot needs to personally contact new group users, join requests may be useful to get PM permission—we will explore [join requests](../interaction/join-requests) later in the book.
 
-## Privacy mode and visible messages { #privacy }
+## Configure privacy mode for the messages you need { #privacy }
 
 Many bots are designed to react only [to commands](../messages/commands).
 For this reason, Telegram protects group privacy by default and doesn't notify bots about non-command messages.
@@ -138,7 +138,7 @@ the reply interface for the user.
 However, I don't recommend using force reply. In my opinion, automatic replies only confuse users.
 :::
 
-## Admin rights
+## Request only the admin rights you need
 
 When a user promotes a bot to a group admin, they can select admin rights. There is a BotFather setting for specifying 
 the admin rights suggested by default.
@@ -147,7 +147,7 @@ The right to remain anonymous, which allows users to send messages on behalf of 
 
 ![Choosing rights](/pictures/ru/admin-rights.png)
 
-## Member tags
+## Use member tags for visible roles
 
 Groups can show member tags next to users' names.
 Admins may allow members to edit their own tags, or reserve tag management for admins.
@@ -155,13 +155,13 @@ Admins may allow members to edit their own tags, or reserve tag management for a
 Bots can read tags in member-related data and, with the right admin permission, set tags for group members.
 This can be useful for role labels, paid community status, support queues, or onboarding state.
 
-## Reaction moderation
+## Moderate reactions sparingly
 
 Group admins can remove individual reactions or all reactions from a specific user.
 Bots with suitable rights can use this for moderation workflows, but should do it sparingly:
 reactions are usually lightweight feedback, and removing them without a visible policy can confuse users.
 
-## Messages on behalf of groups and channels
+## Handle messages sent on behalf of groups and channels
 
 Not only users can send messages in groups.
 Your program should correctly handle messages sent by other entities:
@@ -170,7 +170,7 @@ Your program should correctly handle messages sent by other entities:
 - Messages from a group by anonymous group admins
 - Messages from public channels by premium users
 
-### Examples
+### Detect sender type
 
 Determining chat type (e.g., for storing in a database):
 

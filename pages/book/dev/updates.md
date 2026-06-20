@@ -1,6 +1,9 @@
 # Understanding Updates
 
-## What are updates
+Updates are the main way your bot learns what happened in Telegram.
+If you need information later, design your bot to store it when the update arrives.
+
+## Handle the update types your bot needs
 
 Updates are events that your bot program receives from Telegram servers.
 There can be an update about an incoming message, an update about a user joining a group, and so on.
@@ -48,7 +51,7 @@ async def handle_photo(event: Message):
 <HelpNeeded/>
 :::
 
-## You should save everything { #limitations }
+## Save everything you need later { #limitations }
 
 <mark>Updates are almost the only way to get any information about chats, messages, and users.</mark>
 
@@ -65,7 +68,7 @@ You can fetch some information using Telegram API and not Bot API—for example,
 These features are listed [in the table.](../appendix/api-comparison)
 :::
 
-## Receiving updates multiple times
+## Know when updates can be received again { #receiving-updates-multiple-times }
 
 Bot API disallows getting updates multiple times. If you received an update in Bot API, you won't be able to receive it again.
 

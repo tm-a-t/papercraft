@@ -16,7 +16,7 @@ Only premium users may use custom emoji from sets. Nevertheless, custom emoji se
 by any bots and owned by any users.
 :::
 
-## Formats
+## Choose a set format
 
 Sticker sets and custom emoji set may be static (PNG or WEBP), video (WEBM), or animated (in a special format based on
 Lottie).

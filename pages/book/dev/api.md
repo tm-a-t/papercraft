@@ -2,7 +2,7 @@
 
 Developing a bot means creating a program that connects to Telegram servers, receives information (such as
 incoming messages) and sends instructions (like “reply to that message”).
-This page explains which official APIs can be used for that.
+Use this page to understand which official APIs can be used for that.
 
 **MTProto API** (also known as **Telegram API**) is the API through which your mobile or desktop Telegram app connects
 to the Telegram servers. It is open, meaning that developers can use the API to create their own Telegram apps.
@@ -20,7 +20,7 @@ friendlier tools for everyday bot development.
 
 In short, you can develop bots with either Telegram API or Bot API.
 
-## So which API to choose?
+## Choose the library first
 
 Some libraries are built on top of Bot API and some libraries are built on top of Telegram API.
 
@@ -34,7 +34,7 @@ I prefer always using Telegram API, but honestly there is little difference.
 For most bots, choose the library first and treat the API choice as part of that decision.
 The [library page](./libraries) has practical options.
 
-## A word on userbots
+## Keep userbots outside regular bot design
 
 As Telegram API is open and has libraries that work with it, you can easily write a program that controls a user account
 rather than a bot.

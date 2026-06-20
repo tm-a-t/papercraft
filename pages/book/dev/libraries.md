@@ -10,7 +10,7 @@ Telegram API libraries are useful when you need features Bot API does not provid
 fetching old messages, working with larger files, fetching group members, or running several bot programs at once.
 The detailed comparison is in the [reference page about APIs.](./api)
 
-## Bot API libraries
+## Choose a Bot API library for regular bots
 
 A common Python choice is [aiogram.](https://github.com/aiogram/aiogram)
 [Rocketgram](https://github.com/rocketgram/rocketgram) is an alternative.
@@ -21,7 +21,7 @@ or [GrammY.](https://github.com/grammyjs/grammY)
 Bot API libraries exist for many other languages, too.
 The official site has [a list](https://core.telegram.org/bots/samples) and seems to keep it up-to-date.
 
-## Telegram API libraries
+## Choose a Telegram API library for API-only features
 
 For Python, the most popular library built with Telegram API is 
 [Telethon.](https://github.com/LonamiWebs/Telethon) _Since Telethon isn't primarily focused on bot development,
@@ -32,7 +32,7 @@ For JavaScript, the options include [mtcute](https://github.com/mtcute/mtcute) o
 
 [//]: # (todo other langs?)
 
-## Getting started
+## Start with a private echo bot
 
 Here's a simple bot that echoes the user's messages in DM:
 

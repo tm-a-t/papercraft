@@ -1,6 +1,7 @@
 # Limitations of Bot API in Comparison to Telegram API
 
-This table, kindly provided by @vanutp, shows how Bot API and Telegram API differ in terms of developing bots.
+Use this table when you need to check whether a bot feature requires Telegram API instead of Bot API.
+It was kindly provided by @vanutp.
 
 | Feature                                     | Bot API                                   | Telegram API                                                                                      | Read more                                                                                          |
 |---------------------------------------------|-------------------------------------------|---------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
@@ -11,7 +12,7 @@ This table, kindly provided by @vanutp, shows how Bot API and Telegram API diffe
 | **Get old updates**                         | No                                        | Yes                                                                                               |                                                                                                    |
 | **Run multiple programs with the same bot** | Only if other programs use Telegram API   | Yes                                                                                               | [Receiving updates multiple times](../dev/updates#receiving-updates-multiple-times)                |
 
-See the pages on [what is Bot API and Telegram API](../dev/api) and [API libraries.](../dev/libraries)
+For choosing a library, see the pages on [Bot API vs Telegram API](../dev/api) and [API libraries.](../dev/libraries).
 
 <style module>
 table {

@@ -7,6 +7,11 @@ near the message input.
 Both kinds of buttons may be shown in multiple rows of multiple buttons. 
 You can read more about button layouts at the bottom of this page.
 
+Use buttons when the user should choose, confirm, open something, or send a prepared answer.
+They are often easier than asking users to remember commands or type structured input.
+
+## Choose the right button type
+
 Use inline buttons when the action belongs to a specific message:
 confirming something, opening a link, switching to inline mode, or changing the message after a click.
 
@@ -17,7 +22,7 @@ Recent Telegram clients can also show styled bot buttons with colors and custom 
 Use styling as a visual hint only: button text should still make sense without the color or emoji, because older clients
 and some libraries may not support every visual option yet.
 
-## Inline buttons { #inline }
+## Use inline buttons for message actions { #inline }
 
 Inline buttons are shown together with the messages.
 
@@ -78,7 +83,7 @@ There are more, rather uncommon, buttons:
 - Rich result buttons may also be used with newer [rich messages](./rich-messages) and Mini App flows, depending on the
   message type and current Bot API support.
 
-## Keyboard buttons
+## Use keyboard buttons for suggested replies
 
 Unlike inline buttons, keyboard buttons are shown below the message input field
 (in web versions they can be accessed by clicking the command button ⌘). When pressing a keyboard button, the user simply sends its text.
@@ -113,7 +118,7 @@ buttons only to mentioned users, which are:
 - Users whose usernames are included in the message text
 - The sender of the message to which the bot is replying
 
-## Button layouts
+## Keep button layouts readable
 
 Both inline buttons and keyboard buttons may be aligned in multiple rows.
 A row may contain up to 8 buttons. The total limit of buttons shown at once is 100.

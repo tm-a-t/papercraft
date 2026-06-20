@@ -8,7 +8,7 @@ Here's a hack to check variants quickly: open your account settings and type the
 If the username is taken, a red message will appear.
 This way you can check many usernames without creating a bot until you've made your choice.
 
-## Username form
+## Follow username rules
 
 Bot usernames follow the same rules as usernames for users, groups, and channels.
 The only constraint is that a bot username must end with “bot”, like `@ExampleBot`.
@@ -21,7 +21,7 @@ However, all 5-character usernames (and possibly 6-character ones) are already t
 Most of these registered bots are inactive—developers rarely maintain bots for a long time.
 :::
 
-## Claiming a username through support
+## Ask support for inactive usernames
 
 It is possible to change a bot username for free, even if it's claimed by another (inactive) bot.
 You will need to contact the support: [@BotSupport](https://t.me/BotSupport). They will check whether your bot works and

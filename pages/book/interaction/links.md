@@ -1,14 +1,15 @@
 # Creating Links to Bots
 
 Links are a common entry point to using a bot. 
-_Deep links_ can be used for starting bot dialogs with some extra input.
+Use regular links when you only need to open the bot.
+Use _deep links_ when the bot should receive some extra input at the start.
 
-## Regular links
+## Open the bot with a regular link
 
 The same way as with users, groups, and channels, 
 the link `t.me/examplebot` opens the bot with the username `@examplebot`.
 
-## Deep links
+## Start a dialog with initial input
 
 Deep links can start a personal dialog with the bot with some initial data—
 for example, for a referral program it can be an ID of the user who shared the link.
@@ -45,7 +46,7 @@ The user, however, sees only `/start`, like if starting the bot regularly.
 <source src="/pictures/ru/start.webm" type="video/mp4">
 </video>
 
-## Deep links for groups
+## Add the bot to a group with initial input { #deep-links-for-groups }
 
 There is a variant of deep links for groups as well.
 
@@ -74,9 +75,9 @@ link = f'https://t.me/{self_user.username}?startgroup=from_ad'
 <HelpNeeded/>
 :::
 
-## Using `tg://` links
+## Use `tg://` links for app-specific entry points
 
-Just FIY, all links that we considered above also have `tg://` equivalents. These are direct links that can be opened within the app:
+Just FYI, all links that we considered above also have `tg://` equivalents. These are direct links that can be opened within the app:
 
 - Regular link: `tg://resolve?domain=examplebot`
 - Deep link: `tg://resolve?domain=examplebot&start=YOUR_TEXT`
@@ -88,6 +89,6 @@ Such links are listed [in API documentation](https://core.telegram.org/api/links
 in the unofficial [@DeepLink](https://t.me/deeplink) channel.
 
 
-## Related links (but not to bots)
+## Related links
 
 - [Telegram docs on deep links](https://core.telegram.org/bots/features#deep-linking)

@@ -3,6 +3,9 @@
 Sometimes you want to decorate text in your messages to highlight important things or reference URLs and users.
 There are a lot of formatting options in Telegram, so please don't get carried away :) The simpler, the better.
 
+Use regular message markup for short messages, links, mentions, code snippets, spoilers, and small visual emphasis.
+If the message starts looking like a document, use [rich messages](./rich-messages).
+
 Markup elements in Telegram messages include:
 
 - **Bold text**
@@ -25,16 +28,13 @@ In addition to them, a message may contain any number of username mentions.
 Bot API lets you specify markup in HTML or Markdown.
 Telegram API doesn't include this built-in, but libraries like Telethon and Pyrogram provide similar syntax.
 
-If you need tables, headings, footnotes, formulas, media blocks, or long streamed AI output, use
-[rich messages](./rich-messages) instead of regular message markup.
-
-## Monospaced text
+## Use monospaced text for code
 
 Monospaced text can be formatted as an inline element (similar to `<code>` in HTML) or as a block (similar to `<pre>`).
 
 When sending a monospaced text block, you can specify code language so that Telegram apps will apply syntax highlighting.
 
-## Spoilers
+## Hide optional content with spoilers
 
 A spoiler is text hidden behind an animated cover that users can tap to reveal.
 
@@ -42,7 +42,7 @@ Pictures can be hidden with a spoiler as well, though this is not related to mes
 
 ![text and picture behind the spoilers](/pictures/book/spoilers.png)
 
-## User mentions { #mention }
+## Mention users carefully { #mention }
 
 A mention is clickable text that links to a user profile. 
 To create a mention using Bot API, you can embed a link in the format `tg://user?ID=123456789`. 

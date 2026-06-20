@@ -7,7 +7,7 @@ This way, people who get interested in the bot and open its profile will receive
 You can include an “Add to your group” link using [deep links for groups.](../interaction/links#deep-links-for-groups)
 
 
-## Starting a personal dialog
+## Start the dialog before sending messages
 
 A bot cannot send messages to a user until the user has initiated the dialog. 
 Once the dialog is started, the bot can send messages at any time.
@@ -15,7 +15,7 @@ Bots still cannot casually message other bots like normal users do.
 Newer [bot-to-bot communication](../interaction/bot-automation#bot-to-bot-communication) requires explicit support and
 loop protection.
 
-### The `/start` command
+### Treat `/start` as the main entry point
 
 Here is how a personal dialog usually starts:
 
@@ -66,7 +66,7 @@ after they've already initiated a dialog previously.
 You can use [deep links](../interaction/links) so that the `/start` message contains additional information.
 :::
 
-### Alternative ways to start a dialog
+### Use other permitted entry points
 
 Sometimes a bot may send messages to a user even if they haven't started the dialog explicitly. 
 This happens in one of the following cases:
@@ -76,7 +76,7 @@ This happens in one of the following cases:
 
 When this occurs, the Telegram app shows the user an explanation of why the bot is contacting them.
 
-## Topics in private chats
+## Keep replies in the right private-chat topic
 
 Some bot dialogs can use forum-style topics in private chats.
 This is especially useful for AI assistants and support bots that need to keep several threads separate.
@@ -84,12 +84,12 @@ This is especially useful for AI assistants and support bots that need to keep s
 If your bot receives messages with private-chat topic information, store the thread ID and send replies to the same topic.
 Otherwise responses may appear in the wrong conversation.
 
-## Stopping the dialog { #block }
+## Handle blocked bots { #block }
 
 A user can stop the dialog by blocking the bot. The bot won't be able to send personal messages to the user
 until they unblock it.
 
-## How to check if the bot may text a user
+## Probe whether the bot may text a user
 
 If you need to determine whether a user has blocked your bot, you can use the following method.
 

@@ -11,10 +11,10 @@ Commands are highlighted like links; users can tap on a command to send it.
 Commands work best for common actions that users may want to trigger from anywhere:
 starting the bot, opening settings, asking for help, or running a short admin action.
 
-They work worse for choosing between many options or entering structured data.
-For that, use [buttons](./buttons), [inline mode](../interaction/inline), or a follow-up question.
+For choosing between many options, consider [buttons](./buttons) or [inline mode](../interaction/inline).
+For entering structured data, ask follow-up questions instead of making the user type everything into one line.
 
-## Command arguments
+## Don't require arguments
 
 Of course, you can ask users to add text after a command, like `/weather London`.
 
@@ -26,7 +26,7 @@ If that doesn't work for you, consider better alternatives:
 - [Buttons](../messages/buttons) or [inline mode](../interaction/inline) for choosing options
 - Follow-up questions in the next message for collecting information
 
-## Command lists
+## Show command menus
 
 Through BotFather, you can define a list of commands with short descriptions. When users start typing a command, they'll see an autocomplete menu with these hints.
 
@@ -41,7 +41,7 @@ You can also set command lists through the API instead of BotFather. This lets y
 - Localize command descriptions based on user language
 - Display admin-only commands based on user status (great for group moderation)
 
-## Commands in groups
+## Differentiate commands in groups
 
 In groups with multiple bots, commands need the bot's username to specify which one should respond: `/start@examplebot`.
 

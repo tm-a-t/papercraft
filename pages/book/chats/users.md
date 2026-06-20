@@ -5,9 +5,9 @@ These kinds of chats work by different rules,
 so the book has separate pages for each chat type.
 
 However, your bot will always interact with users in one way or another. 
-On this page, we’ll discuss some general advice about managing users.
+Use this page to decide what user data is safe to store and which fields can change.
 
-## User profile
+## Store users by ID
 
 Users may have no username or no last name—keep this in mind while storing their profile info. 
 In groups, this means the bot can't always mention a user by username 
@@ -36,7 +36,7 @@ else:
 <HelpNeeded/>
 :::
 
-## User languages
+## Cache language when Telegram provides it
 
 Bots can access the language setting that a person has configured in their Telegram app.
 This allows your bot to communicate in users' native languages.
@@ -59,7 +59,7 @@ user.lang_code  # Sometimes is None
 :::
 
 
-## Seen users
+## Know which users the bot has seen { #seen-users }
 
 A bot must have _seen_ a user to perform actions related to them (such as mentioning them). 
 The bot _sees_ a user when, for example, it receives a message from the user or retrieves their information by username.

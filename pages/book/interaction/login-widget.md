@@ -16,7 +16,7 @@ The older iframe-based JavaScript widget still exists in archived documentation.
 The current Telegram Login documentation recommends the newer Telegram Login library, native SDKs, or standard OIDC integration.
 :::
 
-## User steps
+## Show users a short login flow
 
 From the user perspective, the steps are the following:
 
@@ -26,7 +26,7 @@ From the user perspective, the steps are the following:
 
 ![Screenshot](https://core.telegram.org/file/811140314/17c1/xf4ULBL5tmE.58438/07ff5b2958ed0e7e36)
 
-## Handling authorization
+## Validate authorization on your server
 
 In the current OIDC-based flow, your server validates the ID token:
 
@@ -37,13 +37,13 @@ In the current OIDC-based flow, your server validates the ID token:
 
 Telegram currently returns requested user information in the ID token and does not provide a separate UserInfo endpoint.
 
-## Phone number verification
+## Use Gateway only for phone verification
 
 If you only need to verify a user's phone number, Telegram Gateway is a separate developer feature for sending
 verification codes through Telegram at a lower cost than SMS in many cases.
 It is not the same as logging a user into your app with their Telegram account.
 
-## Legacy hash validation
+## Keep legacy hash validation for old widgets
 
 In the legacy widget flow, the widget redirects to the authorization URL, passing the user’s ID, name, and other data as
 GET parameters (or, alternatively, calls a JavaScript function).

@@ -13,14 +13,14 @@ Use ordinary payment providers for supported physical goods and services.
 
 ![Example of a message with payment](https://core.telegram.org/file/464001393/101fc/SB_bFCLR0tg.130549/7ecf91aaa44737e8cb)
 
-## User interface
+## Show the invoice in Telegram
 
 You can try the payment interface in [the Demo Store channel](https://t.me/TestStore).
 
 A bot can send invoice messages to any chats, even from [inline-mode](../interaction/inline). 
 The first [button](../messages/buttons#inline) under the message must be a “Buy” button.
 
-## What Stars are used for
+## Use Stars for digital goods
 
 Telegram Stars are used across many bot and creator features:
 
@@ -34,11 +34,6 @@ Telegram Stars are used across many bot and creator features:
 Stars may have special rules around refunds and withdrawals.
 For example, some Star balances become available for withdrawal only after a waiting period.
 If your bot handles paid content, design around refunds, failed payments, and delayed settlement.
-
-## To fill later
-
-- Practical examples for Stars invoices and subscriptions.
-- Notes about affiliate programs once the developer-facing API surface is clearer.
 
 ## Related links
 

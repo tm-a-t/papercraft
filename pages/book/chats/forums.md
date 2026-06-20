@@ -13,7 +13,7 @@ This matters for support bots, community bots, and any bot that replies inside l
 <figcaption>Forum topics are listed, while other chats shrink into a small column.</figcaption>
 </figure>
 
-## Technical perspective
+## Understand topic IDs
 
 A forum is a group with a special UI.
 You can even open a forum in regular chat view using the forum menu in official apps.
@@ -24,7 +24,7 @@ How topics work technically:
 - The topic ID equals the system message ID
 - The General topic is where all other messages go, and its ID equals 1
 
-## Usage
+## Reply inside the same topic
 
 If your bot works in groups, consider how it'll behave when the group is a forum.
 For example, when a user sends a command, the bot should answer in the same topic—otherwise the response will appear in the General topic.
@@ -64,7 +64,7 @@ async def handle_message(message: Message):
 <HelpNeeded/>
 :::
 
-## Managing topics
+## Manage topics with the right admin rights
 
 Bots can open, edit, and close topics just like users.
 Depending on the forum settings, this may require special admin rights.

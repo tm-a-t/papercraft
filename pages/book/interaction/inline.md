@@ -6,6 +6,9 @@ The inline mode works even in chats where the bot does not participate.
 
 This allows bot users, for example, to quickly search for videos or music and instantly send them. 
 
+Use inline mode when users need to pick bot-generated content from inside any chat.
+For actions tied to one message, [inline buttons](../messages/buttons#inline) are usually a better fit.
+
 A user starts the inline mode by entering bot username and a space. They may add a text query afterwards
 if needed; the query can contain up to 256 characters. Then, the menu of results appears. 
 The user clicks on a result to send the message.
@@ -87,7 +90,7 @@ A developer can enable inline mode in BotFather, as well as select a placeholder
 Group admins may forbid everyone or selected users sending inline messages. In the official Telegram apps,
 this group member restriction is united with the restriction to send stickers and GIFs.
 
-## Result layout
+## Choose list or grid results
 
 The results may form a vertical list (which looks good in case of text) or a grid (which looks good in case of pictures).
 
@@ -102,7 +105,7 @@ Two layouts may be combined, but apparently this works correctly only in Telegra
 ![Combining two layouts](/pictures/ru/inline-both-types.png){style="max-width: 400px"}
 :::
 
-## Inline feedback
+## Turn on inline feedback only when you need it
 
 Inline feedback is updates arriving when a user chooses an inline result and sends a message.
 You will not receive them unless you explicitly turn on this setting in BotFather.

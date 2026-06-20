@@ -12,7 +12,14 @@ Although technically bots are a kind of user account, in this book, I use the te
 :::
 -->
 
-## Newer platform features
+## Start with the basic bot model
+
+Most bots receive [updates](./updates), decide what to do, and send requests back to Telegram.
+This model covers common bot work: personal dialogs, group moderation, channel posting, buttons, commands, and files.
+
+When a feature needs permission or setup, Telegram usually exposes that through BotFather, admin rights, or a specific user action.
+
+## Add newer platform features when they fit
 
 Modern Telegram bots are not limited to simple chat commands.
 Depending on the settings and permissions, bots can also:
@@ -28,7 +35,7 @@ These features still follow Telegram's privacy model:
 the bot only receives the data Telegram sends in updates or through a permissioned connection.
 If you need data later, save it when you receive it.
 
-## How to program a bot
+## Build the first working program
 
 At minimum, you need four things:
 

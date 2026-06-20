@@ -1,10 +1,10 @@
 # Supergroups and Migrations
 
 When you use Telegram, you deal with groups regularly. 
-The truth is that what looks like groups in Telegram UI is actually two kinds of entities: groups and supergroups.
+What looks like groups in Telegram UI is actually two kinds of entities: groups and supergroups.
 For bot developers, the important part is that migrations can change chat IDs and break stored references if you ignore them.
 
-## What are supergroups
+## Detect supergroups even when the UI says "group"
 
 A long time ago, Telegram developers introduced two types of groups: regular ones and supergroups.
 Supergroups had public links, larger limit for the number of members, and other features designed for big communities.
@@ -60,7 +60,7 @@ For more info about group bots, see [the page about groups.](../chats/groups)
 
 
 
-## Turning into a supergroup
+## Update stored chat IDs after migration
 
 A regular group becomes a supergroup when certain settings are changed. 
 As technically the group is replaced with a supergroup (which is a new channel), its [chat ID](../chats/id) changes. 
@@ -101,14 +101,14 @@ async def handle_supergroup(event: events.ChatAction.Event):
 
 A supergroup cannot become a regular group again.
 
-## Message and group IDs
+## Store message and group IDs with chat type
 
 The [chat IDs page](id#bot-api) explains how group IDs are different for groups and supergroups in Bot API.
 In addition, regular groups and supergroups are different in terms of how message IDs work
 as discussed in [Message IDs.](../messages/id)
 
 
-## Gigagroups (broadcast groups)
+## Treat gigagroups as a rare case
 
 Gigagroups are yet another type of groups in Telegram. 
 They are very rare though, so this is just FYI.

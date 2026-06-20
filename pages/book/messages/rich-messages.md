@@ -7,7 +7,7 @@ that should read like a native Telegram document.
 For short chat replies, confirmations, and ordinary bot flows, keep using regular messages with
 [text formatting](./markup).
 
-## What rich messages can include
+## Use document-like blocks when plain text is too small
 
 Rich messages support document-like blocks and inline formatting:
 
@@ -21,7 +21,7 @@ Rich messages support document-like blocks and inline formatting:
 Telegram renders this content natively in its apps, so it does not open a web page like a
 [Mini App](../interaction/mini-apps).
 
-## Streaming rich replies
+## Stream generated answers { #streaming-rich-replies }
 
 Rich messages are especially useful for AI bots.
 Instead of waiting for a full response, a bot can stream a partial rich message draft and update it while the answer is generated.
@@ -29,7 +29,7 @@ Instead of waiting for a full response, a bot can stream a partial rich message 
 This is different from repeatedly editing a normal message:
 Telegram has dedicated Bot API support for rich-message drafts and uses native animations for streamed output.
 
-## Where rich messages can appear
+## Return rich content from chat, inline, guest, and Mini App flows
 
 Bots can send rich messages directly to chats.
 Rich messages can also be used as content for inline, guest, and Web App query results when the bot returns an
@@ -42,19 +42,13 @@ This makes them useful in several flows:
 - A [Mini App](../interaction/mini-apps) returns a generated document back into the chat.
 - An [inline mode](../interaction/inline) result sends a rich answer instead of plain text.
 
-## Restrictions
+## Keep simple messages simple
 
 Rich messages are a newer Bot API feature, so library support may lag behind the official API.
 If your library does not support them yet, you may need to call the raw Bot API methods directly.
 
 For simple messages, do not switch to rich messages just to use bold text or links.
 Regular messages are easier to build, easier to localize, and support common chat interactions such as partial quotes.
-
-## To fill later
-
-- Library examples for aiogram, Folds, and Telethon.
-- A minimal rich message example once common libraries expose stable helpers.
-- Practical limits and client compatibility notes beyond the current Bot API docs.
 
 ## Related links
 

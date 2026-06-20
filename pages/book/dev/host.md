@@ -1,6 +1,9 @@
 # Running Your Telegram Bot on a Server
 
-## Hosting
+Use hosting when the bot needs to keep working after you close your laptop.
+For real users, reliability matters more than raw CPU power.
+
+## Run the bot where it can stay online
 
 During development, you can run the bot on your computer.
 For real users, the bot should run on a server with stable power and internet connection.
@@ -17,7 +20,7 @@ The important part is not raw CPU power, but reliability:
 For a small Linux server, `systemd` is often enough to keep the process running.
 Docker is useful when you want the same environment locally and on the server.
 
-## Free hosting
+## Use free hosting for experiments
 
 If you can't pay for hosting yet, try these free options:
 - [PythonAnywhere](https://www.pythonanywhere.com/) (may be unstable)
@@ -26,7 +29,7 @@ If you can't pay for hosting yet, try these free options:
 Free hosting is fine for experiments.
 For a bot that people rely on, paid hosting is usually cheaper than debugging random sleep modes or network limits.
 
-## Long-polling vs webhooks
+## Choose long-polling or webhooks
 
 When using Bot API, you can choose between long-polling and webhooks.
 
@@ -46,7 +49,7 @@ See the guide on [aiogram webhooks](https://docs.aiogram.dev/en/latest/dispatche
 <HelpNeeded/>
 ::: 
 
-## What to save
+## Persist data from updates
 
 As discussed on the [updates page](./updates#limitations), Telegram will not give your bot a complete history of users,
 chats, and messages on demand.

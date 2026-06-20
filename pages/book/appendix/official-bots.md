@@ -2,6 +2,7 @@
 
 These are the bots that are known to be made by Telegram or have some connection to the Telegram team.
 This list is collected by @vanutp.
+Use it as a reference when you want to inspect official bot behavior in Telegram apps.
 
 ```
 @asmico_attach_bot

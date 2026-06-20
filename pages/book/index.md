@@ -55,7 +55,7 @@ and which Telegram limits affect the way you store data and send messages.
 
 This aims to be the most comprehensive and practical guide on developing bots for Telegram.
 
-## What’s inside?
+## Choose a path
 
 You can read the book in order or jump to the path that matches your bot:
 

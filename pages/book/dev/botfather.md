@@ -1,8 +1,9 @@
 # How to Set Up a Telegram Bot with BotFather
 
 You register and configure bots via [@BotFather](https://t.me/BotFather)—which itself is an official Telegram bot.
+Use it to create the bot, get the token, fill the profile, and enable features that need Telegram-side configuration.
 
-## Registration
+## Create the bot
 
 Once you start BotFather, it will suggest you create a bot with the `/newbot` command.
 You'll choose its name and [username,](./usernames) and then the bot profile will be created.
@@ -12,7 +13,7 @@ The token is your key to control the bot.
 
 ![Example of creating a bot](/pictures/book/botfather.png)
 
-## Settings
+## Configure settings before users arrive
 
 In BotFather, it's easy to edit bot settings using the `/mybots` command.
 This is how you customize the bot profile and configure special features—like
@@ -24,7 +25,7 @@ guest mode or managed bot flows.
 
 You may register up to 20 bots.
 
-## Customization { #customization }
+## Make the profile clear { #customization }
 
 You can open your bot's profile and click “edit” to change its avatar, name, intro, and “about” text.
 This feature is relatively new—previously, BotFather commands were the only way to change a bot's profile settings.
@@ -48,7 +49,7 @@ For example, [inline mode](../interaction/inline), [guest mode](../interaction/b
 and [Log In with Telegram](../interaction/login-widget) are enabled or configured through BotFather.
 :::
 
-## Transferring
+## Transfer ownership safely
 
 If you need to transfer ownership to another person, you can do it through BotFather itself.
 This is often useful when you develop a bot for a client or organization.

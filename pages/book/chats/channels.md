@@ -4,11 +4,11 @@ Bots can participate in channels only as admins.
 Admin rights allow bots to send and edit posts, rename channels, and perform other administrative actions—making them particularly helpful for channel authors.
 The most common uses are scheduled publishing, adding buttons to posts, moderation helpers, and connecting a channel to another system.
 
-## Admin rights
+## Request channel admin rights
 
 Just like in groups, channel admins can select specific admin rights for bots. The default options can be configured [in BotFather](../dev/botfather). 
 
-## Adding buttons to posts
+## Add buttons by editing posts
 
 One common use case is adding buttons to channel posts: likes, links, and other interactive elements.
 This was especially popular before message reactions were introduced.
@@ -72,7 +72,7 @@ async def on_new_message(message: Message):
 
 [//]: # (todo: check for the in the example)
 
-## Direct messages for channels { #direct-messages-for-channels }
+## Store direct-message topic IDs { #direct-messages-for-channels }
 
 Channels can enable direct messages, letting subscribers privately contact channel owners and admins without exposing
 the owner's personal account.
@@ -84,7 +84,7 @@ subscriber thread.
 Bots that help manage a channel inbox should store the channel, direct messages chat, and topic identifiers they receive
 in updates.
 
-## Suggested and paid posts
+## Review suggested and paid posts carefully
 
 Subscribers can suggest posts to a channel through channel direct messages.
 Suggested posts can include a proposed publishing time and may include payment in Stars or Toncoin.
@@ -92,8 +92,3 @@ Suggested posts can include a proposed publishing time and may include payment i
 Bots with the right admin permissions can approve or decline suggested posts.
 If a post is paid, Telegram marks it in Bot API.
 Do not delete paid posts during the required 24-hour period if the channel owner expects to receive the payment.
-
-## To fill later
-
-- Library examples for replying inside channel direct message topics.
-- Suggested post approval and decline examples.
