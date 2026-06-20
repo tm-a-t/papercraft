@@ -59,15 +59,15 @@ This aims to be the most comprehensive and practical guide on developing bots fo
 
 You can read the book in order or jump to the path that matches your bot:
 
-- [**Build and ship a bot.**](dev/basics)
+- [**Build and ship a bot.**](basics)
   Create a bot, choose a library, receive updates, and run it outside your laptop.
-- [**Design conversations.**](chats/pm)
+- [**Design conversations.**](pm)
   Start personal dialogs, choose between commands and buttons, and send messages that behave well.
-- [**Work with chats.**](chats/users)
+- [**Work with chats.**](users)
   Store user data correctly and support groups, forums, channels, supergroups, and IDs.
-- [**Add Telegram features.**](interaction/join-requests)
+- [**Add Telegram features.**](join-requests)
   Use join requests, inline mode, login, mini apps, payments, stickers, and HTML games.
-- [**Use reference pages.**](dev/api)
+- [**Use reference pages.**](api)
   Check Bot API vs Telegram API differences and other lists when you need details.
 
 Use the navigation on the left to follow the book in order or jump to a specific topic.
