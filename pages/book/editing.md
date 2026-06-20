@@ -6,6 +6,16 @@ progress updates, corrections, and small changes that should stay in the same pl
 Some code examples:
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+from asyncio import sleep
+
+...
+
+my_message = await bot.send_message(chat_id, 'Loading...')
+await sleep(10)
+await my_message.edit('Loaded!')
+```
 == aiogram
 ```python
 from asyncio import sleep
@@ -16,7 +26,7 @@ my_message = await bot.send_message(chat_id, 'Loading...')
 await sleep(10)
 await my_message.edit_text('Loaded!')
 ```
-== Telethon & Folds
+== Telethon
 ```python
 from asyncio import sleep
 

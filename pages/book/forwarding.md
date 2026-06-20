@@ -5,6 +5,14 @@ Use this page when your bot needs to forward a message, or copy it into another 
 Some code examples:
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+# With the 'Forwarded' label
+await message.forward(chat_id)
+
+# Without the 'Forwarded' label
+await bot.send_message(chat_id, message)
+```
 == aiogram
 ```python
 # With the 'Forwarded' label
@@ -13,7 +21,7 @@ await message.forward(chat_id)
 # Without the 'Forwarded' label
 await message.copy_to(chat_id)
 ```
-== Telethon & Folds
+== Telethon
 ```python
 # With the 'Forwarded' label
 await message.forward(chat_id)

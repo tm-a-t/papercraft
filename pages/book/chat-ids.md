@@ -14,7 +14,12 @@ In Bot API, regular group IDs start with `-` and channel/supergroup IDs start wi
 Thus, a channel with an actual ID `1356415630` has ID `-1001356415630` in Bot API.
 
 ::: tabs key:libraries
-== Telethon & Folds
+== Folds
+Although Telethon and Folds libraries don't use Bot API, sometimes they use the ID format from Bot API.
+Thus, `message.chat_id` starts with `-100` in case of channels or supergroups.
+
+You can convert between ID formats using `telethon.utils.get_peer_id` and `telethon.utils.resolve_id`.
+== Telethon
 Although Telethon and Folds libraries don't use Bot API, sometimes they use the ID format from Bot API.
 Thus, `message.chat_id` starts with `-100` in case of channels or supergroups.
 

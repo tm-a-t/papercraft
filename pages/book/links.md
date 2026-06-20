@@ -17,17 +17,17 @@ for example, for a referral program it can be an ID of the user who shared the l
 They have the following form: `t.me/examplebot?start=YOUR_TEXT`
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+from folds.context import bot
+
+link = f'https://t.me/{bot.me.username}?start=from_ad'
+```
 == aiogram
 ```python
 from aiogram.utils.deep_linking import create_start_link
 
 link = await create_start_link(bot, 'from_ad')
-```
-== Folds
-```python
-from folds.context import client
-
-link = f'https://t.me/{client.me.username}?start=from_ad'
 ```
 == Telethon
 ```python
@@ -55,17 +55,17 @@ The link of form `t.me/examplebot?startgroup=YOUR_TEXT` opens a chat selection d
 once the bot is added, the command `/start YOUR_TEXT` will immediately be sent to the group.
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+from folds.context import bot
+
+link = f'https://t.me/{bot.me.username}?startgroup=from_ad'
+```
 == aiogram
 ```python
 from aiogram.utils.deep_linking import create_start_link
 
 link = await create_startgroup_link(bot, 'from_ad')
-```
-== Folds
-```python
-from folds.context import client
-
-link = f'https://t.me/{client.me.username}?startgroup=from_ad'
 ```
 == Telethon
 ```python

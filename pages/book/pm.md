@@ -27,17 +27,17 @@ which signals that the private chat has begun.
 The bot should answer this command with a greeting, usage instructions, or the main menu.
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+@bot.private_commands.start
+async def handle_start():
+    return 'Hi!'
+```
 == aiogram
 ```python
 @dp.message(CommandStart())
 async def handle_start(message: Message):
     await message.answer('Hi!')
-```
-== Folds
-```python
-@bot.private_commands.start()
-async def handle_start():
-    return 'Hi!'
 ```
 == Telethon
 ```python
@@ -111,6 +111,14 @@ send messages to the user—so either the user has blocked the bot or the dialog
 This action has minimal rate limiting, so you can do it frequently.
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+try:
+    async with bot.action(user, 'typing'):
+        pass
+except UserIsBlockedError:
+    print("Can't send messages")
+```
 == aiogram
 ```python
 try:
@@ -118,7 +126,7 @@ try:
 except TelegramForbiddenError:
     print("Can't send messages")
 ```
-== Telethon & Folds
+== Telethon
 ```python
 try:
     async with client.action(user, 'typing'):

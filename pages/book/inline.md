@@ -20,6 +20,24 @@ The user clicks on a result to send the message.
 Here is a simple example with text results:
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+@bot.inline_query
+async def handle_inline(query: InlineQuery):
+    input_text = query.text
+    
+    result1 = query.builder.article(
+        title='Option 1',
+        description='This is the first option',
+        text='If chosen, this text will be sent',
+    )
+    result2 = query.builder.article(
+        title='Option 2',
+        description='This is the second option',
+        text='If the second option is chosen, this text will be sent',
+    )
+    await query.answer([result1, result2])
+```
 == aiogram
 ```python
 @dp.inline_query()
@@ -44,24 +62,6 @@ async def handle_inline(query: InlineQuery):
     )
     await query.answer(results=[result1, result2], cache_time=1)
 
-```
-== Folds
-```python
-@bot.inline_query()
-async def handle_inline(query: InlineQuery):
-    input_text = query.text
-    
-    result1 = query.builder.article(
-        title='Option 1',
-        description='This is the first option',
-        text='If chosen, this text will be sent',
-    )
-    result2 = query.builder.article(
-        title='Option 2',
-        description='This is the second option',
-        text='If the second option is chosen, this text will be sent',
-    )
-    await query.answer([result1, result2])
 ```
 == Telethon
 ```python

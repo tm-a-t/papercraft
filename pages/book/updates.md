@@ -20,6 +20,16 @@ Otherwise Telegram may silently skip updates that your bot would otherwise be ab
 Here's an example of handling updates for incoming photos:
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+@bot.private_message
+async def handle_photo(message: Message):
+    if not message.photo: 
+        return
+        
+    file_path = await message.download_media()
+    return 'Got your photo! Saved to ' + file_path
+```
 == aiogram
 ```python
 @dp.message(F.photo & (F.chat.type == ChatType.PRIVATE))
@@ -28,16 +38,6 @@ async def on_private_photo(message: Message):
     file_path = f"downloads/photo_{photo.file_id}.jpg"
     await bot.download(photo, file_path)
     await message.answer('Got your photo! Saved to ' + file_path)
-```
-== Folds
-```python
-@bot.private_message()
-async def handle_photo(message: Message):
-    if not message.photo: 
-        return
-        
-    file_path = await message.download_media()
-    return 'Got your photo! Saved to ' + file_path
 ```
 == Telethon
 ```python

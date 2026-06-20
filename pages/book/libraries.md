@@ -37,6 +37,21 @@ For JavaScript, the options include [mtcute](https://github.com/mtcute/mtcute) o
 Here's a simple bot that echoes the user's messages in DM:
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+from folds import Bot, Message
+
+bot = Bot(bot_token='YOUR_BOT_TOKEN_HERE', api_id=123456, api_hash='YOUR_API_HASH')
+
+
+@bot.private_message
+async def echo(text: str):
+    return text
+
+
+if __name__ == '__main__':
+    bot.run()
+```
 == aiogram
 ```python
 import asyncio
@@ -54,21 +69,6 @@ async def echo(message: Message):
 
 if __name__ == '__main__':
     asyncio.run(dp.start_polling(bot))
-```
-== Folds
-```python
-from folds import Bot, Message
-
-bot = Bot(bot_token='YOUR_BOT_TOKEN_HERE', api_id=123456, api_hash='YOUR_API_HASH')
-
-
-@bot.private_message()
-async def echo(text: str):
-    return text
-
-
-if __name__ == '__main__':
-    bot.run()
 ```
 == Telethon
 ```python

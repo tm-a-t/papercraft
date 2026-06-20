@@ -18,13 +18,21 @@ so ID is probably the only reliable way to identify a user.
 User IDs will be explained in more detail [later in the book.](chat-ids)
 
 ::: tabs key:libraries
+== Folds
+A correct way to get a user's display name would be:
+```python
+if user.last_name is None:
+    full_name = user.first_name
+else:
+    full_name = f'{user.first_name} {user.last_name}'
+```
 == aiogram
 A last name isn't always set, so `user.full_name` is a shortcut that combines the first name and last name (when it exists) into a single string.
 
 ```python
 user.full_name
 ```
-== Telethon & Folds
+== Telethon
 A correct way to get a user's display name would be:
 ```python
 if user.last_name is None:
@@ -46,11 +54,15 @@ If your bot supports multiple languages, Telegram recommends using the last know
 when this information is missing from an update.
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+user.lang_code  # Sometimes is None
+```
 == aiogram
 ```python
 user.language_code  # Sometimes is None
 ```
-== Telethon & Folds
+== Telethon
 ```python
 user.lang_code  # Sometimes is None
 ```

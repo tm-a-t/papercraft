@@ -21,17 +21,17 @@ on that specific message.
 When your bot is added, react with a greeting message:
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+@bot.added_to_group
+async def handle_join(chat: Chat):
+    return 'Hello ' + chat.title
+```
 == aiogram
 ```python
 @dp.my_chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
 async def handle_join(event: ChatMemberUpdated):
     await event.answer('Hello ' + event.chat.title)
-```
-== Folds
-```python
-@bot.added_to_group()
-async def handle_join(chat: Chat):
-    return 'Hello ' + chat.title
 ```
 == Telethon
 ```python
@@ -53,7 +53,7 @@ Some examples:
 ::: tabs key:libraries variant:code
 == Folds
 ```python
-@bot.group_message()
+@bot.group_message
 async def _(chat: Chat):
     return 'Hello ' + chat.title
 ```
@@ -73,6 +73,14 @@ To keep the chat clean, the bot can automatically delete auxiliary messages afte
 Here is an example of deleting greeting messages after 30 seconds (unless the program is interrupted):
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+@bot.on(events.ChatAction(func=event.group and event.user_added and not event.user.is_self))
+async def greet(event: events.ChatAction.Event):
+    answer = await event.respond(f'Welcome to the group, {event.user.first_name}')
+    await asyncio.sleep(30)
+    await answer.delete()
+```
 == aiogram
 ```python
 @dp.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
@@ -82,7 +90,7 @@ async def handle_join(event: ChatMemberUpdated):
     await asyncio.sleep(30)
     await answer.delete()
 ```
-== Folds & Telethon
+== Telethon
 ```python
 @bot.on(events.ChatAction(func=event.group and event.user_added and not event.user.is_self))
 async def greet(event: events.ChatAction.Event):
@@ -176,6 +184,22 @@ Your program should correctly handle messages sent by other entities:
 Determining chat type (e.g., for storing in a database):
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+from folds import ThisSender
+from telethon.tl.types import Chat, Channel, User
+
+...
+
+@bot.group_message
+async def handle_group_message(sender: ThisSender):
+    if isinstance(sender, User):
+        print('Message from user')
+    if isinstance(sender, Channel) and sender.megagroup:
+        print('Message from supergroup')
+    if isinstance(sender, Channel) and not sender.megagroup:
+        print('Message from channel')
+```
 == aiogram
 ```python
 @dp.message(F.chat.type == ChatType.GROUP | F.chat.type == ChatType.SUPERGROUP])
@@ -187,22 +211,6 @@ async def handle_group_message(message: Message):
     elif message.sender_chat is not None and message.sender_chat.type == ChatType.CHANNEL:
         print('Message from channel')
 
-```
-== Folds
-```python
-from folds import ThisSender
-from telethon.tl.types import Chat, Channel, User
-
-...
-
-@bot.group_message()
-async def handle_group_message(sender: ThisSender):
-    if isinstance(sender, User):
-        print('Message from user')
-    if isinstance(sender, Channel) and sender.megagroup:
-        print('Message from supergroup')
-    if isinstance(sender, Channel) and not sender.megagroup:
-        print('Message from channel')
 ```
 == Telethon
 ```python
@@ -227,11 +235,15 @@ async def handle_group_message(event: Message):
 Getting the sender's name:
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+name = sender.first_name or sender.title  # one of these is not None
+```
 == aiogram
 ```python
 name = message.from_user.first_name if message.from_user else message.sender_chat.title 
 ```
-== Folds & Telethon
+== Telethon
 ```python
 name = sender.first_name or sender.title  # one of these is not None
 ```

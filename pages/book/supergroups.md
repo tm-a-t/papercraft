@@ -17,6 +17,28 @@ In fact, most of the groups you participate in are probably supergroups.
 For bot code, the main trait of supergroups is that API considers them a special case of channels.
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+from telethon.tl.types import Chat, Channel, User
+
+# How to check the type of chat using API types:
+if isinstance(chat, Channel) and chat.megagroup:
+    print('This is a supergroup')  # 'megagroup' is an API term for the same thing
+if isinstance(chat, Channel) and not chat.megagroup:
+    print('This is a real channel')
+if isinstance(chat, Chat):
+    print('This is an old-type group')
+if isinstance(chat, User):
+    print('This is PM')
+    
+# How to check the type of chat from an update using Telethon helpers:
+if message.is_group:
+    print('This is a supergroup or a regular group')
+if message.is_channel:
+    print('This is a channel or a supergroup')
+if message.is_private:
+    print('This is PM')
+```
 == aiogram
 ```python
 if chat.type == ChatType.SUPERGROUP:
@@ -28,7 +50,7 @@ if chat.type == ChatType.GROUP:
 if chat.type == ChatType.PRIVATE:
     print('This is PM')
 ```
-== Telethon & Folds
+== Telethon
 ```python
 from telethon.tl.types import Chat, Channel, User
 
@@ -67,17 +89,17 @@ As technically the group is replaced with a supergroup (which is a new channel),
 You may want to handle this event if you store the chats in a database:
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+@bot.group_became_supergroup
+async def handle_supergroup(chat: ThisChat):
+    print(f'{chat.title} became a supergroup')
+```
 == aiogram
 ```python
 @dp.message(F.migrate_to_chat_id)
 async def migrated(message: Message):
     print(f'{message.chat.title} became a supergroup')
-```
-== Folds
-```python
-@bot.group_became_supergroup()
-async def handle_supergroup(chat: ThisChat):
-    print(f'{chat.title} became a supergroup')
 ```
 == Telethon
 ```python

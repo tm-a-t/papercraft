@@ -19,6 +19,20 @@ Here's an example:
 ![Post with buttons](/pictures/ru/channel-buttons.png)
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+@bot.channel_message
+async def on_new_message(message: Message):
+    try:
+        await message.edit(
+            buttons=[
+                [Button.url("Visit Site", "https://example.com")]
+            ]
+        )
+    except (ChatAdminRequiredError, MessageIdInvalidError, InlineBotRequiredError):
+        # Bot is not an admin, or the message can't be edited (e.g., a sticker)
+        pass
+```
 == aiogram
 ```python
 @dp.message(F.chat.type == ChatType.CHANNEL)
@@ -35,20 +49,6 @@ async def on_new_message(message: Message):
             reply_markup=reply_markup
         )
     except Exception:
-        # Bot is not an admin, or the message can't be edited (e.g., a sticker)
-        pass
-```
-== Folds
-```python
-@bot.channel_message()
-async def on_new_message(message: Message):
-    try:
-        await message.edit(
-            buttons=[
-                [Button.url("Visit Site", "https://example.com")]
-            ]
-        )
-    except (ChatAdminRequiredError, MessageIdInvalidError, InlineBotRequiredError):
         # Bot is not an admin, or the message can't be edited (e.g., a sticker)
         pass
 ```

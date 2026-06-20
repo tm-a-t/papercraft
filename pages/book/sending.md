@@ -5,6 +5,20 @@ Bots can send messages just like users... almost. Mind chat permissions, file li
 Some code examples:
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+# Send a message
+await bot.send_message(chat_id, 'Hey there')
+
+# Shortcut: send where the event came from
+await event.respond('Hey there')
+
+# Send a file
+await bot.send_message(
+    chat_id,
+    file='path.txt'
+)
+```
 == aiogram
 ```python
 # Send a message
@@ -21,7 +35,7 @@ await bot.send_document(
 )
 ```
 See [How to upload file?](https://docs.aiogram.dev/en/v3.20.0.post0/api/upload_file.html#sending-files).
-== Telethon & Folds
+== Telethon
 ```python
 # Send a message
 await client.send_message(chat_id, 'Hey there')
@@ -59,6 +73,13 @@ In channels and groups, bots can only send messages if they're members and admin
 Premium users can restrict receiving voice messages (including round videos).
 
 ::: tabs key:libraries variant:code
+== Folds
+```python
+try:
+    await bot.send_message(...)
+except UserIsBlockedError:
+    print('User blocked the bot :(')
+```
 == aiogram
 ```python
 try:
@@ -66,7 +87,7 @@ try:
 except TelegramForbiddenError:
     print('User blocked the bot, bot banned from chat, etc.')
 ```
-== Telethon & Folds
+== Telethon
 ```python
 try:
     await client.send_message(...)
