@@ -19,7 +19,6 @@ const sidebar: DefaultTheme.Sidebar = {
         {
             text: 'Build and Ship a Bot',
             items: [
-                {text: 'Start Building', link: '/book/basics'},
                 {text: 'Create the Bot', link: '/book/botfather'},
                 {text: 'Choose a Library', link: '/book/libraries'},
                 {text: 'Handle Updates', link: '/book/updates'},
@@ -30,12 +29,12 @@ const sidebar: DefaultTheme.Sidebar = {
             text: 'Design Bot Dialogs',
             items: [
                 {text: 'Private Chat Lifecycle', link: '/book/pm'},
+                {text: 'Send Messages', link: '/book/sending'},
+                {text: 'Edit Messages', link: '/book/editing'},
+                {text: 'Forward Messages', link: '/book/forwarding'},
                 {text: 'Commands', link: '/book/commands'},
                 {text: 'Buttons', link: '/book/buttons'},
                 {text: 'Bot Links', link: '/book/links'},
-                {text: 'Sending Messages', link: '/book/sending'},
-                {text: 'Editing Messages', link: '/book/editing'},
-                {text: 'Forwarding Messages', link: '/book/forwarding'},
                 {text: 'Text Formatting', link: '/book/markup'},
                 {text: 'Rich Messages', link: '/book/rich-messages'},
                 {text: 'Polls and Checklists', link: '/book/polls-checklists'},
@@ -45,10 +44,10 @@ const sidebar: DefaultTheme.Sidebar = {
             text: 'Work with Chats',
             items: [
                 {text: 'Users', link: '/book/users'},
+                {text: 'Supergroups', link: '/book/supergroups'},
                 {text: 'Groups', link: '/book/groups'},
                 {text: 'Forums', link: '/book/forums'},
                 {text: 'Channels', link: '/book/channels'},
-                {text: 'Supergroups', link: '/book/supergroups'},
                 {text: 'User and Chat IDs', link: '/book/chat-ids'},
                 {text: 'Message IDs', link: '/book/message-ids'},
             ],

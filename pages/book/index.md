@@ -28,7 +28,7 @@ const members = [
 </script>
 
 
-# Papercraft Book: How to Build Better Telegram Bots
+# Papercraft Book
 
 <p style="display: flex; align-items: start;">
     <a href="https://github.com/tm-a-t/papercraft" target="_blank">
@@ -46,31 +46,28 @@ contributions with examples for different libraries are welcome.
 
 The book starts with the path to a working bot:
 register it, choose a library, receive updates, and run the program on a server.
-After that, it focuses on the Telegram features that shape real bots:
+After that, it explores the Telegram features that shape real bots:
 dialogs, commands, buttons, groups, channels, forums, and product features such as login or payments.
 
-Another focus is user experience.
-You'll learn when a command is enough, when buttons are better, why deep links matter,
-and which Telegram limits affect the way you store data and send messages.
+I focus on good user experience.
+You'll learn when a command is enough, and when more complex surfaces provide a better flow.
 
 This aims to be the most comprehensive and practical guide on developing bots for Telegram.
 
-## Choose a path
+## Build the first working program
 
-You can read the book in order or jump to the path that matches your bot:
+At minimum, you need four things:
 
-- [**Build and ship a bot.**](basics)
-  Create a bot, choose a library, receive updates, and run it outside your laptop.
-- [**Design conversations.**](pm)
-  Start personal dialogs, choose between commands and buttons, and send messages that behave well.
-- [**Work with chats.**](users)
-  Store user data correctly and support groups, forums, channels, supergroups, and IDs.
-- [**Add Telegram features.**](join-requests)
-  Use join requests, inline mode, login, mini apps, payments, stickers, and HTML games.
-- [**Use reference pages.**](api)
-  Check Bot API vs Telegram API differences and other lists when you need details.
+1. A bot registered in [BotFather](botfather).
+2. A token for controlling the bot.
+3. A library for your programming language.
+4. A program that receives [updates](updates) and sends responses.
 
-Use the navigation on the left to follow the book in order or jump to a specific topic.
+While you can run the bot program on your computer during development,
+you'll want to deploy it to a hosting service when the code is ready for production.
+
+The following section covers these steps in order.
+
 
 ## Who made this?
 
