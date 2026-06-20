@@ -11,7 +11,9 @@ You can include an “Add to your group” link using [deep links for groups.](.
 
 A bot cannot send messages to a user until the user has initiated the dialog. 
 Once the dialog is started, the bot can send messages at any time.
-Note that bots cannot send messages to other bots.
+Bots still cannot casually message other bots like normal users do.
+Newer [bot-to-bot communication](../interaction/bot-automation#bot-to-bot-communication) requires explicit support and
+loop protection.
 
 ### The `/start` command
 
@@ -70,9 +72,17 @@ Sometimes a bot may send messages to a user even if they haven't started the dia
 This happens in one of the following cases:
 
 - The user [requested to join](../interaction/join-requests) a group or channel where the bot manages join requests.
-- The user [authorized on a site with Telegram Login Widget](../interaction/login-widget) through the bot.
+- The user [authorized with Log In with Telegram](../interaction/login-widget) and allowed the bot to contact them.
 
 When this occurs, the Telegram app shows the user an explanation of why the bot is contacting them.
+
+## Topics in private chats
+
+Some bot dialogs can use forum-style topics in private chats.
+This is especially useful for AI assistants and support bots that need to keep several threads separate.
+
+If your bot receives messages with private-chat topic information, store the thread ID and send replies to the same topic.
+Otherwise responses may appear in the wrong conversation.
 
 ## Stopping the dialog { #block }
 

@@ -1,9 +1,20 @@
-# Telegram Login Widget
+# Log In With Telegram
 
-Your site may feature a “Log in with Telegram” button which must be linked to your bot.
-The button may be configured in such way that authorizing users will see an “Allow the bot contact me” check box.
+Your site or app may feature a “Log in with Telegram” button linked to your bot.
+Telegram now supports a newer login flow based on OpenID Connect, including Authorization Code Flow with PKCE.
 
-An alternative to Telegram Login Widget is [Login URL button,](../messages/buttons) a way to authorize on a site from the Telegram app.
+Users can authorize in a few taps, optionally share their verified phone number, and optionally allow your bot to send
+them direct messages.
+
+To use it, register allowed URLs in the [@BotFather](https://t.me/BotFather) Mini App and store the client ID and client
+secret securely.
+
+An alternative to Log In with Telegram is [Login URL button,](../messages/buttons) a way to authorize on a site from the Telegram app.
+
+::: info Legacy widget
+The older iframe-based JavaScript widget still exists in archived documentation.
+The current Telegram Login documentation recommends the newer Telegram Login library, native SDKs, or standard OIDC integration.
+:::
 
 ## User steps
 
@@ -17,7 +28,25 @@ From the user perspective, the steps are the following:
 
 ## Handling authorization
 
-When the user logs in, the widget redirects to the authorization URL, passing the user’s ID, name, and other data as GET parameters (or, alternatively, calls a JavaScript function).
+In the current OIDC-based flow, your server validates the ID token:
+
+- Verify the JWT signature using Telegram's public keys.
+- Check that the issuer is Telegram.
+- Check that the audience matches your bot's client ID.
+- Check expiration and any nonce/state value you generated.
+
+Telegram currently returns requested user information in the ID token and does not provide a separate UserInfo endpoint.
+
+## Phone number verification
+
+If you only need to verify a user's phone number, Telegram Gateway is a separate developer feature for sending
+verification codes through Telegram at a lower cost than SMS in many cases.
+It is not the same as logging a user into your app with their Telegram account.
+
+## Legacy hash validation
+
+In the legacy widget flow, the widget redirects to the authorization URL, passing the user’s ID, name, and other data as
+GET parameters (or, alternatively, calls a JavaScript function).
 
 To make sure that the parameters came from Telegram, you should check the hash parameter. The encryption logic is described in the Telegram docs, but here is a Python example:
 
@@ -55,4 +84,6 @@ def verify_telegram_login_hash(data: TelegramLoginData, token: str) -> bool:
 
 ## Related links
 
-- [Telegram docs. Login Widget](https://core.telegram.org/widgets/login)
+- [Telegram docs. Log In With Telegram](https://core.telegram.org/bots/telegram-login)
+- [Telegram docs. Telegram Gateway](https://core.telegram.org/gateway)
+- [Telegram docs. Legacy Login Widget](https://core.telegram.org/widgets/login)

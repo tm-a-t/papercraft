@@ -14,7 +14,8 @@ Markup elements in Telegram messages include:
 - Spoilers (hidden text, see below)
 - User mentions through their ID (see below)
 - Block quotation (which can be expandable)
-- Custom emoji (available only for bots with [paid usernames](../dev/usernames))
+- Dynamic date and time values, shown in each user's local time zone
+- Custom emoji (availability depends on the bot and account capabilities)
 
 A message may contain no more than 100 such markup elements. If you try to send a message with more,
 the rest will be ignored.
@@ -23,6 +24,9 @@ In addition to them, a message may contain any number of username mentions.
 
 Bot API lets you specify markup in HTML or Markdown.
 Telegram API doesn't include this built-in, but libraries like Telethon and Pyrogram provide similar syntax.
+
+If you need tables, headings, footnotes, formulas, media blocks, or long streamed AI output, use
+[rich messages](./rich-messages) instead of regular message markup.
 
 ## Monospaced text
 
@@ -55,3 +59,4 @@ Username mentions and ID mentions work differently:
 ## Related links
 
 - [Bot API docs on markup](https://core.telegram.org/bots/api#formatting-options)
+- [Telegram docs on rich messages](https://core.telegram.org/bots/features#advanced-formatting-options)

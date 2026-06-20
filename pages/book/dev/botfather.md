@@ -18,6 +18,10 @@ In BotFather, it's easy to edit bot settings using the `/mybots` command.
 This is how you customize the bot profile and configure special features—like
 forbidding being added to groups.
 
+Many settings are also available in the [@BotFather Mini App](https://t.me/BotFather).
+It can be used to create bots, update icons and descriptions, configure web login, and enable newer features such as
+guest mode or managed bot flows.
+
 You may register up to 20 bots.
 
 ## Customization { #customization }
@@ -36,6 +40,12 @@ It may be a good idea to include your contacts in “About”.
 
 ::: info
 In BotFather, you can also edit [command hints](../messages/commands) or the [inline mode placeholder.](../interaction/inline)
+:::
+
+::: info Newer settings
+Some platform features require BotFather configuration before the API methods become useful.
+For example, [inline mode](../interaction/inline), [guest mode](../interaction/bot-automation#guest-bots),
+and [Log In with Telegram](../interaction/login-widget) are enabled or configured through BotFather.
 :::
 
 ## Transferring

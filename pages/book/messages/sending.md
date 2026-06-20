@@ -10,9 +10,11 @@ For example, you may encounter errors when trying to send a voice message to a p
 ### What messages can bots send?
 
 Bots can send and receive messages just like users. These messages can be simple text or include media such as
-pictures, videos, files, polls, voice messages, stickers, and more.
+pictures, videos, live photos, files, polls, voice messages, stickers, and more.
 
 Unlike users, bots can also add [buttons](../messages/buttons) to their messages.
+For highly structured output such as tables, formulas, and long AI answers, bots can send
+[rich messages](./rich-messages).
 
 ### How do I send a message?
 
@@ -106,6 +108,16 @@ Note that the limits for less common actions, such as editing or deleting messag
 
 Developers of popular bots can contact Telegram support to request increased limits.
 
+### Can a bot stream a generated answer?
+
+Yes. Bots can now stream text drafts while a response is being generated.
+For structured AI output, use [rich-message streaming](./rich-messages#streaming-rich-replies).
+
+::: warning
+Streaming is not a replacement for rate limiting.
+If your bot streams to many users at once, you still need queues, timeouts, and cancellation logic.
+:::
+
 ## 2. Editing messages
 
 ### How to edit messages?
@@ -182,7 +194,9 @@ It is not allowed to forward messages from groups and channels with the “prote
 
 ### Can bots use polls?
 
-Bots can't vote in polls; however, they can send all kinds of polls.
+Bots can't vote in polls; however, they can send many kinds of polls.
+Modern polls can include more options, media, links, descriptions, time limits, and other settings.
+See [Polls and Checklists](./polls-checklists).
 
 ### Can bots react to messages?
 

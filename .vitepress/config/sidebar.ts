@@ -35,6 +35,8 @@ const sidebar: DefaultTheme.Sidebar = {
                 {text: 'Bot Links', link: '/book/interaction/links'},
                 {text: 'Sending and Editing Messages', link: '/book/messages/sending'},
                 {text: 'Text Formatting', link: '/book/messages/markup'},
+                {text: 'Rich Messages', link: '/book/messages/rich-messages'},
+                {text: 'Polls and Checklists', link: '/book/messages/polls-checklists'},
             ],
         },
         {
@@ -54,9 +56,10 @@ const sidebar: DefaultTheme.Sidebar = {
             items: [
                 {text: 'Join Requests', link: '/book/interaction/join-requests'},
                 {text: 'Inline Mode', link: '/book/interaction/inline'},
-                {text: 'Telegram Login', link: '/book/interaction/login-widget'},
+                {text: 'Log In with Telegram', link: '/book/interaction/login-widget'},
                 {text: 'Mini Apps', link: '/book/interaction/mini-apps'},
-                {text: 'Payments', link: '/book/interaction/payments'},
+                {text: 'Bot Automation', link: '/book/interaction/bot-automation'},
+                {text: 'Payments and Stars', link: '/book/interaction/payments'},
                 {text: 'Stickers', link: '/book/interaction/stickers'},
                 {text: 'HTML Games', link: '/book/interaction/html-games'},
             ],

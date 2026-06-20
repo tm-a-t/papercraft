@@ -17,6 +17,10 @@ Group admins can grant the bot permissions for deleting group members or perform
 
 A group may contain up to 20 bots.
 
+Some bots can also be used in a group without joining it.
+With [guest mode](../interaction/bot-automation#guest-bots), a user mentions the bot and the bot can send one reply based
+on that specific message.
+
 ::: tabs key:libraries
 == aiogram
 ```python
@@ -107,7 +111,9 @@ This includes:
 - Messages [mentioning](../messages/markup#mention) the bot
 - System messages
 
-When privacy mode is off, the bot can see all messages in groups except ones from other bots.
+When privacy mode is off, the bot can see all ordinary user messages in groups.
+Messages from other bots are still limited, except for newer bot-to-bot communication flows and certain messages that
+Telegram explicitly exposes.
 
 Also, if a bot is a group admin, it sees all messages regardless of the privacy mode setting.
 
@@ -140,6 +146,20 @@ the admin rights suggested by default.
 The right to remain anonymous, which allows users to send messages on behalf of the group, has no effect on bots.
 
 ![Choosing rights](/pictures/ru/admin-rights.png)
+
+## Member tags
+
+Groups can show member tags next to users' names.
+Admins may allow members to edit their own tags, or reserve tag management for admins.
+
+Bots can read tags in member-related data and, with the right admin permission, set tags for group members.
+This can be useful for role labels, paid community status, support queues, or onboarding state.
+
+## Reaction moderation
+
+Group admins can remove individual reactions or all reactions from a specific user.
+Bots with suitable rights can use this for moderation workflows, but should do it sparingly:
+reactions are usually lightweight feedback, and removing them without a visible policy can confuse users.
 
 ## Messages on behalf of groups and channels
 

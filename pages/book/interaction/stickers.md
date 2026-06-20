@@ -3,6 +3,8 @@
 Bots (and only bots) can create sticker sets and custom emoji sets. Each pack must have a user specified as its owner.
 A common way for people to create and manage sticker sets is through [@Stickers](https://t.me/stickers) bot,
 but other bots can do it as well.
+Telegram also provides an official [@Stickers Mini App](https://t.me/Stickers), which lets users create stickers and emoji,
+manage packs, and view usage statistics in a richer interface.
 
 Use this feature when sticker or custom emoji management is part of the bot itself:
 brand packs, community packs, generators, moderation tools, or a workflow around user-submitted images.
@@ -25,3 +27,4 @@ regardless of their color theme.
 
 - [Telegram site. Sticker requirements](https://core.telegram.org/stickers)
 - [Telegram docs. Creating stickers and custom emoji](https://core.telegram.org/bots/features#stickers-and-custom-emoji)
+- [Telegram blog. Stickers Mini App](https://telegram.org/blog/profile-music-gift-themes#stickers-mini-app)

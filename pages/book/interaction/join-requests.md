@@ -26,6 +26,27 @@ The admin right to add members allows the bot to approve or decline the requests
 
 Moreover, the bot can PM those who left join requests.
 
+## Guardian bots and screening
+
+Telegram now supports richer join request flows for bots that screen new members.
+A guard bot can receive a join request query, open a Mini App for the applicant, and answer the query based on the result.
+
+This is useful for:
+
+- Anti-spam checks.
+- Community applications.
+- Paid or invite-only communities.
+- AI-assisted moderation.
+
+Do not assume that the bot can inspect the whole user profile or chat history.
+Design screening around the data Telegram provides, the answers the applicant gives, and any rules your community owns.
+
+## To fill later
+
+- Example flow with `sendChatJoinRequestWebApp`.
+- Library examples for answering join request queries.
+
 ## Related links
 
 - [Telegram blog. How join requests look](https://telegram.org/blog/shared-media-scrolling-calendar-join-requests-and-more#join-requests-for-groups-and-channels)
+- [Telegram blog. Guardian Bots for Group Chats](https://telegram.org/blog/watch-apps-and-more#guardian-bots-for-group-chats)

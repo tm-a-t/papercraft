@@ -7,6 +7,13 @@ There can be an update about an incoming message, an update about a user joining
 
 We'll use this term throughout the book.
 
+Telegram adds new update types when new bot features appear.
+Recent examples include business connections and business messages, guest bot messages, managed bot updates,
+checklist changes, suggested posts, and richer poll events.
+
+If you use `allowed_updates` in webhooks or long polling, remember to include the new update types you need.
+Otherwise Telegram may silently skip updates that your bot would otherwise be able to handle.
+
 ::: tabs key:libraries
 == aiogram
 Here's an example of handling updates for incoming photos:

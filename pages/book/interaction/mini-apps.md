@@ -5,6 +5,23 @@ Use them when a regular chat interface is too limited:
 forms, dashboards, shops, editors, and other interfaces with many controls are often better as Mini Apps.
 
 For example, this feature is used by semi-official bot [@Wallet](https://t.me/wallet).
+Official bot interfaces such as [@BotFather](https://t.me/BotFather) and [@Stickers](https://t.me/Stickers) also use
+Mini Apps for newer management flows.
+
+## Newer capabilities
+
+Mini Apps can be more than embedded forms.
+Recent platform features allow Mini Apps to support full-screen interfaces, subscriptions, home screen shortcuts,
+geolocation, motion tracking, local device storage, secure local storage, and requests for users, chats, or managed bots.
+
+Mini Apps are also used in automation flows:
+a bot may open a Mini App to configure permissions, request a managed bot, or screen a join request before approving it.
+
+## To fill later
+
+- Examples for device storage and secure storage.
+- Examples for requesting chats or managed bots from a Mini App.
+- Notes about full-screen mode and client compatibility.
 
 ---
 

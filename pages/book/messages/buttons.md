@@ -13,6 +13,10 @@ confirming something, opening a link, switching to inline mode, or changing the 
 Use keyboard buttons when you want to suggest what the user should send next.
 They are more intrusive because they take space near the message input, so it is better to show them only when they are really helpful.
 
+Recent Telegram clients can also show styled bot buttons with colors and custom emoji.
+Use styling as a visual hint only: button text should still make sense without the color or emoji, because older clients
+and some libraries may not support every visual option yet.
+
 ## Inline buttons { #inline }
 
 Inline buttons are shown together with the messages.
@@ -69,8 +73,10 @@ There are more, rather uncommon, buttons:
 - Web view button. Opens [bot web interface](../interaction/mini-apps).
 - Login URL button. Used for authorization on sites;
   for example, official [@discussbot](https://t.me/discussbot) utilized it before Telegram introduced native comments.
-  The button works similarly to [Telegram Login Widget](../interaction/login-widget) but doesn't require entering
+  The button works similarly to [Log In with Telegram](../interaction/login-widget) but doesn't require entering
   the phone number and confirming the authorization.
+- Rich result buttons may also be used with newer [rich messages](./rich-messages) and Mini App flows, depending on the
+  message type and current Bot API support.
 
 ## Keyboard buttons
 
@@ -89,6 +95,7 @@ Apart from sending the text, a keyboard button may do one of the following:
 - Ask the account phone number.
 - Ask the user's geolocation.
 - Open a poll creation menu.
+- Request a user, chat, or managed bot.
 
 Of course, these actions require confirmation from the user.
 

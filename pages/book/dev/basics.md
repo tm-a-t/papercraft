@@ -12,6 +12,21 @@ Although technically bots are a kind of user account, in this book, I use the te
 :::
 -->
 
+## Newer platform features
+
+Modern Telegram bots are not limited to simple chat commands.
+Depending on the settings and permissions, bots can also:
+
+- Send [rich messages](../messages/rich-messages) with tables, formulas, collapsible sections, and streamed AI output.
+- Work as [guest bots](../interaction/bot-automation#guest-bots) when users mention them in chats where the bot is not a member.
+- Help automate user or business accounts with explicit access permissions.
+- Help users create and manage other bots.
+- Handle newer chat features such as [channel direct messages](../chats/channels#direct-messages-for-channels),
+  suggested posts, checklists, and advanced polls.
+
+These features still follow Telegram's privacy model:
+the bot only receives the data Telegram sends in updates or through a permissioned connection.
+If you need data later, save it when you receive it.
 
 ## How to program a bot
 

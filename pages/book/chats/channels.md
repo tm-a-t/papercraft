@@ -72,4 +72,28 @@ async def on_new_message(message: Message):
 
 [//]: # (todo: check for the in the example)
 
-[//]: # (todo: Paid posts)
+## Direct messages for channels { #direct-messages-for-channels }
+
+Channels can enable direct messages, letting subscribers privately contact channel owners and admins without exposing
+the owner's personal account.
+
+In Bot API, these conversations are represented as a special direct messages chat with topics.
+When sending into such a chat, the bot may need to specify the direct messages topic ID so the answer goes to the right
+subscriber thread.
+
+Bots that help manage a channel inbox should store the channel, direct messages chat, and topic identifiers they receive
+in updates.
+
+## Suggested and paid posts
+
+Subscribers can suggest posts to a channel through channel direct messages.
+Suggested posts can include a proposed publishing time and may include payment in Stars or Toncoin.
+
+Bots with the right admin permissions can approve or decline suggested posts.
+If a post is paid, Telegram marks it in Bot API.
+Do not delete paid posts during the required 24-hour period if the channel owner expects to receive the payment.
+
+## To fill later
+
+- Library examples for replying inside channel direct message topics.
+- Suggested post approval and decline examples.
