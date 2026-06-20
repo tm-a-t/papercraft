@@ -15,6 +15,21 @@
     color: var(--vp-c-text-2);
 }
 
+.vp-doc .mermaid-diagram {
+    margin: 16px 0;
+    overflow-x: auto;
+    text-align: center;
+}
+
+.vp-doc .mermaid-diagram__svg svg {
+    max-width: 100%;
+    height: auto;
+}
+
+.vp-doc .mermaid-diagram__fallback {
+    text-align: left;
+}
+
 :root:not(.dark) .VPHero .VPImage {
     /*filter: drop-shadow(10px 6px 24px #8d8fba);*/
     filter: drop-shadow(2px 4px 4px #4d4f8e);

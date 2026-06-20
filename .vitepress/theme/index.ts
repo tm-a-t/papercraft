@@ -5,6 +5,7 @@ import './custom.css'
 import CodeTab from '../../components/CodeTab.vue'
 import HelpNeeded from '../../components/HelpNeeded.vue'
 import Layout from './layout/Layout.vue'
+import MermaidDiagram from './MermaidDiagram.vue'
 import '@nolebase/vitepress-plugin-highlight-targeted-heading/client/style.css'
 import { enhanceAppWithTabs } from 'vitepress-plugin-tabs/client'
 
@@ -18,6 +19,7 @@ export default {
     enhanceApp({app, router, siteData}) {
         app.component('CodeTab', CodeTab);
         app.component('HelpNeeded', HelpNeeded);
+        app.component('MermaidDiagram', MermaidDiagram);
         for (const [filepath, component] of Object.entries(customComponents)) {
             const name = filepath.match(/\/([^/]+)\.vue$/)[1];
             app.component(name, component.default);

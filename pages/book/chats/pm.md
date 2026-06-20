@@ -6,14 +6,16 @@ Even if your bot is designed to work in groups or channels, implement a small pr
 When people open the bot profile, they should get a greeting, a help screen, or a way to add the bot to a group.
 For group bots, this can be an “Add to your group” link built with [deep links for groups.](../interaction/links#deep-links-for-groups)
 
-## Remember that only users can start dialogs
+Below we will discuss the chat lifecycle. 
 
-Design private-chat flows around the user opening the dialog first.
-A bot cannot send private messages to a user until the user has started the dialog, except for specific Telegram entry points described below.
-Once the dialog exists, the bot can keep sending messages unless the user blocks it.
+tl;dr: Don't try to message users who haven't contacted the bot, and remember that users block the bot again.
 
-Bots also cannot casually message other bots like normal users do.
-Newer [bot-to-bot communication](../interaction/bot-automation#bot-to-bot-communication) requires explicit support and loop protection.
+```mermaid
+flowchart TD
+    Blocked(Can't message) -->|User starts the bot| Started
+    Started(Message anytime) -->|User blocks the bot| Blocked
+```
+
 
 ## Treat `/start` as the main entry point
 
@@ -74,7 +76,16 @@ This can happen when:
 
 In these cases, the Telegram app shows the user an explanation of why the bot is contacting them.
 
-## Keep replies in the right private-chat topic
+## Remember that only users can start dialogs
+
+Design private-chat flows around the user opening the dialog first.
+A bot cannot send private messages to a user until the user has started the dialog, except for specific Telegram entry points described below.
+Once the dialog exists, the bot can keep sending messages unless the user blocks it.
+
+Bots also cannot casually message other bots like normal users do.
+Newer [bot-to-bot communication](../interaction/bot-automation#bot-to-bot-communication) requires explicit support and loop protection.
+
+## Keep replies in the right topic
 
 Some bot dialogs can use forum-style topics in private chats.
 This is especially useful for AI assistants and support bots that need to keep several threads separate.
@@ -89,7 +100,7 @@ After that, the bot cannot send personal messages to the user until they unblock
 
 Treat this as a normal state: if a send attempt fails because the bot is blocked, stop retrying the same personal message and wait for the user to return.
 
-## Probe whether a user blocked the bot
+## Check if users have your bot blocked
 
 If you need to check whether a user has blocked the bot, try a lightweight chat action before sending the actual message.
 

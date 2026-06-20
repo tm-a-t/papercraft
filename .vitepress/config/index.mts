@@ -6,6 +6,7 @@ import head from './head'
 import ruConfig from './ru'
 import sidebar from './sidebar'
 import {tabsMarkdownPlugin} from 'vitepress-plugin-tabs'
+import {mermaidMarkdownPlugin} from './mermaid'
 
 const nav = [
     {text: 'Book', link: '/book/', activeMatch: '/book/'},
@@ -44,6 +45,7 @@ export default defineConfig({
         config: (md) => {
             md.disable('emoji')
             md.use(tabsMarkdownPlugin)
+            mermaidMarkdownPlugin(md)
         }
     },
     vite: {
