@@ -2,12 +2,11 @@
 
 Use bots in channels for scheduled publishing, adding buttons to posts, moderation helpers, and connecting a channel to another system.
 Bots can participate in channels only as admins.
-Admin rights allow bots to send and edit posts, rename channels, and perform other administrative actions—making them particularly helpful for channel authors.
 
 ## Request channel admin rights
 
-Ask only for the channel admin rights the bot needs.
-Just like in groups, channel admins can select specific admin rights for bots. The default options can be configured [in BotFather](../dev/botfather). 
+Just like in groups, channel admins can choose specific admin rights for bots.
+If you require specific features, change the default selection [in BotFather](../dev/botfather). 
 
 ## Add buttons by editing posts
 

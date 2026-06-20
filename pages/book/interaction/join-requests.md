@@ -1,7 +1,7 @@
 # How to Manage Telegram Join Requests with a Bot
 
 Join requests are useful when your bot controls access to a group or channel.
-They also give the bot a narrow chance to contact a user before the user has started a regular personal dialog.
+They also give the bot a chance to contact a user before the user has started a regular personal dialog.
 
 ## Use join requests before adding users
 
@@ -20,28 +20,19 @@ A join request is left in two cases:
   such links may have an approval requirement.
   (Bots with admin rights can create invite links, too.)
 
-## Approve, decline, or contact applicants
+## Approve, decline, or contact
 
-Make the bot an admin if it should process join requests automatically.
+If your bot should process join requests, ask for the admin right to add members.
 The bot receives updates every time a user leaves a join request.
-The admin right to add members allows the bot to approve or decline the requests.
 
-Moreover, the bot can PM those who left join requests.
+Your bot can PM users who left join requests.
 
-## Screen applicants with guardian flows
+## Show UI to process joining
 
 Telegram now supports richer join request flows for bots that screen new members.
-A guard bot can receive a join request query, open a Mini App for the applicant, and answer the query based on the result.
+Upon receiving a join request query, your bot can open [a Mini App](../interaction/mini-apps) and approve or decline based on the result.
 
-This is useful for:
-
-- Anti-spam checks.
-- Community applications.
-- Paid or invite-only communities.
-- AI-assisted moderation.
-
-Do not assume that the bot can inspect the whole user profile or chat history.
-Design screening around the data Telegram provides, the answers the applicant gives, and any rules your community owns.
+This is mainly useful for anti-spam checks.
 
 ## Related links
 

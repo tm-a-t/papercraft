@@ -1,20 +1,8 @@
 # How to Send Telegram Bot Messages
 
-Use this page when your bot needs to send messages users can receive.
-Plan for Telegram-specific constraints from the start:
-chat permissions, file limits, rate limits, and a few Telegram-specific corner cases.
+Bots can send messages just like users... almost. Mind chat permissions, file limits, rate limits, and a few Telegram-specific corner cases.
 
-## Choose the message type
-
-Choose the simplest message type that fits the user task.
-Bot messages can be simple text or include media such as
-pictures, videos, live photos, files, polls, voice messages, stickers, and more.
-
-Add [buttons](../messages/buttons) when the message should offer a choice or action.
-For highly structured output such as tables, formulas, and long AI answers, bots can send
-[rich messages](./rich-messages).
-
-## Send with your library
+Some code examples:
 
 ::: tabs key:libraries
 == aiogram
@@ -50,6 +38,16 @@ await client.send_message(
 == Other libraries
 <HelpNeeded/>
 :::
+
+## Use any message type
+
+Choose the simplest message type that fits the user task.
+Bot messages can be simple text or include media such as
+pictures, videos, live photos, files, polls, voice messages, stickers, and more.
+
+Add [buttons](../messages/buttons) when the message should offer a choice or action.
+For highly structured output such as tables, formulas, and long AI answers, bots can send
+[rich messages](./rich-messages).
 
 ## Handle forbidden sends
 

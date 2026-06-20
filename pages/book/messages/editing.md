@@ -3,7 +3,7 @@
 Use this page when your bot needs to update a message after sending it:
 progress updates, corrections, and small changes that should stay in the same place in the chat.
 
-## Edit text
+Some code examples:
 
 ::: tabs key:libraries
 == aiogram

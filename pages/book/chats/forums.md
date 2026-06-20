@@ -67,7 +67,7 @@ async def handle_message(message: Message):
 
 ## Manage topics with the right admin rights
 
-Give the bot topic-management rights only when it should open, edit, or close topics.
-Depending on the forum settings, this may require special admin rights.
+Your bot may open, edit, or close topics.
+In some forums, topic management is restricted for regular members, so ask to grant admin rights for your bot.
 
 [//]: # (todo: https://core.telegram.org/api/threads)

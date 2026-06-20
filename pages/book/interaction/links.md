@@ -4,12 +4,13 @@ Links are a common entry point to using a bot.
 Use regular links when you only need to open the bot.
 Use _deep links_ when the bot should receive some extra input at the start.
 
-## Open the bot with a regular link
+## Use regular links to direct people to your bot
 
 The same way as with users, groups, and channels, 
-the link `t.me/examplebot` opens the bot with the username `@examplebot`.
+the link `t.me/examplebot` opens the bot with the username `@examplebot`. 
+Use the link in form `examplebot.t.me` if you want to be fancy :)
 
-## Start a dialog with initial input
+## Use deep links for more input
 
 Deep links can start a personal dialog with the bot with some initial data—
 for example, for a referral program it can be an ID of the user who shared the link.
@@ -46,9 +47,10 @@ The user, however, sees only `/start`, like if starting the bot regularly.
 <source src="/pictures/ru/start.webm" type="video/mp4">
 </video>
 
-## Add the bot to a group with initial input { #deep-links-for-groups }
+## Use group deep links for more input { #deep-links-for-groups }
 
-Use group deep links when the bot should join a group and receive initial input right away.
+If your bot is intended for groups, use deep links for groups. With them, the bot can join a group and receive initial input right away.
+
 The link of form `t.me/examplebot?startgroup=YOUR_TEXT` opens a chat selection dialog to add the bot;
 once the bot is added, the command `/start YOUR_TEXT` will immediately be sent to the group.
 
@@ -74,17 +76,12 @@ link = f'https://t.me/{self_user.username}?startgroup=from_ad'
 <HelpNeeded/>
 :::
 
-## Use `tg://` links for app-specific entry points
+## Mind the `tg://` links
 
-Prefer regular `t.me` links when a link may be opened outside Telegram.
-Use `tg://` links when you specifically need an in-app Telegram entry point.
-All links considered above have `tg://` equivalents:
+All links considered above have `tg://` equivalents (like `tg://resolve?domain=examplebot`). 
+Still, prefer the regular `t.me` links: they are more readable and can be opened outside Telegram.
 
-- Regular link: `tg://resolve?domain=examplebot`
-- Deep link: `tg://resolve?domain=examplebot&start=YOUR_TEXT`
-- Group deep link: `tg://resolve?domain=examplebot&startgroup=true`
-
-Some direct links may replace `t.me` links or do special actions.
+Some other `tg://` links lead to in-app places, 
 For example, the link to [tg://settings](tg://settings) opens settings in some Telegram apps.
 Such links are listed [in API documentation](https://core.telegram.org/api/links) and
 in the unofficial [@DeepLink](https://t.me/deeplink) channel.

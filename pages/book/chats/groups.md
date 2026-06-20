@@ -5,20 +5,20 @@ Groups are where people talk to each other, so bot behavior is more visible and 
 Plan for the details that shape group bots:
 privacy mode, admin rights, public messages, and messages sent on behalf of groups or channels.
 
-## Add the bot intentionally
+If you don't plan for groups, forbid adding your bot to groups [in BotFather settings](../dev/botfather).
 
-Let users add the bot only when group usage is part of the design.
-Bots cannot join groups on their own.
-The bot's developer can forbid adding to groups [using BotFather settings](../dev/botfather).
+## Ask users to add bot to the group
+
+Users can add bots to groups, but bots cannot join groups on their own. A group may contain up to 20 bots.
 
 In public groups (those with usernames), bots can only be added by administrators. 
 Group admins can grant the bot permissions for deleting group members or performing other administrative actions.
 
-A group may contain up to 20 bots.
-
 Some bots can also be used in a group without joining it.
 With [guest mode](../interaction/bot-automation#guest-bots), a user mentions the bot and the bot can send one reply based
 on that specific message.
+
+When your bot is added, react with a greeting message:
 
 ::: tabs key:libraries
 == aiogram

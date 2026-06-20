@@ -59,7 +59,7 @@ user.lang_code  # Sometimes is None
 :::
 
 
-## Know which users the bot has seen { #seen-users }
+## Don't act on unknown users { #seen-users }
 
 Before mentioning a user by ID or performing similar user-related actions, make sure the bot has _seen_ that user.
 The bot _sees_ a user when, for example, it receives a message from the user or retrieves their information by username.

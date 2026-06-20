@@ -2,7 +2,7 @@
 
 Use this page when your bot needs to forward a message, or copy it into another chat without the forwarded label.
 
-## Keep or remove the forwarded label
+Some code examples:
 
 ::: tabs key:libraries
 == aiogram
@@ -25,10 +25,10 @@ await client.send_message(chat_id, message)
 <HelpNeeded/>
 :::
 
-## Expect music forwarding quirks
+## Forward music normally
 
-When a user or a bot forwards a music file, it doesn't receive the “Forwarded” label. Strange Telegram rules ¯\_(ツ)_/¯
+Before latest updates, music files didn't receive the “Forwarded” label. Now everything is ok!
 
-## Respect protected content
+## Remember that messages can be unforwardable
 
-Do not forward messages from groups and channels with the “protected content” setting turned on.
+Bots (and users) may not forward messages from groups and channels with the “protected content” setting turned on.
