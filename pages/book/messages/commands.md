@@ -1,4 +1,4 @@
-# Commands in Telegram Bots
+# How to Design Useful Telegram Bot Commands
 
 Commands are one of the most common ways to interact with bots. They start with `/` and consist of Latin letters, digits, and underscores.
 

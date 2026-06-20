@@ -1,4 +1,4 @@
-# What Telegram Bots Can Do
+# How to Start Building a Telegram Bot
 
 Use a Telegram bot when a server program should chat with users, respond to commands, send media, or participate in groups and channels.
 A bot is a special user account controlled by your program.

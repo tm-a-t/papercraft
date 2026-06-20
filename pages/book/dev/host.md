@@ -1,4 +1,4 @@
-# Running Your Telegram Bot on a Server
+# How to Run a Telegram Bot on a Server
 
 Use hosting when the bot needs to keep working after you close your laptop.
 For real users, reliability matters more than raw CPU power.

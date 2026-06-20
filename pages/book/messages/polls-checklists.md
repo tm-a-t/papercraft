@@ -1,4 +1,4 @@
-# Polls and Checklists
+# How to Use Polls and Checklists in Telegram Bots
 
 Use polls and checklists when a message should help people make decisions, collect answers, or track tasks.
 Polls are available to ordinary bots.

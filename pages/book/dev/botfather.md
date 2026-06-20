@@ -1,4 +1,4 @@
-# How to Set Up a Telegram Bot with BotFather
+# How to Create and Configure a Telegram Bot with BotFather
 
 You register and configure bots via [@BotFather](https://t.me/BotFather)—which itself is an official Telegram bot.
 Use it to create the bot, get the token, fill the profile, and enable features that need Telegram-side configuration.

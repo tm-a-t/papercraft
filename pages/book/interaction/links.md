@@ -1,4 +1,4 @@
-# Creating Links to Bots
+# How to Create Telegram Bot Links and Deep Links
 
 Links are a common entry point to using a bot. 
 Use regular links when you only need to open the bot.

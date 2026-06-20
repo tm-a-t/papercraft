@@ -1,4 +1,4 @@
-# Telegram API vs Bot API. What Is the Difference?
+# When to Use Telegram Bot API vs Telegram API
 
 Choose the API based on the library and features your bot needs.
 Developing a bot means creating a program that connects to Telegram servers, receives information (such as

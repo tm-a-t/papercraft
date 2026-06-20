@@ -1,4 +1,4 @@
-# Text Formatting in Telegram Messages
+# How to Format Text in Telegram Bot Messages
 
 Sometimes you want to decorate text in your messages to highlight important things or reference URLs and users.
 Use formatting sparingly :) The simpler, the better.

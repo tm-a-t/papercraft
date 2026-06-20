@@ -1,4 +1,4 @@
-# Limitations of Bot API in Comparison to Telegram API
+# What Telegram Bot API Can and Can't Do
 
 Use this table when you need to check whether a bot feature requires Telegram API instead of Bot API.
 It was kindly provided by @vanutp.

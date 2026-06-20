@@ -1,4 +1,4 @@
-# How Telegram Assigns Message IDs
+# How to Store Telegram Message IDs Correctly
 
 When you program a bot, you'll often need to refer to messages by their IDs—so it's useful to know that these IDs work differently depending on the chat type.
 

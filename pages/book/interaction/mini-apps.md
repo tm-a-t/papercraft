@@ -1,4 +1,4 @@
-# Telegram Mini Apps
+# How to Build Telegram Mini Apps for Bot Flows
 
 Use Mini Apps when a regular chat interface is too limited:
 forms, dashboards, shops, editors, and other interfaces with many controls are often better as Mini Apps.

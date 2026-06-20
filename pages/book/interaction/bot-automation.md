@@ -1,4 +1,4 @@
-# Bot Automation
+# How to Use Telegram Bot Automation Safely
 
 Telegram has several newer ways to let bots act outside the traditional “user sends a message, bot replies” flow.
 These features are powerful, but they are also permission-sensitive.

@@ -1,4 +1,4 @@
-# HTML Games in Bots
+# How to Launch HTML Games from Telegram Bots
 
 Use HTML games when the bot experience is actually a game and needs a web canvas or web UI.
 For most bot interfaces, [Mini Apps](./mini-apps) are the more common choice.

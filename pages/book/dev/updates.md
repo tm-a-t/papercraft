@@ -1,4 +1,4 @@
-# Understanding Updates
+# How to Handle Telegram Bot Updates
 
 Updates are the main way your bot learns what happened in Telegram.
 If you need information later, design your bot to store it when the update arrives.

@@ -1,4 +1,4 @@
-# Rich Messages
+# How to Send Rich Messages from Telegram Bots
 
 Use rich messages when regular text formatting is not enough:
 reports, long AI answers, documentation snippets, technical explanations, tables, formulas, and other content

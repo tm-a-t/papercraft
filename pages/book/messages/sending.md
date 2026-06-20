@@ -1,4 +1,4 @@
-# Sending and Editing Messages
+# How to Send and Edit Telegram Bot Messages
 
 Use this page when your bot needs to send, edit, forward, copy, or react to messages.
 Plan for Telegram-specific constraints from the start:

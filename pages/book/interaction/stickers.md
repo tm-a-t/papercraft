@@ -1,4 +1,4 @@
-# Managing Sticker Sets and Custom Emoji Sets
+# How to Manage Stickers and Custom Emoji with Telegram Bots
 
 Use bot-managed sticker sets when sticker or custom emoji management is part of the bot itself:
 brand packs, community packs, generators, moderation tools, or a workflow around user-submitted images.

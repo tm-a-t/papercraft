@@ -1,4 +1,4 @@
-# Bots in Channels
+# How to Use Telegram Bots in Channels
 
 Use bots in channels for scheduled publishing, adding buttons to posts, moderation helpers, and connecting a channel to another system.
 Bots can participate in channels only as admins.

@@ -1,4 +1,4 @@
-# Supergroups and Migrations
+# How to Handle Telegram Supergroups and Chat Migrations
 
 When you use Telegram, you deal with groups regularly. 
 What looks like groups in Telegram UI is actually two kinds of entities: groups and supergroups.

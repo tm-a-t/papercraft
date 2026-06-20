@@ -1,4 +1,4 @@
-# Log In With Telegram
+# How to Add Log In with Telegram to Your Site
 
 Use “Log in with Telegram” when your site or app should authenticate users through their Telegram account.
 Telegram now supports a newer login flow based on OpenID Connect, including Authorization Code Flow with PKCE.

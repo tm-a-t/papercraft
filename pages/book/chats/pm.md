@@ -1,4 +1,4 @@
-# Personal Dialogs and `/start`
+# How to Design Private Chats and `/start` for Telegram Bots
 
 Personal dialogs are the main place for onboarding, settings, support, and any flow that should not happen in a group.
 

@@ -1,4 +1,4 @@
-# Claiming a Username for Your Bot
+# How to Choose a Telegram Bot Username
 
 When you register a bot, you should choose its username carefully:
 it will be difficult to change afterwards.

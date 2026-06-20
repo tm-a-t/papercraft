@@ -28,7 +28,7 @@ const members = [
 </script>
 
 
-# Papercraft Book
+# Papercraft Book: How to Build Better Telegram Bots
 
 <p style="display: flex; align-items: start;">
     <a href="https://github.com/tm-a-t/papercraft" target="_blank">

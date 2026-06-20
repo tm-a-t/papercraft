@@ -1,4 +1,4 @@
-# Processing Payments and Stars Through Telegram Bots
+# How to Accept Payments and Telegram Stars in Bots
 
 Use Telegram payments when the purchase starts inside Telegram and should be completed without sending the user to a separate checkout page.
 

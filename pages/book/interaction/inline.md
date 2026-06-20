@@ -1,4 +1,4 @@
-# Implementing Inline Mode in Telegram Bots
+# How to Use Telegram Bot Inline Mode
 
 Use inline mode when users need to pick bot-generated content from inside any chat.
 For actions tied to one message, [inline buttons](../messages/buttons#inline) are usually a better fit.

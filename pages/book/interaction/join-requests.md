@@ -1,4 +1,4 @@
-# Managing Join Requests as a Telegram Bot
+# How to Manage Telegram Join Requests with a Bot
 
 Join requests are useful when your bot controls access to a group or channel.
 They also give the bot a narrow chance to contact a user before the user has started a regular personal dialog.

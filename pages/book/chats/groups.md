@@ -1,4 +1,4 @@
-# Bots in Groups
+# How to Make Telegram Bots Work Well in Groups
 
 Use group bots for moderation, support, games, alerts, and shared workflows.
 Groups are where people talk to each other, so bot behavior is more visible and more sensitive than in a private chat.

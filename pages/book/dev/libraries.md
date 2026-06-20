@@ -1,4 +1,4 @@
-# How to Choose the Right Library for a Telegram Bot
+# How to Choose a Telegram Bot Library
 
 Most developers use a library instead of calling Telegram with raw HTTP requests.
 Start by deciding whether Bot API is enough or you need Telegram API features.

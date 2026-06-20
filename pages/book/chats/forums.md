@@ -1,4 +1,4 @@
-# Bots in Forums
+# How to Handle Telegram Forum Topics in Bot Code
 
 Forums are a special kind of group that is split into multiple topics.
 If your bot works in groups, you should verify that it handles forums correctly.

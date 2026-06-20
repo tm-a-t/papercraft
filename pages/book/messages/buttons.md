@@ -1,4 +1,4 @@
-# Buttons in Telegram Bots
+# How to Choose Buttons for Telegram Bot Flows
 
 Use buttons when the user should choose, confirm, open something, or send a prepared answer.
 They are often easier than asking users to remember commands or type structured input.

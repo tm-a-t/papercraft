@@ -1,4 +1,4 @@
-# Managing User Info
+# How to Store Telegram Bot User Data Safely
 
 Bots may work in PM, in groups, and in channels—depending on their purpose.
 These kinds of chats work by different rules,
