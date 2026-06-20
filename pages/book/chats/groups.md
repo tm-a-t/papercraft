@@ -1,8 +1,11 @@
-# Developing Telegram Bots for Groups
+# Bots in Groups
 
 Group bots are powerful.
 They provide features in groups—the space where people talk to each other.
-There are a lot of details to consider, though.
+They are useful for moderation, support, games, alerts, and shared workflows.
+
+There are also a lot of details to consider:
+privacy mode, admin rights, public messages, and messages sent on behalf of groups or channels.
 
 ## Joining groups
 
@@ -91,7 +94,7 @@ Note that if your bot needs to personally contact new group users, join requests
 
 ## Privacy mode and visible messages { #privacy }
 
-Many bots are designed to react only [to commands](../messages/commands.md).
+Many bots are designed to react only [to commands](../messages/commands).
 For this reason, Telegram protects group privacy by default and doesn't notify bots about non-command messages.
 
 If you want your bot to see all chat messages, you need to disable the privacy mode.

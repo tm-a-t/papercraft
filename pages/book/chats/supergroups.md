@@ -1,7 +1,8 @@
-# Supergroups in Telegram
+# Supergroups and Migrations
 
 When you use Telegram, you deal with groups regularly. 
 The truth is that what looks like groups in Telegram UI is actually two kinds of entities: groups and supergroups.
+For bot developers, the important part is that migrations can change chat IDs and break stored references if you ignore them.
 
 ## What are supergroups
 
@@ -102,7 +103,7 @@ A supergroup cannot become a regular group again.
 
 ## Message and group IDs
 
-On the next page we will discuss [how group IDs are different for groups and supergroups in Bot API.](id#bot-api)
+The [chat IDs page](id#bot-api) explains how group IDs are different for groups and supergroups in Bot API.
 In addition, regular groups and supergroups are different in terms of how message IDs work
 as discussed in [Message IDs.](../messages/id)
 

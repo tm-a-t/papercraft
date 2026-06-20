@@ -1,6 +1,7 @@
-# Messages FAQ
+# Sending and Editing Messages
 
-This page covers what bots can and can't do with Telegram messages.
+This page covers what bots can and can't do with Telegram messages:
+sending, editing, forwarding, copying, and reacting.
 In short, bots can send, edit, and delete messages just like users, but there are some limitations and corner cases.
 For example, you may encounter errors when trying to send a voice message to a premium user.
 

@@ -1,8 +1,8 @@
-# How Your Telegram Bot Should Manage User Info
+# Managing User Info
 
 Bots may work in PM, in groups, and in channels—depending on their purpose.
 These kinds of chats work by different rules,
-so we'll consider them all in the “Chats” chapter.
+so the book has separate pages for each chat type.
 
 However, your bot will always interact with users in one way or another. 
 On this page, we’ll discuss some general advice about managing users.

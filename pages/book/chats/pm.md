@@ -1,6 +1,6 @@
-# How Personal Dialogs with Telegram Bots Work
+# Personal Dialogs and `/start`
 
-You want your bot to answer users in personal dialogs.
+Personal dialogs are the main place for onboarding, settings, support, and any flow that should not happen in a group.
 
 Even if your bot is designed to work in groups or channels, it's a good idea to implement a greeting message in PM.
 This way, people who get interested in the bot and open its profile will receive a response rather than encountering no interaction.
@@ -45,7 +45,7 @@ async def handle_start(event: Message):
 ```
 
 The regexp in this example accepts `/start` with some text after it in case a deep link is used.
-Deep links are explained [in the “Interaction” chapter.](../interaction/links)
+Deep links are explained [on the links page.](../interaction/links)
 == Other libraries
 <HelpNeeded/>
 :::

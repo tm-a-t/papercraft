@@ -1,8 +1,8 @@
-# Telegram API VS Bot API. What Is the Difference?
+# Telegram API vs Bot API. What Is the Difference?
 
 Developing a bot means creating a program that connects to Telegram servers, receives information (such as
 incoming messages) and sends instructions (like “reply to that message”).
-Let's dive into how it works.
+This page explains which official APIs can be used for that.
 
 **MTProto API** (also known as **Telegram API**) is the API through which your mobile or desktop Telegram app connects
 to the Telegram servers. It is open, meaning that developers can use the API to create their own Telegram apps.
@@ -14,17 +14,15 @@ The Bot API was created to allow developers to write bots using plain HTTP-reque
 the complexities of MTProto.
 It also has features to make development easier, such as webhooks and built-in HTML/Markdown markup.
 
-However, you won't need the perks of Bot API :)
-
 Most developers use wrapper libraries rather than plain HTTP-requests anyway.
-These libraries are available for many programming languages and often include
-even more features for convenient development.
+These libraries are available for many programming languages and usually provide
+friendlier tools for everyday bot development.
 
 In short, you can develop bots with either Telegram API or Bot API.
 
 ## So which API to choose?
 
-Some libraries are built on top of Bot API and some libraries are built on top of Telegram API. 
+Some libraries are built on top of Bot API and some libraries are built on top of Telegram API.
 
 On the one hand, you can find many more libraries for Bot API.
 
@@ -33,7 +31,8 @@ By default, it forbids uploading large files or fetching old messages from chat 
 (you can check out [the comparison table](../appendix/api-comparison)).
 I prefer always using Telegram API, but honestly there is little difference.
 
-You can read more about choosing the right library on the next page!
+For most bots, choose the library first and treat the API choice as part of that decision.
+The [library page](./libraries) has practical options.
 
 ## A word on userbots
 
@@ -46,7 +45,7 @@ Userbots are used for various purposes, such as updating a user's profile pictur
 collecting messages from public groups and channels, and automating repetitive tasks.
 
 We are not covering userbots in Papercraft Book, 
-but Telegram API libraries on the next page will be helpful if you want to develop one.
+but Telegram API libraries are helpful if you want to develop one.
 
 ::: warning
 Although Telegram usually doesn't ban accounts for userbots, you should be careful.

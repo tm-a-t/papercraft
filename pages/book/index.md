@@ -40,35 +40,37 @@ const members = [
 ---
 
 Welcome to the Papercraft Book!
-This is your guide to developing user-friendly, feature-rich, and stable bots for Telegram.
+This is a practical guide to developing user-friendly, feature-rich, and stable bots for Telegram.
 The book is independent of any specific programming language or library—
 contributions with examples for different libraries are welcome.
 
-We cover all major features of the Telegram bot platform,
-starting from common features like `/commands` and progressing to specialized ones,
-such as managing join requests and forum topics.
-You'll also find corner cases and development tips throughout.
+The book starts with the path to a working bot:
+register it, choose a library, receive updates, and run the program on a server.
+After that, it focuses on the Telegram features that shape real bots:
+dialogs, commands, buttons, groups, channels, forums, and product features such as login or payments.
 
 Another focus is user experience.
-You'll learn how to make bots easy to use and which Telegram features work best in different scenarios.
+You'll learn when a command is enough, when buttons are better, why deep links matter,
+and which Telegram limits affect the way you store data and send messages.
 
 This aims to be the most comprehensive and practical guide on developing bots for Telegram.
 
 ## What’s inside?
 
-The book has four chapters, each divided into multiple pages:
+You can read the book in order or jump to the path that matches your bot:
 
-1. [**Development.**](dev/basics)
-   Things to note before you start coding: API and libraries, bot configuration, some basic notions and tips.
-2. [**Messages.**](messages/sending)
-   Features of messages: sending/editing/deleting, commands, markup, buttons.
-3. [**Chats.**](chats/users) 
-   Managing user data & developing bots for different kinds of chats.
-   Rules of PM, groups, and channels. Forums and supergroups.
-4. [**Interaction.**](interaction/join-requests) 
-   Non-dialog Telegram features: join requests, deep links, payments, mini apps, etc.
+- [**Build and ship a bot.**](dev/basics)
+  Create a bot, choose a library, receive updates, and run it outside your laptop.
+- [**Design conversations.**](chats/pm)
+  Start personal dialogs, choose between commands and buttons, and send messages that behave well.
+- [**Work with chats.**](chats/users)
+  Store user data correctly and support groups, forums, channels, supergroups, and IDs.
+- [**Add Telegram features.**](interaction/join-requests)
+  Use join requests, inline mode, login, mini apps, payments, stickers, and HTML games.
+- [**Use reference pages.**](dev/api)
+  Check Bot API vs Telegram API differences and other lists when you need details.
 
-Feel free to use navigation on the left or just hit the “Next page” button below.
+Use the navigation on the left to follow the book in order or jump to a specific topic.
 
 ## Who made this?
 

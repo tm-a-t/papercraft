@@ -4,6 +4,9 @@ Bots (and only bots) can create sticker sets and custom emoji sets. Each pack mu
 A common way for people to create and manage sticker sets is through [@Stickers](https://t.me/stickers) bot,
 but other bots can do it as well.
 
+Use this feature when sticker or custom emoji management is part of the bot itself:
+brand packs, community packs, generators, moderation tools, or a workflow around user-submitted images.
+
 Bots are able to create, rename, edit, and delete sets.
 
 ::: info Custom emoji

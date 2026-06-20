@@ -1,4 +1,4 @@
-# Telegram Bots 101
+# What Telegram Bots Can Do
 
 A Telegram bot is a special user account controlled by your server program.
 Bots can chat with users, respond to commands, send media, and participate in groups and channels.
@@ -15,16 +15,17 @@ Although technically bots are a kind of user account, in this book, I use the te
 
 ## How to program a bot
 
-Here is a short answer:
+At minimum, you need four things:
 
-1. Register a bot.
-2. Pick a library for your favorite programming language.
-3. Use the library docs and this book to write the code.
+1. A bot registered in [BotFather](./botfather).
+2. A token for controlling the bot.
+3. A library for your programming language.
+4. A program that receives [updates](./updates) and sends responses.
 
 While you can run the bot program on your computer during development, 
 you'll want to deploy it to a hosting service when the code is ready for production.
 
-All these steps are covered in detail further in the “Development” chapter.
+The following pages cover these steps in order.
 
 ## Related links
 

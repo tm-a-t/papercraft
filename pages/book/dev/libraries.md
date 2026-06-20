@@ -1,12 +1,19 @@
 # How to Choose the Right Library for a Telegram Bot
 
-Your choice depends on whether you use Bot API or Telegram API.
-I've covered the differences [on the previous page,](./api) so make sure to read it first.
+Most developers use a library instead of calling Telegram with raw HTTP requests.
+The first choice is whether the library uses Bot API or Telegram API under the hood.
+
+If you are building a regular bot, Bot API libraries are usually enough.
+They are easy to start with, well documented, and available for many languages.
+
+Telegram API libraries are useful when you need features Bot API does not provide:
+fetching old messages, working with larger files, fetching group members, or running several bot programs at once.
+The detailed comparison is in the [reference page about APIs.](./api)
 
 ## Bot API libraries
 
-A common choice for developing Telegram bots is a Python library called [aiogram.](https://github.com/aiogram/aiogram)
-[Rocketgram](https://github.com/rocketgram/rocketgram) is a popular alternative.
+A common Python choice is [aiogram.](https://github.com/aiogram/aiogram)
+[Rocketgram](https://github.com/rocketgram/rocketgram) is an alternative.
 
 JavaScript is often used as well: check out [Telegraf](https://github.com/telegraf/telegraf)
 or [GrammY.](https://github.com/grammyjs/grammY)
@@ -84,5 +91,3 @@ if __name__ == '__main__':
 == Other libraries
 <HelpNeeded/>
 :::
-
-But first, you will need to register a bot and obtain the token.

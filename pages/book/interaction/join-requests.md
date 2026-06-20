@@ -1,8 +1,7 @@
 # Managing Join Requests as a Telegram Bot
 
-The _Interaction_ chapter of the Papercraft Book starts here; 
-it is dedicated to using bots beyond messages and commands. 
-Let's talk about the notion of join requests in groups and channels.
+Join requests are useful when your bot controls access to a group or channel.
+They also give the bot a narrow chance to contact a user before the user has started a regular personal dialog.
 
 ## What are join requests
 

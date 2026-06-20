@@ -1,6 +1,7 @@
 # Processing Payments Through Telegram Bots
 
 Bots can receive payments from users with a built-in Telegram feature.
+Use this when the purchase starts inside Telegram and should be completed without sending the user to a separate checkout page.
 
 Payments are processed with a [provider](https://core.telegram.org/bots/payments#supported-payment-providers) like Stripe.
 The providers work in different countries and have different requirements; 

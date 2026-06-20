@@ -1,7 +1,8 @@
-# Developing Telegram Bots for Channels
+# Bots in Channels
 
 Bots can participate in channels only as admins.
 Admin rights allow bots to send and edit posts, rename channels, and perform other administrative actions—making them particularly helpful for channel authors.
+The most common uses are scheduled publishing, adding buttons to posts, moderation helpers, and connecting a channel to another system.
 
 ## Admin rights
 

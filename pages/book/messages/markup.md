@@ -1,4 +1,4 @@
-# Extensive Text Formatting in Telegram Messages
+# Text Formatting in Telegram Messages
 
 Sometimes you want to decorate text in your messages to highlight important things or reference URLs and users.
 There are a lot of formatting options in Telegram, so please don't get carried away :) The simpler, the better.

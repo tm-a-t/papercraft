@@ -1,4 +1,4 @@
-# Buttons in Telegram Bots 
+# Buttons in Telegram Bots
 
 There are two types of buttons that bots can show when sending messages:
 _inline buttons_ appear below the sent message, and _keyboard buttons_ are suggestions that users see
@@ -6,6 +6,12 @@ near the message input.
 
 Both kinds of buttons may be shown in multiple rows of multiple buttons. 
 You can read more about button layouts at the bottom of this page.
+
+Use inline buttons when the action belongs to a specific message:
+confirming something, opening a link, switching to inline mode, or changing the message after a click.
+
+Use keyboard buttons when you want to suggest what the user should send next.
+They are more intrusive because they take space near the message input, so it is better to show them only when they are really helpful.
 
 ## Inline buttons { #inline }
 

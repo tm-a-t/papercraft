@@ -1,7 +1,8 @@
-# Developing Telegram Bots for Forums
+# Bots in Forums
 
 Forums are a special kind of group that is split into multiple topics.
 If your bot works in groups, you should verify that it handles forums correctly.
+This matters for support bots, community bots, and any bot that replies inside large group discussions.
 
 <br>
 

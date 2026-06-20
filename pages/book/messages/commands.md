@@ -1,4 +1,4 @@
-# Mini-Guide on Implementing Telegram Bot Commands
+# Commands in Telegram Bots
 
 Commands are one of the most common ways to interact with bots. They start with `/` and consist of Latin letters, digits, and underscores.
 
@@ -6,9 +6,13 @@ Commands are highlighted like links; users can tap on a command to send it.
 
 ![An example of using commands](/pictures/ru/commands.png)
 
-[//]: # (todo: add )
+## When to use commands
 
-[//]: # (todo: when to use commands)
+Commands work best for common actions that users may want to trigger from anywhere:
+starting the bot, opening settings, asking for help, or running a short admin action.
+
+They work worse for choosing between many options or entering structured data.
+For that, use [buttons](./buttons), [inline mode](../interaction/inline), or a follow-up question.
 
 ## Command arguments
 

@@ -1,6 +1,8 @@
 # Telegram Mini Apps
 
 Mini Apps are a feature of integrating a web page into the bot.
+Use them when a regular chat interface is too limited:
+forms, dashboards, shops, editors, and other interfaces with many controls are often better as Mini Apps.
 
 For example, this feature is used by semi-official bot [@Wallet](https://t.me/wallet).
 
