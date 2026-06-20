@@ -16,7 +16,7 @@ Deep links can start a personal dialog with the bot with some initial data—
 for example, for a referral program it can be an ID of the user who shared the link.
 They have the following form: `t.me/examplebot?start=YOUR_TEXT`
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 from aiogram.utils.deep_linking import create_start_link
@@ -54,7 +54,7 @@ If your bot is intended for groups, use deep links for groups. With them, the bo
 The link of form `t.me/examplebot?startgroup=YOUR_TEXT` opens a chat selection dialog to add the bot;
 once the bot is added, the command `/start YOUR_TEXT` will immediately be sent to the group.
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 from aiogram.utils.deep_linking import create_start_link

@@ -19,7 +19,8 @@ const editLink = useEditLink()
 <style scoped>
 .content-container {
   text-align: center;
-  padding: 16px 0;
+  padding: 48px 0;
+  background-color: var(--vp-code-block-bg);
 }
 
 .heading {

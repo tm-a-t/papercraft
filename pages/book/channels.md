@@ -18,7 +18,7 @@ Here's an example:
 
 ![Post with buttons](/pictures/ru/channel-buttons.png)
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 @dp.message(F.chat.type == ChatType.CHANNEL)

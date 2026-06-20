@@ -5,7 +5,7 @@ progress updates, corrections, and small changes that should stay in the same pl
 
 Some code examples:
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 from asyncio import sleep

@@ -17,9 +17,10 @@ checklist changes, suggested posts, and richer poll events.
 If you use `allowed_updates` in webhooks or long polling, remember to include the new update types you need.
 Otherwise Telegram may silently skip updates that your bot would otherwise be able to handle.
 
-::: tabs key:libraries
-== aiogram
 Here's an example of handling updates for incoming photos:
+
+::: tabs key:libraries variant:code
+== aiogram
 ```python
 @dp.message(F.photo & (F.chat.type == ChatType.PRIVATE))
 async def on_private_photo(message: Message):
@@ -29,7 +30,6 @@ async def on_private_photo(message: Message):
     await message.answer('Got your photo! Saved to ' + file_path)
 ```
 == Folds
-Here's an example of handling updates for incoming photos:
 ```python
 @bot.private_message()
 async def handle_photo(message: Message):
@@ -40,7 +40,6 @@ async def handle_photo(message: Message):
     return 'Got your photo! Saved to ' + file_path
 ```
 == Telethon
-Here's an example of handling updates for incoming photos:
 ```python
 @client.on(events.NewMessage(incoming=True, func=lambda e: e.photo and e.is_private))
 async def handle_photo(event: Message):

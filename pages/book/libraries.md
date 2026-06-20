@@ -36,7 +36,7 @@ For JavaScript, the options include [mtcute](https://github.com/mtcute/mtcute) o
 
 Here's a simple bot that echoes the user's messages in DM:
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 import asyncio

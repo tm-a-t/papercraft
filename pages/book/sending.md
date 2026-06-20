@@ -4,7 +4,7 @@ Bots can send messages just like users... almost. Mind chat permissions, file li
 
 Some code examples:
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 # Send a message
@@ -58,7 +58,7 @@ In channels and groups, bots can only send messages if they're members and admin
 
 Premium users can restrict receiving voice messages (including round videos).
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 try:

@@ -16,7 +16,7 @@ In fact, most of the groups you participate in are probably supergroups.
 
 For bot code, the main trait of supergroups is that API considers them a special case of channels.
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 if chat.type == ChatType.SUPERGROUP:
@@ -29,10 +29,10 @@ if chat.type == ChatType.PRIVATE:
     print('This is PM')
 ```
 == Telethon & Folds
-How to check the type of chat using API types:
 ```python
 from telethon.tl.types import Chat, Channel, User
 
+# How to check the type of chat using API types:
 if isinstance(chat, Channel) and chat.megagroup:
     print('This is a supergroup')  # 'megagroup' is an API term for the same thing
 if isinstance(chat, Channel) and not chat.megagroup:
@@ -41,9 +41,8 @@ if isinstance(chat, Chat):
     print('This is an old-type group')
 if isinstance(chat, User):
     print('This is PM')
-```
-How to check the type of chat from an update using Telethon helpers:
-```python
+    
+# How to check the type of chat from an update using Telethon helpers:
 if message.is_group:
     print('This is a supergroup or a regular group')
 if message.is_channel:
@@ -67,7 +66,7 @@ A regular group becomes a supergroup when certain settings are changed.
 As technically the group is replaced with a supergroup (which is a new channel), its [chat ID](chat-ids) changes. 
 You may want to handle this event if you store the chats in a database:
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 @dp.message(F.migrate_to_chat_id)

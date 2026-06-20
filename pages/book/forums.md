@@ -32,7 +32,7 @@ For example, when a user sends a command, the bot should answer in the same topi
 
 [//]: # (todo: code for answering in the same topic)
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 @dp.message()

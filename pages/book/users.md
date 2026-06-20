@@ -45,7 +45,7 @@ However, the user's language is not always included in all updates.
 If your bot supports multiple languages, Telegram recommends using the last known language preference 
 when this information is missing from an update.
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 user.language_code  # Sometimes is None

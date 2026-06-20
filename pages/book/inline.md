@@ -19,7 +19,7 @@ The user clicks on a result to send the message.
 
 Here is a simple example with text results:
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 @dp.inline_query()

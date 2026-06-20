@@ -4,7 +4,7 @@ Use this page when your bot needs to forward a message, or copy it into another 
 
 Some code examples:
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 # With the 'Forwarded' label

@@ -26,7 +26,7 @@ When the user clicks the button, the `/start` command is sent,
 which signals that the private chat has begun.
 The bot should answer this command with a greeting, usage instructions, or the main menu.
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 @dp.message(CommandStart())
@@ -110,7 +110,7 @@ send messages to the user—so either the user has blocked the bot or the dialog
 
 This action has minimal rate limiting, so you can do it frequently.
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 try:

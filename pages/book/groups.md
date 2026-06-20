@@ -20,7 +20,7 @@ on that specific message.
 
 When your bot is added, react with a greeting message:
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 @dp.my_chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
@@ -50,7 +50,7 @@ async def handle_join(event):
 
 Some examples:
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == Folds
 ```python
 @bot.group_message()
@@ -72,7 +72,7 @@ For example, when a bot greets new members, all existing members will also recei
 To keep the chat clean, the bot can automatically delete auxiliary messages after a certain period.
 Here is an example of deleting greeting messages after 30 seconds (unless the program is interrupted):
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 @dp.chat_member(ChatMemberUpdatedFilter(IS_NOT_MEMBER >> IS_MEMBER))
@@ -175,7 +175,7 @@ Your program should correctly handle messages sent by other entities:
 
 Determining chat type (e.g., for storing in a database):
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 @dp.message(F.chat.type == ChatType.GROUP | F.chat.type == ChatType.SUPERGROUP])
@@ -226,7 +226,7 @@ async def handle_group_message(event: Message):
 
 Getting the sender's name:
 
-::: tabs key:libraries
+::: tabs key:libraries variant:code
 == aiogram
 ```python
 name = message.from_user.first_name if message.from_user else message.sender_chat.title 
