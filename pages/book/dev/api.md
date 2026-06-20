@@ -1,14 +1,17 @@
 # Telegram API vs Bot API. What Is the Difference?
 
+Choose the API based on the library and features your bot needs.
 Developing a bot means creating a program that connects to Telegram servers, receives information (such as
 incoming messages) and sends instructions (like “reply to that message”).
 Use this page to understand which official APIs can be used for that.
 
-**MTProto API** (also known as **Telegram API**) is the API through which your mobile or desktop Telegram app connects
+Use **MTProto API** (also known as **Telegram API**) when you need lower-level Telegram access.
+This is the API through which your mobile or desktop Telegram app connects
 to the Telegram servers. It is open, meaning that developers can use the API to create their own Telegram apps.
 The MTProto API is named after the MTProto encryption protocol which the Telegram team developed for their messenger.
 
-**Telegram Bot API** is another official API. Bot API is built on top of MTProto API and can only be used for bots.
+Use **Telegram Bot API** for most ordinary bot work.
+It is built on top of MTProto API and can only be used for bots.
 
 The Bot API was created to allow developers to write bots using plain HTTP-requests without having to learn
 the complexities of MTProto.
@@ -36,10 +39,10 @@ The [library page](./libraries) has practical options.
 
 ## Keep userbots outside regular bot design
 
-As Telegram API is open and has libraries that work with it, you can easily write a program that controls a user account
+Telegram API libraries can also control a user account
 rather than a bot.
 Such programs are called userbots. 
-They are useful when you want to automate actions that users are allowed to do and bots aren't.
+Use them when you want to automate actions that users are allowed to do and bots aren't.
 
 Userbots are used for various purposes, such as updating a user's profile picture with the current time,
 collecting messages from public groups and channels, and automating repetitive tasks.

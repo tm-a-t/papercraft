@@ -1,7 +1,7 @@
 # Rich Messages
 
-Rich messages are structured messages that bots can send when regular text formatting is not enough.
-Use them for reports, long AI answers, documentation snippets, technical explanations, tables, formulas, and other content
+Use rich messages when regular text formatting is not enough:
+reports, long AI answers, documentation snippets, technical explanations, tables, formulas, and other content
 that should read like a native Telegram document.
 
 For short chat replies, confirmations, and ordinary bot flows, keep using regular messages with
@@ -31,6 +31,7 @@ Telegram has dedicated Bot API support for rich-message drafts and uses native a
 
 ## Return rich content from chat, inline, guest, and Mini App flows
 
+Return rich content when the generated result should remain structured after it is sent.
 Bots can send rich messages directly to chats.
 Rich messages can also be used as content for inline, guest, and Web App query results when the bot returns an
 `InputRichMessageContent`.

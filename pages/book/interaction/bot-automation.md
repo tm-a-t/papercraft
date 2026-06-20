@@ -6,8 +6,8 @@ Do not treat them as a way to bypass user consent or chat privacy.
 
 ## Automate business and profile tasks with permission
 
-Users can connect a bot to their account and grant it specific permissions.
-Depending on those permissions, a bot may help manage messages, profile information, stories, gifts, Stars, and other account features.
+Use account automation only after the user connects the bot and grants specific permissions.
+Depending on those permissions, the bot may help manage messages, profile information, stories, gifts, Stars, and other account features.
 
 This is useful for:
 
@@ -21,7 +21,7 @@ The user controls what the bot can access.
 
 ## Help users manage their own bots
 
-Bots can help users create and manage other bots.
+Use managed-bot flows when your bot helps users create or maintain their own bots.
 For example, an AI assistant or no-code tool can guide a user through creating a new bot, receive updates when a managed bot is created,
 and request or replace that bot's token when allowed.
 
@@ -41,12 +41,13 @@ Guest bots are useful for temporary tools:
 - Tools that should answer once without joining the group.
 
 Guest mode is limited by design.
-The bot does not get the chat history, does not see the participant list, and does not keep receiving future messages unless it is mentioned
+Design guest replies around one visible message:
+the bot does not get the chat history, does not see the participant list, and does not keep receiving future messages unless it is mentioned
 or replied to again.
 
 ## Add loop protection for bot-to-bot communication { #bot-to-bot-communication }
 
-Bots can communicate with other bots when the relevant mode is enabled.
+Enable bot-to-bot communication only for bounded workflows.
 This can be useful for agent workflows or for using another bot as a specialized tool.
 
 Add loop protection before enabling this.

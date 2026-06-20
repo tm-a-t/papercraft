@@ -1,6 +1,6 @@
 # Polls and Checklists
 
-Bots can create interactive messages that help people make decisions, collect answers, or track tasks.
+Use polls and checklists when a message should help people make decisions, collect answers, or track tasks.
 Polls are available to ordinary bots.
 Checklists are newer and currently matter most for bots connected to user or business accounts.
 
@@ -11,7 +11,7 @@ For complex workflows with validation, permissions, filters, and custom fields, 
 
 ## Use polls for choices
 
-Bots can send regular polls and quizzes.
+Use regular polls and quizzes when users should choose or answer inside Telegram.
 They cannot vote in polls themselves, but they can receive poll updates and use the results in the bot logic.
 
 Recent Telegram updates made polls much more flexible:
@@ -35,7 +35,7 @@ Checklists are collaborative task lists inside Telegram chats.
 They can be useful for teams, shopping lists, moderation workflows, launch checklists, and support handoffs.
 
 In the Bot API, bots can see checklist messages and service messages about changed tasks.
-Bots can also reply to a specific checklist task.
+Reply to a specific checklist task when the answer belongs to one item, not the whole message.
 
 Sending or editing checklists is currently tied to business-account style flows:
 a bot sends or edits the checklist on behalf of a connected account, not as a plain standalone bot in every chat.

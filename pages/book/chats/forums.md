@@ -13,8 +13,9 @@ This matters for support bots, community bots, and any bot that replies inside l
 <figcaption>Forum topics are listed, while other chats shrink into a small column.</figcaption>
 </figure>
 
-## Understand topic IDs
+## Use topic IDs
 
+Use topic IDs to keep bot replies in the correct forum topic.
 A forum is a group with a special UI.
 You can even open a forum in regular chat view using the forum menu in official apps.
 
@@ -66,7 +67,7 @@ async def handle_message(message: Message):
 
 ## Manage topics with the right admin rights
 
-Bots can open, edit, and close topics just like users.
+Give the bot topic-management rights only when it should open, edit, or close topics.
 Depending on the forum settings, this may require special admin rights.
 
 [//]: # (todo: https://core.telegram.org/api/threads)

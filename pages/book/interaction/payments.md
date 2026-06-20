@@ -1,7 +1,6 @@
 # Processing Payments and Stars Through Telegram Bots
 
-Bots can receive payments from users with a built-in Telegram feature.
-Use this when the purchase starts inside Telegram and should be completed without sending the user to a separate checkout page.
+Use Telegram payments when the purchase starts inside Telegram and should be completed without sending the user to a separate checkout page.
 
 Payments are processed with a [provider](https://core.telegram.org/bots/payments#supported-payment-providers) like Stripe.
 The providers work in different countries and have different requirements; 
@@ -17,7 +16,8 @@ Use ordinary payment providers for supported physical goods and services.
 
 You can try the payment interface in [the Demo Store channel](https://t.me/TestStore).
 
-A bot can send invoice messages to any chats, even from [inline-mode](../interaction/inline). 
+Send an invoice message when the user is ready to buy.
+Invoices can appear in any chat, even from [inline-mode](../interaction/inline).
 The first [button](../messages/buttons#inline) under the message must be a “Buy” button.
 
 ## Use Stars for digital goods

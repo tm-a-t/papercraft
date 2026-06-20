@@ -1,9 +1,10 @@
 # Log In With Telegram
 
-Your site or app may feature a “Log in with Telegram” button linked to your bot.
+Use “Log in with Telegram” when your site or app should authenticate users through their Telegram account.
 Telegram now supports a newer login flow based on OpenID Connect, including Authorization Code Flow with PKCE.
 
-Users can authorize in a few taps, optionally share their verified phone number, and optionally allow your bot to send
+Ask only for the access you need:
+users can authorize in a few taps, optionally share their verified phone number, and optionally allow your bot to send
 them direct messages.
 
 To use it, register allowed URLs in the [@BotFather](https://t.me/BotFather) Mini App and store the client ID and client
@@ -41,7 +42,7 @@ Telegram currently returns requested user information in the ID token and does n
 
 If you only need to verify a user's phone number, Telegram Gateway is a separate developer feature for sending
 verification codes through Telegram at a lower cost than SMS in many cases.
-It is not the same as logging a user into your app with their Telegram account.
+Do not treat it as account login: it verifies a phone number, not a Telegram identity for your app.
 
 ## Keep legacy hash validation for old widgets
 

@@ -1,14 +1,14 @@
 # Buttons in Telegram Bots
 
-There are two types of buttons that bots can show when sending messages:
+Use buttons when the user should choose, confirm, open something, or send a prepared answer.
+They are often easier than asking users to remember commands or type structured input.
+
+Telegram bots have two main button types:
 _inline buttons_ appear below the sent message, and _keyboard buttons_ are suggestions that users see
 near the message input.
 
 Both kinds of buttons may be shown in multiple rows of multiple buttons. 
 You can read more about button layouts at the bottom of this page.
-
-Use buttons when the user should choose, confirm, open something, or send a prepared answer.
-They are often easier than asking users to remember commands or type structured input.
 
 ## Choose the right button type
 
@@ -24,12 +24,13 @@ and some libraries may not support every visual option yet.
 
 ## Use inline buttons for message actions { #inline }
 
-Inline buttons are shown together with the messages.
+Use inline buttons when the button action should stay attached to one message.
+They are shown together with the message and work well for confirmations, links, callbacks, and message edits.
 
 ### Callback button
 
-A callback button is simply a button that sends [an update](../dev/updates) to the bot when pressed.
-The bot can handle it in any way.
+Use callback buttons when the bot should handle the click itself.
+When pressed, the button sends [an update](../dev/updates) to the bot.
 
 When a user clicks a callback button, the bot can show a notification or an alert (see the video below).
 To provide visual feedback, the bot should typically edit the message or react in some other visible way.
@@ -44,7 +45,7 @@ when creating the button.
 
 ### URL button
 
-A URL button acts like a link.
+Use a URL button when the action is opening a link.
 
 In Bot API, a URL button can be converted to a [user mention](./markup#mention) button by specifying `tg://user?ID=123456789`
 as the URL. In Telegram API, user mention buttons are implemented differently.
@@ -53,7 +54,7 @@ as the URL. In Telegram API, user mention buttons are implemented differently.
 
 ### Switch-to-inline button
 
-A switch-to-inline button opens [bot inline mode](../interaction/inline). 
+Use a switch-to-inline button when a message should lead the user into [bot inline mode](../interaction/inline).
 You can configure this button to open inline mode in the current chat or display a chat selection dialog first.
 You can also pre-fill a text query that will appear next to the bot's username (which the user can modify).
 
@@ -63,7 +64,7 @@ You can also pre-fill a text query that will appear next to the bot's username (
 
 ### Request peer button
 
-A request peer button allows the user to share information about one of their chats. 
+Use a request peer button when the bot needs the user to choose and share one of their chats.
 When clicked, it displays a chat selection dialog.
 
 You can configure this button flexibly: for example, the chat selection may include only channels with usernames or groups
@@ -71,13 +72,13 @@ where the user is an admin.
 
 ### Other inline buttons
 
-There are more, rather uncommon, buttons:
+Use these only for the flows that require them:
 
 - Callback game button. Opens an [HTML game](../interaction/html-games).
 - Pay button. Used for [integrated payments](../interaction/payments).
 - Web view button. Opens [bot web interface](../interaction/mini-apps).
 - Login URL button. Used for authorization on sites;
-  for example, official [@discussbot](https://t.me/discussbot) utilized it before Telegram introduced native comments.
+  for example, official [@discussbot](https://t.me/discussbot) used it before Telegram introduced native comments.
   The button works similarly to [Log In with Telegram](../interaction/login-widget) but doesn't require entering
   the phone number and confirming the authorization.
 - Rich result buttons may also be used with newer [rich messages](./rich-messages) and Mini App flows, depending on the
@@ -85,7 +86,8 @@ There are more, rather uncommon, buttons:
 
 ## Use keyboard buttons for suggested replies
 
-Unlike inline buttons, keyboard buttons are shown below the message input field
+Use keyboard buttons when the next expected user action is sending a prepared reply.
+They are shown below the message input field
 (in web versions they can be accessed by clicking the command button ⌘). When pressing a keyboard button, the user simply sends its text.
 
 In Telegram mobile apps, keyboard buttons replace the keyboard; but the user is able to hide them and see 
@@ -95,22 +97,22 @@ the regular keyboard again.
 <source src="/pictures/ru/keyboard-buttons.webm" type="video/mp4">
 </video>
 
-Apart from sending the text, a keyboard button may do one of the following:
+Use special keyboard buttons when the bot needs one of these user-confirmed actions:
 
 - Ask the account phone number.
 - Ask the user's geolocation.
 - Open a poll creation menu.
 - Request a user, chat, or managed bot.
 
-Of course, these actions require confirmation from the user.
+Telegram asks the user for confirmation before sharing this data or opening these menus.
 
 There's a “resize keyboard” option which determines whether the button keyboard should have flexible height.
 For some reason it's off by default, so the buttons look stretched:
 
 ![](/pictures/ru/wide-buttons.png)
 
-Keyboard buttons can be shown only with sending a message. 
-A bot can send keyboard buttons that will hide (but not disappear) after use.
+Send keyboard buttons together with a message.
+If the keyboard is needed only once, send it with the option to hide after use.
 
 In groups, keyboard buttons are visible to all members by default. Alternatively, a bot can show
 buttons only to mentioned users, which are:

@@ -5,7 +5,8 @@ They also give the bot a narrow chance to contact a user before the user has sta
 
 ## Use join requests before adding users
 
-When a user joins a group or a channel with a link, admin approval may be required. In this case,
+Require join requests when you need to approve people before they enter a group or channel.
+When a user joins with a link and admin approval is required,
 the user doesn't become a member immediately but leaves a join request.
 Admins may approve or decline join requests from the list. Bots with admin rights may do this as well.
 
@@ -21,7 +22,8 @@ A join request is left in two cases:
 
 ## Approve, decline, or contact applicants
 
-If bot is a group admin, it receives updates every time a user leaves a join request.
+Make the bot an admin if it should process join requests automatically.
+The bot receives updates every time a user leaves a join request.
 The admin right to add members allows the bot to approve or decline the requests.
 
 Moreover, the bot can PM those who left join requests.

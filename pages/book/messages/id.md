@@ -20,5 +20,6 @@ In personal dialogs and regular groups, there are no common message IDs. Instead
 Although service messages (such as “A user entered the chat” or “The chat title has changed”) don't look like normal messages in the UI, they're still messages and have their own IDs.
 
 ::: info TELEGRAM API
-A bot can retrieve a message by its ID through [Telegram API,](../dev/api) but Bot API doesn't provide such feature.
+Use [Telegram API](../dev/api) if the bot needs to retrieve a message by ID.
+Bot API doesn't provide this feature.
 :::

@@ -38,7 +38,7 @@ else:
 
 ## Cache language when Telegram provides it
 
-Bots can access the language setting that a person has configured in their Telegram app.
+Use the user's language setting when Telegram includes it in an update.
 This allows your bot to communicate in users' native languages.
 
 However, the user's language is not always included in all updates. 
@@ -61,7 +61,7 @@ user.lang_code  # Sometimes is None
 
 ## Know which users the bot has seen { #seen-users }
 
-A bot must have _seen_ a user to perform actions related to them (such as mentioning them). 
+Before mentioning a user by ID or performing similar user-related actions, make sure the bot has _seen_ that user.
 The bot _sees_ a user when, for example, it receives a message from the user or retrieves their information by username.
 
 “Seeing” users is not an official term, but rather a conceptual explanation of how Telegram's API works.

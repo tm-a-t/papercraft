@@ -6,6 +6,7 @@ For bot developers, the important part is that migrations can change chat IDs an
 
 ## Detect supergroups even when the UI says "group"
 
+Detect the API chat type instead of relying on what the Telegram UI calls a group.
 A long time ago, Telegram developers introduced two types of groups: regular ones and supergroups.
 Supergroups had public links, larger limit for the number of members, and other features designed for big communities.
 
@@ -13,7 +14,7 @@ Apparently, this was later considered rather confusing. Telegram app interface n
 “supergroups” and all groups look the same there, although on the technical level two types remain distinct.
 In fact, most of the groups you participate in are probably supergroups.
 
-The main trait of supergroups is that API considers them a special case of channels.
+For bot code, the main trait of supergroups is that API considers them a special case of channels.
 
 ::: tabs key:libraries
 == aiogram
@@ -103,6 +104,7 @@ A supergroup cannot become a regular group again.
 
 ## Store message and group IDs with chat type
 
+Store IDs with enough context to tell regular groups and supergroups apart.
 The [chat IDs page](id#bot-api) explains how group IDs are different for groups and supergroups in Bot API.
 In addition, regular groups and supergroups are different in terms of how message IDs work
 as discussed in [Message IDs.](../messages/id)
@@ -110,8 +112,8 @@ as discussed in [Message IDs.](../messages/id)
 
 ## Treat gigagroups as a rare case
 
-Gigagroups are yet another type of groups in Telegram. 
-They are very rare though, so this is just FYI.
+Do not design around gigagroups unless your bot actually encounters one.
+They are very rare.
 
 A maximal number of supergroup members is 200,000. 
 When it's close to the limit, Telegram app suggests admins turn the supergroup into a gigagroup. 

@@ -1,15 +1,14 @@
 # Bots in Groups
 
-Group bots are powerful.
-They provide features in groups—the space where people talk to each other.
-They are useful for moderation, support, games, alerts, and shared workflows.
-
-There are also a lot of details to consider:
+Use group bots for moderation, support, games, alerts, and shared workflows.
+Groups are where people talk to each other, so bot behavior is more visible and more sensitive than in a private chat.
+Plan for the details that shape group bots:
 privacy mode, admin rights, public messages, and messages sent on behalf of groups or channels.
 
 ## Add the bot intentionally
 
-Users can add bots to groups, but bots cannot join groups on their own.
+Let users add the bot only when group usage is part of the design.
+Bots cannot join groups on their own.
 The bot's developer can forbid adding to groups [using BotFather settings](../dev/botfather).
 
 In public groups (those with usernames), bots can only be added by administrators. 
@@ -66,7 +65,8 @@ async def _(chat: Chat):
 -->
 
 
-Group messages are visible to all members. A bot cannot send a message that only one person in the group will see.
+Treat every group message as public.
+A bot cannot send a message that only one person in the group will see.
 For example, when a bot greets new members, all existing members will also receive this greeting message.
 
 To keep the chat clean, the bot can automatically delete auxiliary messages after a certain period.
@@ -94,12 +94,12 @@ async def greet(event: events.ChatAction.Event):
 <HelpNeeded/>
 :::
 
-Note that if your bot needs to personally contact new group users, join requests may be useful to get PM permission—we will explore [join requests](../interaction/join-requests) later in the book.
+If your bot needs to personally contact new group users, consider join requests to get PM permission—we will explore [join requests](../interaction/join-requests) later in the book.
 
 ## Configure privacy mode for the messages you need { #privacy }
 
-Many bots are designed to react only [to commands](../messages/commands).
-For this reason, Telegram protects group privacy by default and doesn't notify bots about non-command messages.
+Keep privacy mode on for bots that react only [to commands](../messages/commands).
+Telegram protects group privacy by default and doesn't notify bots about non-command messages.
 
 If you want your bot to see all chat messages, you need to disable the privacy mode.
 
@@ -152,6 +152,7 @@ The right to remain anonymous, which allows users to send messages on behalf of 
 Groups can show member tags next to users' names.
 Admins may allow members to edit their own tags, or reserve tag management for admins.
 
+Use member tags when the role should be visible in the chat.
 Bots can read tags in member-related data and, with the right admin permission, set tags for group members.
 This can be useful for role labels, paid community status, support queues, or onboarding state.
 

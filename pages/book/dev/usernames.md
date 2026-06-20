@@ -11,7 +11,7 @@ This way you can check many usernames without creating a bot until you've made y
 ## Follow username rules
 
 Bot usernames follow the same rules as usernames for users, groups, and channels.
-The only constraint is that a bot username must end with “bot”, like `@ExampleBot`.
+Make sure the username ends with “bot”, like `@ExampleBot`.
 
 You can buy short usernames that don't follow this constraint on [Fragment.](https://fragment.com/)
 
@@ -23,11 +23,11 @@ Most of these registered bots are inactive—developers rarely maintain bots for
 
 ## Ask support for inactive usernames
 
-It is possible to change a bot username for free, even if it's claimed by another (inactive) bot.
-You will need to contact the support: [@BotSupport](https://t.me/BotSupport). They will check whether your bot works and
+Contact support if the username you need is claimed by another inactive bot.
+Write to [@BotSupport](https://t.me/BotSupport). They will check whether your bot works and
 supports English language.
 
-The common format is the following:
+Use this format:
 
 ```
 1. @old_username

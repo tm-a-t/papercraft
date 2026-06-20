@@ -9,7 +9,7 @@ During development, you can run the bot on your computer.
 For real users, the bot should run on a server with stable power and internet connection.
 Bot programs are usually lightweight, so a small VPS or container is enough for many projects.
 
-The important part is not raw CPU power, but reliability:
+Check reliability before CPU power:
 
 - The process should restart after crashes and server reboots.
 - Bot tokens and API keys should be stored outside the source code.

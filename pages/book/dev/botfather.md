@@ -9,7 +9,7 @@ Once you start BotFather, it will suggest you create a bot with the `/newbot` co
 You'll choose its name and [username,](./usernames) and then the bot profile will be created.
 
 You'll obtain the bot token, which looks like `1553279091:AAGLECcm23ihHRomX3PrKHc-IMQcIti6afA`.
-The token is your key to control the bot.
+Keep the token private: it is your key to control the bot.
 
 ![Example of creating a bot](/pictures/book/botfather.png)
 
@@ -28,7 +28,7 @@ You may register up to 20 bots.
 ## Make the profile clear { #customization }
 
 You can open your bot's profile and click “edit” to change its avatar, name, intro, and “about” text.
-This feature is relatively new—previously, BotFather commands were the only way to change a bot's profile settings.
+Use BotFather commands if your Telegram client does not show this editor.
 
 Intro (aka description) is the text users see before they start a dialog with the bot.
 It can contain a picture or even a GIF.

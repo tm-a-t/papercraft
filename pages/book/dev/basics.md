@@ -1,7 +1,7 @@
 # What Telegram Bots Can Do
 
-A Telegram bot is a special user account controlled by your server program.
-Bots can chat with users, respond to commands, send media, and participate in groups and channels.
+Use a Telegram bot when a server program should chat with users, respond to commands, send media, or participate in groups and channels.
+A bot is a special user account controlled by your program.
 
 Bots have some limitations compared to real users—mostly for privacy protection.
 For instance, bots can't join groups on their own and must be invited by users.

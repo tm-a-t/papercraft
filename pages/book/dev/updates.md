@@ -5,7 +5,7 @@ If you need information later, design your bot to store it when the update arriv
 
 ## Handle the update types your bot needs
 
-Updates are events that your bot program receives from Telegram servers.
+Think of updates as events that your bot program receives from Telegram servers.
 There can be an update about an incoming message, an update about a user joining a group, and so on.
 
 We'll use this term throughout the book.
@@ -70,7 +70,8 @@ These features are listed [in the table.](../appendix/api-comparison)
 
 ## Know when updates can be received again { #receiving-updates-multiple-times }
 
-Bot API disallows getting updates multiple times. If you received an update in Bot API, you won't be able to receive it again.
+Do not rely on receiving the same Bot API update again.
+If you received an update in Bot API, you won't be able to receive it again.
 
 There's no such limitation in Telegram API. This is because Telegram API is primarily designed for apps, where a user can have multiple Telegram applications on different devices, each needing to receive new messages.
 The same principle applies to bots: when you run multiple bot programs using Telegram API, they all receive the new updates.

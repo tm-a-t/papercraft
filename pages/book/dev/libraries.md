@@ -1,14 +1,14 @@
 # How to Choose the Right Library for a Telegram Bot
 
 Most developers use a library instead of calling Telegram with raw HTTP requests.
-The first choice is whether the library uses Bot API or Telegram API under the hood.
+Start by deciding whether Bot API is enough or you need Telegram API features.
 
 If you are building a regular bot, Bot API libraries are usually enough.
-They are easy to start with, well documented, and available for many languages.
+Choose them when you want an easy start, good documentation, and many language options.
 
 Telegram API libraries are useful when you need features Bot API does not provide:
 fetching old messages, working with larger files, fetching group members, or running several bot programs at once.
-The detailed comparison is in the [reference page about APIs.](./api)
+Use the [API comparison page](./api) when this choice affects the bot design.
 
 ## Choose a Bot API library for regular bots
 

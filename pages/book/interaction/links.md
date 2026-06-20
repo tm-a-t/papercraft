@@ -48,8 +48,7 @@ The user, however, sees only `/start`, like if starting the bot regularly.
 
 ## Add the bot to a group with initial input { #deep-links-for-groups }
 
-There is a variant of deep links for groups as well.
-
+Use group deep links when the bot should join a group and receive initial input right away.
 The link of form `t.me/examplebot?startgroup=YOUR_TEXT` opens a chat selection dialog to add the bot;
 once the bot is added, the command `/start YOUR_TEXT` will immediately be sent to the group.
 
@@ -77,13 +76,15 @@ link = f'https://t.me/{self_user.username}?startgroup=from_ad'
 
 ## Use `tg://` links for app-specific entry points
 
-Just FYI, all links that we considered above also have `tg://` equivalents. These are direct links that can be opened within the app:
+Prefer regular `t.me` links when a link may be opened outside Telegram.
+Use `tg://` links when you specifically need an in-app Telegram entry point.
+All links considered above have `tg://` equivalents:
 
 - Regular link: `tg://resolve?domain=examplebot`
 - Deep link: `tg://resolve?domain=examplebot&start=YOUR_TEXT`
 - Group deep link: `tg://resolve?domain=examplebot&startgroup=true`
 
-There are more direct links that may replace `t.me` links or do special actions.
+Some direct links may replace `t.me` links or do special actions.
 For example, the link to [tg://settings](tg://settings) opens settings in some Telegram apps.
 Such links are listed [in API documentation](https://core.telegram.org/api/links) and
 in the unofficial [@DeepLink](https://t.me/deeplink) channel.

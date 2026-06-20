@@ -9,6 +9,7 @@ You can include an “Add to your group” link using [deep links for groups.](.
 
 ## Start the dialog before sending messages
 
+Design PM flows around the user starting the dialog first.
 A bot cannot send messages to a user until the user has initiated the dialog. 
 Once the dialog is started, the bot can send messages at any time.
 Bots still cannot casually message other bots like normal users do.
@@ -46,7 +47,7 @@ async def handle_start(event: Message):
     await event.respond('Hi!')
 ```
 
-The regexp in this example accepts `/start` with some text after it in case a deep link is used.
+The regexp accepts `/start` with some text after it in case a deep link is used.
 Deep links are explained [on the links page.](../interaction/links)
 == Other libraries
 <HelpNeeded/>
@@ -57,13 +58,13 @@ Deep links are explained [on the links page.](../interaction/links)
 Just like any other chat, the dialog with the bot appears in the user's recent chat list.
 
 ::: warning
-The `/start` command doesn't necessarily mean this is the user's first interaction with the bot.
+Do not assume `/start` means this is the user's first interaction with the bot.
 Make sure your bot handles situations where a user sends `/start`
 after they've already initiated a dialog previously.
 :::
 
 ::: tip Extra input
-You can use [deep links](../interaction/links) so that the `/start` message contains additional information.
+Use [deep links](../interaction/links) when the `/start` message should contain additional information.
 :::
 
 ### Use other permitted entry points

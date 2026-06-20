@@ -1,11 +1,12 @@
 # Bots in Channels
 
+Use bots in channels for scheduled publishing, adding buttons to posts, moderation helpers, and connecting a channel to another system.
 Bots can participate in channels only as admins.
 Admin rights allow bots to send and edit posts, rename channels, and perform other administrative actions—making them particularly helpful for channel authors.
-The most common uses are scheduled publishing, adding buttons to posts, moderation helpers, and connecting a channel to another system.
 
 ## Request channel admin rights
 
+Ask only for the channel admin rights the bot needs.
 Just like in groups, channel admins can select specific admin rights for bots. The default options can be configured [in BotFather](../dev/botfather). 
 
 ## Add buttons by editing posts
@@ -74,6 +75,7 @@ async def on_new_message(message: Message):
 
 ## Store direct-message topic IDs { #direct-messages-for-channels }
 
+Store direct-message topic IDs if your bot helps answer a channel inbox.
 Channels can enable direct messages, letting subscribers privately contact channel owners and admins without exposing
 the owner's personal account.
 
@@ -86,6 +88,7 @@ in updates.
 
 ## Review suggested and paid posts carefully
 
+Review suggested posts before approving them.
 Subscribers can suggest posts to a channel through channel direct messages.
 Suggested posts can include a proposed publishing time and may include payment in Stars or Toncoin.
 

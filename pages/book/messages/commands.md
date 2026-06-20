@@ -16,7 +16,7 @@ For entering structured data, ask follow-up questions instead of making the user
 
 ## Don't require arguments
 
-Of course, you can ask users to add text after a command, like `/weather London`.
+You can ask users to add text after a command, like `/weather London`.
 
 But there's a catch: when users tap a command from the autocomplete menu, Telegram sends it immediately—no chance to add arguments. To append text without sending, users need to press Tab (desktop) or long-tap the command (mobile). Most users don't know this trick.
 

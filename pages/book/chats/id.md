@@ -23,5 +23,5 @@ You can convert between ID formats using `telethon.utils.get_peer_id` and `telet
 
 ## Read the bot ID from its token
 
-The first part of a bot token is the bot ID. For example, the token `110201874:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw`
+Read the first part of a bot token when you need the bot ID. For example, the token `110201874:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw`
 belongs to the bot with ID `110201874`.
