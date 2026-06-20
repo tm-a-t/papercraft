@@ -27,9 +27,9 @@ const sidebar: DefaultTheme.Sidebar = {
             ],
         },
         {
-            text: 'Design Conversations',
+            text: 'Design Bot Dialogs',
             items: [
-                {text: 'Private Chats and /start', link: '/book/chats/pm'},
+                {text: 'Private Chat Lifecycle', link: '/book/chats/pm'},
                 {text: 'Commands', link: '/book/messages/commands'},
                 {text: 'Buttons', link: '/book/messages/buttons'},
                 {text: 'Bot Links', link: '/book/interaction/links'},

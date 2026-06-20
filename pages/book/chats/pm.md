@@ -1,31 +1,28 @@
-# How to Design Private Chats and `/start` for Telegram Bots
+# How to Manage the Lifecycle of Private Chats
 
-Personal dialogs are the main place for onboarding, settings, support, and any flow that should not happen in a group.
+Private chats are the main place for onboarding, settings, support, and any flow that should not happen in a group.
 
-Even if your bot is designed to work in groups or channels, it's a good idea to implement a greeting message in PM.
-This way, people who get interested in the bot and open its profile will receive a response rather than encountering no interaction.
-You can include an “Add to your group” link using [deep links for groups.](../interaction/links#deep-links-for-groups)
+Even if your bot is designed to work in groups or channels, implement a small private-chat flow.
+When people open the bot profile, they should get a greeting, a help screen, or a way to add the bot to a group.
+For group bots, this can be an “Add to your group” link built with [deep links for groups.](../interaction/links#deep-links-for-groups)
 
+## Remember that only users can start dialogs
 
-## Start the dialog before sending messages
+Design private-chat flows around the user opening the dialog first.
+A bot cannot send private messages to a user until the user has started the dialog, except for specific Telegram entry points described below.
+Once the dialog exists, the bot can keep sending messages unless the user blocks it.
 
-Design PM flows around the user starting the dialog first.
-A bot cannot send messages to a user until the user has initiated the dialog. 
-Once the dialog is started, the bot can send messages at any time.
-Bots still cannot casually message other bots like normal users do.
-Newer [bot-to-bot communication](../interaction/bot-automation#bot-to-bot-communication) requires explicit support and
-loop protection.
+Bots also cannot casually message other bots like normal users do.
+Newer [bot-to-bot communication](../interaction/bot-automation#bot-to-bot-communication) requires explicit support and loop protection.
 
-### Treat `/start` as the main entry point
+## Treat `/start` as the main entry point
 
-Here is how a personal dialog usually starts:
-
-A user opens the bot with a link or by searching in the app. 
-They then see [the intro text](../dev/botfather#customization) and the “Start” button.
+A private chat usually starts when the user opens the bot with a link or by searching in the app.
+Telegram then shows [the intro text](../dev/botfather#customization) and the “Start” button.
 
 When the user clicks the button, the `/start` command is sent,
 which signals that the private chat has begun.
-The bot should respond to this command with a greeting or usage instructions.
+The bot should answer this command with a greeting, usage instructions, or the main menu.
 
 ::: tabs key:libraries
 == aiogram
@@ -67,15 +64,15 @@ after they've already initiated a dialog previously.
 Use [deep links](../interaction/links) when the `/start` message should contain additional information.
 :::
 
-### Use other permitted entry points
+## Use other entry points
 
-Sometimes a bot may send messages to a user even if they haven't started the dialog explicitly. 
-This happens in one of the following cases:
+Sometimes Telegram allows a bot to contact a user through another entry point.
+This can happen when:
 
 - The user [requested to join](../interaction/join-requests) a group or channel where the bot manages join requests.
 - The user [authorized with Log In with Telegram](../interaction/login-widget) and allowed the bot to contact them.
 
-When this occurs, the Telegram app shows the user an explanation of why the bot is contacting them.
+In these cases, the Telegram app shows the user an explanation of why the bot is contacting them.
 
 ## Keep replies in the right private-chat topic
 
@@ -85,14 +82,16 @@ This is especially useful for AI assistants and support bots that need to keep s
 If your bot receives messages with private-chat topic information, store the thread ID and send replies to the same topic.
 Otherwise responses may appear in the wrong conversation.
 
-## Handle blocked bots { #block }
+## Handle users blocking your bot { #block }
 
-A user can stop the dialog by blocking the bot. The bot won't be able to send personal messages to the user
-until they unblock it.
+A user can block the bot at any time.
+After that, the bot cannot send personal messages to the user until they unblock it.
 
-## Probe whether the bot may text a user
+Treat this as a normal state: if a send attempt fails because the bot is blocked, stop retrying the same personal message and wait for the user to return.
 
-If you need to determine whether a user has blocked your bot, you can use the following method.
+## Probe whether a user blocked the bot
+
+If you need to check whether a user has blocked the bot, try a lightweight chat action before sending the actual message.
 
 Attempt to show a “Bot is typing...” status in the dialog.
 If Telegram servers return an error, it means the bot can't
