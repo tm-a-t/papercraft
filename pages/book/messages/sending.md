@@ -1,12 +1,10 @@
-# How to Send and Edit Telegram Bot Messages
+# How to Send Telegram Bot Messages
 
-Use this page when your bot needs to send, edit, forward, copy, or react to messages.
+Use this page when your bot needs to send messages users can receive.
 Plan for Telegram-specific constraints from the start:
-chat permissions, file limits, rate limits, protected content, and a few Telegram-specific corner cases.
+chat permissions, file limits, rate limits, and a few Telegram-specific corner cases.
 
-## Send messages users can receive
-
-### Choose the message type
+## Choose the message type
 
 Choose the simplest message type that fits the user task.
 Bot messages can be simple text or include media such as
@@ -16,7 +14,7 @@ Add [buttons](../messages/buttons) when the message should offer a choice or act
 For highly structured output such as tables, formulas, and long AI answers, bots can send
 [rich messages](./rich-messages).
 
-### Send with your library
+## Send with your library
 
 ::: tabs key:libraries
 == aiogram
@@ -53,7 +51,7 @@ await client.send_message(
 <HelpNeeded/>
 :::
 
-### Handle forbidden sends
+## Handle forbidden sends
 
 Expect some sends to fail.
 A bot can't send messages to a user who [blocked it.](../chats/pm#block)
@@ -81,20 +79,20 @@ except UserIsBlockedError:
 <HelpNeeded/>
 :::
 
-### Treat albums as multiple messages
+## Treat albums as multiple messages
 
 An album is a collection of multiple media messages (such as photos or videos) that are displayed as a single grouped message in Telegram apps.
 
 When your bot receives an album, for example, you should handle it as multiple incoming messages.
 
-### Respect file limits { #file-limits }
+## Respect file limits { #file-limits }
 
 Check file sizes before upload or download.
 Telegram allows sharing files up to 4 GB; however, Bot API has more strict limits. Through Bot API, a bot can download 
 files up to 20 MB and upload files up to 50 MB. If you use [a local Bot API server](../appendix/api-comparison) though, these limits extend up 
 to 2 GB.
 
-### Rate-limit broadcasts
+## Rate-limit broadcasts
 
 Send broadcasts gradually.
 Telegram won't let you spam, of course, and the main limits from the official docs are:
@@ -110,7 +108,7 @@ Remember that the limits for less common actions, such as editing or deleting me
 
 Developers of popular bots can contact Telegram support to request increased limits.
 
-### Stream generated answers carefully
+## Stream generated answers carefully
 
 Use streaming when a generated answer may take long enough that users need progress feedback.
 Bots can now stream text drafts while a response is being generated.
@@ -120,93 +118,6 @@ For structured AI output, use [rich-message streaming](./rich-messages#streaming
 Streaming is not a replacement for rate limiting.
 If your bot streams to many users at once, you still need queues, timeouts, and cancellation logic.
 :::
-
-## Edit messages for progress and corrections
-
-### Edit text
-
-::: tabs key:libraries
-== aiogram
-```python
-from asyncio import sleep
-
-...
-
-my_message = await bot.send_message(chat_id, 'Loading...')
-await sleep(10)
-await my_message.edit_text('Loaded!')
-```
-== Telethon & Folds
-```python
-from asyncio import sleep
-
-...
-
-my_message = await client.send_message(chat_id, 'Loading...')
-await sleep(10)
-await my_message.edit('Loaded!')
-```
-== Other libraries
-<HelpNeeded/>
-:::
-
-Edit messages freely when it helps show progress or fix bot output:
-bot edits do not get the “Edited” label that users' edits get.
-
-### Replace media when Telegram allows it { #edit-media }
-
-Replace media when the message should stay in the same place in the chat.
-While editing a message, you can edit its media as well as the text.
-A picture, video, or file can be replaced with another picture, video, or file (music counts as files too.)
-
-You can add a media document to a text message that was originally sent without media (but only one, so no albums). 
-You cannot remove media from a message though.
-
-## Forward or copy intentionally
-
-### Keep or remove the forwarded label
-
-::: tabs key:libraries
-== aiogram
-```python
-# With the 'Forwarded' label
-await message.forward(chat_id)
-
-# Without the 'Forwarded' label
-await message.copy_to(chat_id)
-```
-== Telethon & Folds
-```python
-# With the 'Forwarded' label
-await message.forward(chat_id)
-
-# Without the 'Forwarded' label
-await client.send_message(chat_id, message)
-```
-== Other libraries
-<HelpNeeded/>
-:::
-
-### Expect music forwarding quirks
-
-When a user or a bot forwards a music file, it doesn't receive the “Forwarded” label. Strange Telegram rules ¯\_(ツ)_/¯
-
-### Respect protected content
-
-Do not forward messages from groups and channels with the “protected content” setting turned on.
-
-## Use message interactions where they fit
-
-### Send polls instead of voting
-
-If the bot needs to collect answers, send a poll instead of trying to vote.
-Bots can't vote in polls, but they can send many kinds of polls.
-Modern polls can include more options, media, links, descriptions, time limits, and other settings.
-See [Polls and Checklists](./polls-checklists).
-
-### React when needed
-
-Use reactions only when they add visible feedback to a workflow.
 
 ## Related links
 

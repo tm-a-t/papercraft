@@ -113,7 +113,7 @@ You will not receive them unless you explicitly turn on this setting in BotFathe
 Although the purpose of the inline feedback feature is collecting statistics, bot developers
 sometimes use it to edit messages after they are sent. This comes handy when the bot should load only 
 the selected result rather then all of them. For example, a music search bot may 
-[add a song](../messages/sending#edit-media) to a sent message and not load all songs during the search.
+[add a song](../messages/editing#edit-media) to a sent message and not load all songs during the search.
 
 Here is a trick: a bot may edit a sent inline message only if it contains inline buttons. 
 (Otherwise, the inline feedback update does not include the message ID.)
