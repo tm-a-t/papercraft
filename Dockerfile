@@ -18,7 +18,8 @@ COPY scripts scripts
 
 RUN yarn build
 
-FROM openresty/openresty:latest
+#FROM openresty/openresty:latest
+FROM nginx:alpine
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /build/.vitepress/dist /dist
 
